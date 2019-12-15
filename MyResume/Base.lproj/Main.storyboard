@@ -57,12 +57,16 @@
                                             </imageView>
                                             <label opaque="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLh-g2-3Is">
                                                 <rect key="frame" x="45" y="0.0" width="349" height="25"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="poR-Ov-s6s"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="khP-RM-j94" appends="YES" id="Kbq-Ps-CGg"/>
+                                                </connections>
                                             </label>
                                         </subviews>
                                     </stackView>
@@ -221,6 +225,11 @@
                 <tapGestureRecognizer id="06Y-I7-zwM" userLabel="Tap Gesture Recognizer (email)">
                     <connections>
                         <action selector="emailLabelTapped:" destination="BYZ-38-t0r" id="zpy-TN-ipN"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="khP-RM-j94" userLabel="Tap Gesture Recognizer (phone)">
+                    <connections>
+                        <action selector="phoneLabelTapped:" destination="BYZ-38-t0r" id="x7a-uk-StL"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

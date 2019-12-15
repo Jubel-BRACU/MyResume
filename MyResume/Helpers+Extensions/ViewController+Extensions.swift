@@ -28,17 +28,18 @@ extension ViewController: MFMailComposeViewControllerDelegate {
     //Mail Controller delegate
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         
-        if let _ = error {
+        if let error = error {
             //show error alert
-            
-           //dimiss the controller
+            print(error.localizedDescription)
+           
+            //dimiss the controller
            controller.dismiss(animated: true, completion: nil)
            return
        }
         
         switch result {
             case .cancelled:
-                print("Action cancelled")
+                print("Mail draft deleted")
                 
             case .failed:
                 print("Mail failed")
@@ -47,7 +48,7 @@ extension ViewController: MFMailComposeViewControllerDelegate {
                 print("Mail draft saved")
                 
             case .sent:
-            print("Mail sent")
+                print("Mail sent")
             
         //deal with unknown cases
         @unknown default:

@@ -39,8 +39,11 @@ class ViewController: UIViewController, ResumeDelegate {
         self.loadMailComposer(to: recipients)
     }
     
-    
-    
+    @IBAction func phoneLabelTapped(_ sender: Any) {
+        let number = "TEL://+16463790039"
+        callNumber(number: number)
+    }
+
 
     //MARK: - Custom Properties
     //properties
@@ -78,6 +81,14 @@ class ViewController: UIViewController, ResumeDelegate {
             self.updateUI()
         }
     }
+    
+    func callNumber(number: String) {
+        let url = URL(string: number)
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+        
+    }
+    
+    
     
 }
 
