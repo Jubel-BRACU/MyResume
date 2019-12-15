@@ -204,6 +204,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SjO-eb-TPu"/>
                     <connections>
+                        <outlet property="profilePictureImageView" destination="27C-h4-bEQ" id="pvE-eb-rvb"/>
                         <outletCollection property="contactInformationLabels" destination="qLh-g2-3Is" collectionClass="NSMutableArray" id="cYB-52-adV"/>
                         <outletCollection property="contactInformationLabels" destination="eej-m8-Hbt" collectionClass="NSMutableArray" id="Kdt-DF-lLr"/>
                         <outletCollection property="contactInformationLabels" destination="U3k-0G-3oE" collectionClass="NSMutableArray" id="01Y-px-emA"/>

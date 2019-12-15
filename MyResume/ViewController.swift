@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController, ResumeDelegate {
     
     //MARK: - Custom Protocols
-    
     //protocol method to receive json data once loaded
     func jsonDataLoaded(_ data: Resume, _ filename: String) {
         resume = data
@@ -20,6 +19,8 @@ class ViewController: UIViewController, ResumeDelegate {
     }
     
     //MARK: - UI Outlets
+    
+    @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet var contactInformationLabels: [UILabel]!
     @IBOutlet var websiteLabels: [UILabel]!
     
@@ -64,6 +65,13 @@ class ViewController: UIViewController, ResumeDelegate {
     }
     
     //MARK: - Custom methods
+    //fetch json data
+    func fetchData() {
+        ResumeController.shared.loadJSONData { [unowned self] (success) in
+            guard success != nil else { return }
+            self.updateUI()
+        }
+    }
     
     //View UI handler
     func updateUI() {
@@ -73,22 +81,13 @@ class ViewController: UIViewController, ResumeDelegate {
         
         //set website links labels
         resume?.setWebsiteLabels(resume: resume, labels: websiteLabels)
-    }
-    
-    func fetchData() {
-        ResumeController.shared.loadJSONData { [unowned self] (success) in
-            guard success != nil else { return }
-            self.updateUI()
-        }
-    }
-    
-    func callNumber(number: String) {
-        let url = URL(string: number)
-        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
         
+        //set profile image view properties
+        setImageViewProperties(view: profilePictureImageView, frameHeight: 2, borderWidth: 2, borderColor: .gray)
     }
     
     
     
+
 }
 

@@ -76,10 +76,34 @@ extension ViewController: MFMailComposeViewControllerDelegate {
         DispatchQueue.main.async { [unowned self] in
             let mailComposerVC = MFMailComposeViewController()
             mailComposerVC.mailComposeDelegate = self
+                //set vc to mail composer delegate
+            
             mailComposerVC.setToRecipients(emails)
             mailComposerVC.setSubject("Job Opportunity")
             mailComposerVC.setMessageBody("Hi Simon, We reviewed your resume and...", isHTML: false)
             self.present(mailComposerVC, animated: true, completion: nil)
+        }
+    }
+    
+    //trigger call phone number
+    func callNumber(number: String) {
+        let url = URL(string: number)
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+    }
+    
+    
+    func setImageViewProperties(view: UIImageView, frameHeight: CGFloat?, borderWidth: CGFloat?, borderColor: UIColor?) {
+        if let height = frameHeight {
+            view.layer.cornerRadius = view.frame.height / height
+            view.clipsToBounds = true
+        }
+            
+        if let borderWidth = borderWidth {
+            view.layer.borderWidth = borderWidth
+        }
+            
+        if let borderColor = borderColor {
+            view.layer.borderColor = borderColor.cgColor
         }
     }
     
