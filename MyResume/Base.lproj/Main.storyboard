@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimonItaliaResume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,12 +78,16 @@
                                             </imageView>
                                             <label opaque="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eej-m8-Hbt">
                                                 <rect key="frame" x="45" y="0.0" width="349" height="25"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="kxh-dP-i08"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="06Y-I7-zwM" appends="YES" id="35M-z8-zVK"/>
+                                                </connections>
                                             </label>
                                         </subviews>
                                     </stackView>
@@ -204,14 +208,19 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="RzQ-2a-9fw">
+                <tapGestureRecognizer id="RzQ-2a-9fw" userLabel="Tap Gesture Recognizer (linkedin)">
                     <connections>
                         <action selector="linkedinLabelTapped:" destination="BYZ-38-t0r" id="at7-1w-O4O"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="Tpw-dm-b7T">
+                <tapGestureRecognizer id="Tpw-dm-b7T" userLabel="Tap Gesture Recognizer (github)">
                     <connections>
                         <action selector="githubLabelTapped:" destination="BYZ-38-t0r" id="LR3-sh-zW1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="06Y-I7-zwM" userLabel="Tap Gesture Recognizer (email)">
+                    <connections>
+                        <action selector="emailLabelTapped:" destination="BYZ-38-t0r" id="zpy-TN-ipN"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

@@ -31,16 +31,16 @@ class ResumeController {
         
         let url = URL(fileURLWithPath: path!)
         do {
-             let data = try Data(contentsOf: url)
-             let json = JSONDecoder()
-             let resume = try json.decode(Resume.self, from: data)
-//             print("Success! Resumes objects loaded:\n \(resume)")
-
-             //pass resume data to VC
+            let data = try Data(contentsOf: url)
+            let json = JSONDecoder()
+            let resume = try json.decode(Resume.self, from: data)
+            //             print("Success! Resumes objects loaded:\n \(resume)")
+            
+            //pass resume data to VC
             delegate?.jsonDataLoaded(resume, filename)
             completion(true)
-
-         } catch {
+            
+        } catch {
             completion(nil)
             print("Error! Resume object not created. Reason: \(error.localizedDescription)\n")
         }
@@ -57,7 +57,7 @@ class ResumeController {
             let items = try fm.contentsOfDirectory(atPath: path)
             for item in items {
                 if item.hasSuffix(type) {
-//                    print("Success! .json file found: \(item)\n")
+                    //                    print("Success! .json file found: \(item)\n")
                     filename = item
                 }
             }

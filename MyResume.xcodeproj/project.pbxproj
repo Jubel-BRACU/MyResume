@@ -91,10 +91,10 @@
 				2AA6F59E239DF1F200DF0FE4 /* SceneDelegate.swift */,
 				2AA6F5A0239DF1F200DF0FE4 /* ViewController.swift */,
 				2AA6F5A2239DF1F200DF0FE4 /* Main.storyboard */,
+				2AA6F5A7239DF1F400DF0FE4 /* LaunchScreen.storyboard */,
 				2AAF876C23A3253400043F01 /* Source Data */,
 				2AA6F5A5239DF1F400DF0FE4 /* Assets.xcassets */,
 				2A6740B623A390A400685D1E /* profile_image.png */,
-				2AA6F5A7239DF1F400DF0FE4 /* LaunchScreen.storyboard */,
 				2AA6F5AA239DF1F400DF0FE4 /* Info.plist */,
 			);
 			path = MyResume;

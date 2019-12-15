@@ -22,5 +22,4 @@ extension NSMutableAttributedString {
         
         return attributedString
     }
-    
 }

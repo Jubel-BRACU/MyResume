@@ -15,3 +15,8 @@ enum WebsiteLabels: Int {
 enum ContactLabels: Int {
     case name = 0, phone, email
 }
+
+enum ProfileLabels: Int {
+    case profession = 0, general, valueProposition
+    
+}

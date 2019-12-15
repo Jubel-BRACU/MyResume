@@ -36,8 +36,8 @@
           "project name": "Waiter's Friend",
           "date": "October, 2019",
           "github": "https://github.com/simonitalia/WaitersFriend",
-          "description": "The aim of this app is to find how to make any cocktail. The app connects to a paid tier (patreon) 3rd party cocktail database, and utilizes JSON-API calls to ftech data on demand to populate the respective screens of the app. The also caches data to save on API calls, and saves data (as JSON data) to the app bundle (userDefaults) when a user saves cocktails to their favorites",
-          "technologies": "UIKit, CGAffineTransform, UIActivityIndicator, UICollectionView, UICollectionViewCompositionalLayout, UITableView, GestureRecognizer, SegmentController, .xib, JSON-APIs, JSON Encoder / Decoder, URLComponents, queryItems, appendingPathComponents, @escaping funcions, UserDefaults, enum, extension (UIView), UITableViewCell, UIActivityIndicator, UISearchController, UIAlertController"
+          "description": "The aim of this app is to find how to make any cocktail. The app connects to a paid tier (patreon) 3rd party cocktail database, and utilizes JSON-API calls to fetch data on demand to populate the respective screens of the app. The also caches data to save on API calls, and saves data (as JSON data) to the app bundle (userDefaults) when a user saves cocktails to their favorites",
+          "technologies": "UIKit, CGAffineTransform, UIActivityIndicator, UICollectionView, UICollectionViewCompositionalLayout, UITableView, GestureRecognizer, SegmentController, .xib, JSON-APIs, JSON Encoder / Decoder, URLComponents, queryItems, appendingPathComponents, @escaping functions, UserDefaults, enum, extension (UIView), UITableViewCell, UIActivityIndicator, UISearchController, UIAlertController"
         },
 
         {
@@ -110,7 +110,7 @@
           "project name": "Notes",
           "date": "December, 2018",
           "github": "https://github.com/simonitalia/ShoppingList",
-          "description": "The aim of this app is to create a simple shopping list, by adding and removong items to a UITableView, enusring the entries are saved to the app's bundle for later retreival when the app is closedd, then reopened.",
+          "description": "The aim of this app is to create a simple shopping list, by adding and removing items to a UITableView, ensuring the entries are saved to the app's bundle for later retrieval when the app is closed, then reopened.",
           "technologies": "UICollectionViewController, UICollectionView, UICollectionViewCell, FileManager, UserDefaults"
         },
 
@@ -118,7 +118,7 @@
           "project name": "Bull's Eye",
           "date": "April, 2018",
           "github": "https://github.com/simonitalia/BullsEye",
-          "description": "The aim of this game is to drag the slider left or right and place it in a postion that matches the random numbeer you're given at the start of each round of the game.",
+          "description": "The aim of this game is to drag the slider left or right and place it in a position that matches the random number you're given at the start of each round of the game.",
           "technologies": "UIKit, UIAlertController, UIWebView, html, UISliderView, Notifications, UIImageView, UIButtonView"
         },
 
@@ -147,7 +147,7 @@
         {
           "job title": "EMEA Market E-Commerce Platform / Web Applications Product Director",
           "description": "A European Markets focused position, with roles covering Product Management, Project Management and BA leadership and oversight of large scale IT projects for Estee Lauder’s in house E-Commerce platform.",
-          "company": "Estee Lauder Companies Onine (An Estee Lauder Company)",
+          "company": "Estee Lauder Companies Online (An Estee Lauder Company)",
           "company description": "Estee Lauder Companies is a global leader in the Beauty Industry, with online / E-Commerce sales exceeding $1BN annually.",
           "company website": "https://www.elcompanies.com/",
           "location": "London, UK",
@@ -159,7 +159,7 @@
         {
           "job title": "Global E-Commerce Platform / Web Applications Product Director",
           "description": "A US and Global markets focused position with roles covering Product Management, Project Management and BA leadership on large scale projects for Estee Lauder’s E-Comm platform. Mar 2011 to Apr 2017",
-          "company": "Estee Lauder Companies Onine (An Estee Lauder Company)",
+          "company": "Estee Lauder Companies Online (An Estee Lauder Company)",
           "company description": "Estee Lauder Companies is a global leader in the Beauty Industry, with online / E-Commerce sales exceeding $1BN annually.",
           "company website": "",
           "location": "New York City, USA",
@@ -182,26 +182,26 @@
 
         {
           "job title": "Program Manager / Senior Project Manager",
-          "description": "A senior role requiring strong Project leadership of cross-functional teams for the timely delivery of web software development projects. Project responsibilities included authoring & maintenance of project scope, schedules/milestones, riskss & issues identification and mitigation strategies. Agile with SCRUM exercised on all projects. Regular status meetings with Stakeholders and product reviews with Product Owners to continually monitor and update product backlog. In this position I also managend and mentored direct reports from the PM, BA & QA / Test teams.",
+          "description": "A senior role requiring strong Project leadership of cross-functional teams for the timely delivery of web software development projects. Project responsibilities included authoring & maintenance of project scope, schedules/milestones, risks & issues identification and mitigation strategies. Agile with SCRUM exercised on all projects. Regular status meetings with Stakeholders and product reviews with Product Owners to continually monitor and update product backlog. In this position I also managed and mentored direct reports from the PM, BA & QA / Test teams.",
           "company": "Fairfax Digital, (A Fairfax Media Business)",
           "company description": "Fairfax Digital is Australia's leading provider of online news and classifieds. Comprising around 30 interactive sites which reach over eight million visitors each month.",
           "company website": "https://www.fairfaxmedia.com.au",
           "location": "Melbourne, Australia",
           "period": "Jun 2006 to Oct 2008",
           "duration": "2+ years",
-          "accomplishments": "Lead delivery of a technically complex project to display Premium, Executive job ads made for the company's print newspapers to online, Lead delivery of a new Classifieds website for Exeutive (100K+) job listings, Lead delivery of Premium product offering (Multi industry category listing and auto refresh)"
+          "accomplishments": "Lead delivery of a technically complex project to display Premium, Executive job ads made for the company's print newspapers to online, Lead delivery of a new Classifieds website for Executive (100K+) job listings, Lead delivery of Premium product offering (Multi industry category listing and auto refresh)"
         },
 
         {
           "job title": "Senior Business Analyst",
-          "description": "A senior role requiring strong Project & BA leadership of cross-functional teams for the timely delivery of web software development projects. Project responsibilities included authoring & maintenance of project scope, schedules/milestones, requirements, user interafce and business rules, risks & issues identification and mitigation strategies. Agile with SCRUM exercised on all projects. In this position I also managend and mentored direct reports from the BA & QA / Test teams.",
+          "description": "A senior role requiring strong Project & BA leadership of cross-functional teams for the timely delivery of web software development projects. Project responsibilities included authoring & maintenance of project scope, schedules/milestones, requirements, user interface and business rules, risks & issues identification and mitigation strategies. Agile with SCRUM exercised on all projects. In this position I also managed and mentored direct reports from the BA & QA / Test teams.",
           "company": "Fairfax Digital, (A Fairfax Media Business)",
           "company description": "Fairfax Digital is Australia's leading provider of online news and classifieds. Comprising around 30 interactive sites which reach over eight million visitors each month",
           "company website": "https://www.fairfaxmedia.com.au",
           "location": "Melbourne, Australia",
           "period": "Oct 2005 to Jun 2006",
           "duration": "9 months",
-          "accomplishments": "Lead delivery of Premium product offering (Priority ad placemeent in search results), Lead the Taxonomy review & implementation project (updated industry and sub-industry categories)"
+          "accomplishments": "Lead delivery of Premium product offering (Priority ad placement in search results), Lead the Taxonomy review & implementation project (updated industry and sub-industry categories)"
         },
 
         {
@@ -213,7 +213,7 @@
           "location": "Melbourne, Australia",
           "period": "Jan 2003 to Sep 2005",
           "duration": "2+ years",
-          "accomplishments": "Lead delivery of a new web system for clients to view the company's travel and expenditure reports, Lead delivery of a new web based travel authorisation system for corporate travellers"
+          "accomplishments": "Lead delivery of a new web system for clients to view the company's travel and expenditure reports, Lead delivery of a new web based travel authorization system for corporate travelers"
         }
       ],
 
@@ -223,7 +223,7 @@
         "location": "Remote (Melbourne, New York City, Europe, Asia)",
         "period": "Apr 2018 to current",
         "service": "1.5+ years",
-        "description": "60+ iOS apps using Apple’s broad and powerful range of frameworks such as UKit, SpriteKit, SceneKit, CoreML / CreateML, CoreMotion, WatchKit, CoreGraphics, NotificationCenter, Delegate Protocol Pattern, Notifications and Observers, MVC, Extensions, UITableViewController, UICollectionViewController, Encodable/Decodable Protocols, JSON Encoder/Decoder, CoreData",
+        "description": "60+ iOS apps using Apple’s broad and powerful range of frameworks such as UIKit, SpriteKit, SceneKit, CoreML / CreateML, CoreMotion, WatchKit, CoreGraphics, NotificationCenter, Delegate Protocol Pattern, Notifications and Observers, MVC, Extensions, UITableViewController, UICollectionViewController, Encodable/Decodable Protocols, JSON Encoder/Decoder, CoreData",
         "projects": "https://github.com/simonitalia"
       }
     ],
@@ -441,6 +441,6 @@
       "Fitness",
       "Cocktail Mixing",
       "Latte art",
-      "Travelling"
+      "Traveling"
     ]
 }

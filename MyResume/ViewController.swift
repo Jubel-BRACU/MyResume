@@ -13,11 +13,11 @@ class ViewController: UIViewController, ResumeDelegate {
     //MARK: - Custom Protocols
     
     //protocol method to receive json data once loaded
-        func jsonDataLoaded(_ data: Resume, _ filename: String) {
-            resume = data
-            jsonFilename = filename
-//      print("Success! Delegate / Protocol pattern is working.\n")
-        }
+    func jsonDataLoaded(_ data: Resume, _ filename: String) {
+        resume = data
+        jsonFilename = filename
+        //      print("Success! Delegate / Protocol pattern is working.\n")
+    }
     
     //MARK: - UI Outlets
     @IBOutlet var contactInformationLabels: [UILabel]!
@@ -25,14 +25,23 @@ class ViewController: UIViewController, ResumeDelegate {
     
     //Website Labels Gesture Recognizers
     @IBAction func linkedinLabelTapped(_ sender: Any) {
-        self.loadWebsite(url: "https://www.linkedin.com/in/simonitalia/")
+        let url = "https://www.linkedin.com/in/simonitalia/"
+        self.loadWebsite(url: url)
     }
     
     @IBAction func githubLabelTapped(_ sender: Any) {
-        self.loadWebsite(url: "https://github.com/simonitalia")
+        let url = "https://github.com/simonitalia"
+        self.loadWebsite(url: url)
+    }
+    
+    @IBAction func emailLabelTapped(_ sender: Any) {
+        let recipients = ["simonitalia@gmail.com"]
+        self.loadMailComposer(to: recipients)
     }
     
     
+    
+
     //MARK: - Custom Properties
     //properties
     var resume: Resume?
@@ -64,7 +73,7 @@ class ViewController: UIViewController, ResumeDelegate {
     }
     
     func fetchData() {
-        ResumeController.shared.loadJSONData { (success) in
+        ResumeController.shared.loadJSONData { [unowned self] (success) in
             guard success != nil else { return }
             self.updateUI()
         }
