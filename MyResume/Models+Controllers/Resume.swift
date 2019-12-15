@@ -36,26 +36,6 @@ struct Resume: Decodable {
     let otherCertifications: [[String: String]]
     let hobbies: [String]
     
-    //object initializer
-//    init(contactInformation: [String: String], profile: [String: String], websites: [String: String], personalProjects: [[String: String]], courseworkProjects: [[String: String]], professionalExperience: [[String: String]], developerExperience: [String: String], experienceOverview: [String], generalSkills: [String], education: [[String: String]], industryCertifications: [[String: String]], projectBasedCourses: [[String: String]], foundationalCourses: [[String: String]], otherCertifications: [String: String], hobbies: [String]) {
-//
-//        self.contactInformation = contactInformation
-//        self.profile = profile
-//        self.websites = websites
-//        self.personalProjects = personalProjects
-//        self.courseworkProjects = courseworkProjects
-//        self.professionalExperience = professionalExperience
-//        self.developerExperience = developerExperience
-//        self.experienceOverview = experienceOverview
-//        self.generalSkills = generalSkills
-//        self.education = education
-//        self.industryCertifications = industryCertifications
-//        self.projectBasedCourses = projectBasedCourses
-//        self.foundationalCourses = foundationalCourses
-//        self.otherCertifications = otherCertifications
-//        self.hobbies = hobbies
-//    }
-    
     //Map Resume propertiy names, to json data field names
     enum CodingKeys: String, CodingKey {
 

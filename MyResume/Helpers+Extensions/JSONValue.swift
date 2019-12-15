@@ -8,7 +8,7 @@
 
 import Foundation
 
-//Helper allows to parse JSON values that may be of differing data types
+//Helper allows to parse JSON values that may be of a differing data type
 public enum JSONValue: Decodable {
     case string(String)
     case int(Int)
