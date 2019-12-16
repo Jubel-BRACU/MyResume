@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A11378A23A702C90097B8AA /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11378923A702C90097B8AA /* UIImageView+Extensions.swift */; };
+		2A11378C23A704390097B8AA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11378B23A704390097B8AA /* UIView+Extensions.swift */; };
 		2A6740B723A390A400685D1E /* profile_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6740B623A390A400685D1E /* profile_image.png */; };
 		2AA4527023A5AA2C00A30E9F /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4526F23A5AA2C00A30E9F /* ViewController+Extensions.swift */; };
 		2AA4527423A5B28100A30E9F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4527323A5B28100A30E9F /* Enums.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A11378923A702C90097B8AA /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		2A11378B23A704390097B8AA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		2A6740B623A390A400685D1E /* profile_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_image.png; sourceTree = "<group>"; };
 		2AA4526F23A5AA2C00A30E9F /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
 		2AA4527323A5B28100A30E9F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				2AAF876423A267A900043F01 /* JSONValue.swift */,
 				2AC3BCCE23A4A87A0097073C /* NSMutableAttributedString+Extensions.swift */,
 				2AA4526F23A5AA2C00A30E9F /* ViewController+Extensions.swift */,
+				2A11378923A702C90097B8AA /* UIImageView+Extensions.swift */,
+				2A11378B23A704390097B8AA /* UIView+Extensions.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -193,9 +199,11 @@
 			files = (
 				2AA6F5A1239DF1F200DF0FE4 /* ViewController.swift in Sources */,
 				2AAF876523A267A900043F01 /* JSONValue.swift in Sources */,
+				2A11378A23A702C90097B8AA /* UIImageView+Extensions.swift in Sources */,
 				2AA4527423A5B28100A30E9F /* Enums.swift in Sources */,
 				2AA6F59D239DF1F200DF0FE4 /* AppDelegate.swift in Sources */,
 				2AA6F59F239DF1F200DF0FE4 /* SceneDelegate.swift in Sources */,
+				2A11378C23A704390097B8AA /* UIView+Extensions.swift in Sources */,
 				2AA4527023A5AA2C00A30E9F /* ViewController+Extensions.swift in Sources */,
 				2AAF875523A0B6F900043F01 /* Resume.swift in Sources */,
 				2AAF875723A1BC6000043F01 /* ResumeController.swift in Sources */,

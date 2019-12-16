@@ -92,19 +92,14 @@ extension ViewController: MFMailComposeViewControllerDelegate {
     }
     
     
-    func setImageViewProperties(view: UIImageView, frameHeight: CGFloat?, borderWidth: CGFloat?, borderColor: UIColor?) {
-        if let height = frameHeight {
-            view.layer.cornerRadius = view.frame.height / height
-            view.clipsToBounds = true
-        }
-            
-        if let borderWidth = borderWidth {
-            view.layer.borderWidth = borderWidth
-        }
-            
-        if let borderColor = borderColor {
-            view.layer.borderColor = borderColor.cgColor
-        }
-    }
+//    func setImageViewProperties(borderWidth: CGFloat?, borderColor: UIColor?) {
+//        if let borderWidth = borderWidth {
+//            imageView.layer.borderWidth = borderWidth
+//        }
+//            
+//        if let borderColor = borderColor {
+//            imageView.layer.borderColor = borderColor.cgColor
+//        }
+//    }
     
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class ViewController: UIViewController, ResumeDelegate {
     
     //MARK: - Custom Protocols
@@ -19,10 +20,16 @@ class ViewController: UIViewController, ResumeDelegate {
     }
     
     //MARK: - UI Outlets
-    
+    //IB Properties
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet var contactInformationLabels: [UILabel]!
     @IBOutlet var websiteLabels: [UILabel]!
+    
+    //IB Programmatic properties
+    @IBInspectable var borderWidth: CGFloat = 2
+    @IBInspectable var borderColor: UIColor = .gray
+    @IBInspectable var cornerRadius: CGFloat = 0
+    
     
     //Website Labels Gesture Recognizers
     @IBAction func linkedinLabelTapped(_ sender: Any) {
@@ -83,11 +90,12 @@ class ViewController: UIViewController, ResumeDelegate {
         resume?.setWebsiteLabels(resume: resume, labels: websiteLabels)
         
         //set profile image view properties
-        setImageViewProperties(view: profilePictureImageView, frameHeight: 2, borderWidth: 2, borderColor: .gray)
+        profilePictureImageView.setViewProperties(borderWidth: borderWidth, borderColor: borderColor)
+        
+        //set view shape
+        profilePictureImageView.makeViewCircle()
     }
     
-    
-    
 
-}
+
 
