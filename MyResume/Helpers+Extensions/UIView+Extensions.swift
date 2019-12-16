@@ -12,7 +12,7 @@ import UIKit
 extension UIView {
     
     //set view attributes
-    func setViewProperties(borderWidth: CGFloat?, borderColor: UIColor?) {
+    func setProperties(borderWidth: CGFloat?, borderColor: UIColor?, cornerRadius: CGFloat?) {
         if let borderWidth = borderWidth {
             self.layer.borderWidth = borderWidth
         }
@@ -20,10 +20,15 @@ extension UIView {
         if let borderColor = borderColor {
             self.layer.borderColor = borderColor.cgColor
         }
+        
+        if let cornerRadius = cornerRadius {
+            self.layer.cornerRadius = cornerRadius
+        }
+        
     }
     
     //set view shape to circle
-    func makeViewCircle() {
+    func makeCircle() {
         self.layer.cornerRadius = self.frame.height / 2
         self.clipsToBounds = true
     }

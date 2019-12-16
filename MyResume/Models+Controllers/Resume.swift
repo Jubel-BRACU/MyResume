@@ -81,24 +81,25 @@ struct Resume: Decodable {
     func setWebsiteLabels(resume: Resume?, labels: [UILabel]) {
         guard resume != nil else { return }
         
+        let urlType = "https://"
         let dict = resume?.websites.first
+       
         for label in labels {
-            let attributedString = NSMutableAttributedString()
-            
+
             switch label.tag {
             case WebsiteLabels.linkedin.rawValue:
                 let string = dict!["linkedin"]!
-                let text = attributedString.createAtrributedString(string: string)
+                let text = string.createAtrributedString(type: urlType)
                 label.attributedText = text
-                
+                    
             case WebsiteLabels.github.rawValue:
                 let string = dict!["github"]!
-                let text = attributedString.createAtrributedString(string: string)
+                let text = string.createAtrributedString(type: urlType)
                 label.attributedText = text
                 
             case WebsiteLabels.businessWebsite.rawValue:
                 let string = dict!["businesss website"]!
-                let text = attributedString.createAtrributedString(string: string)
+                let text = string.createAtrributedString(type: urlType)
                 label.attributedText = text
                 
             default:

@@ -30,7 +30,6 @@ class ViewController: UIViewController, ResumeDelegate {
     @IBInspectable var borderColor: UIColor = .gray
     @IBInspectable var cornerRadius: CGFloat = 0
     
-    
     //Website Labels Gesture Recognizers
     @IBAction func linkedinLabelTapped(_ sender: Any) {
         let url = "https://www.linkedin.com/in/simonitalia/"
@@ -90,12 +89,10 @@ class ViewController: UIViewController, ResumeDelegate {
         resume?.setWebsiteLabels(resume: resume, labels: websiteLabels)
         
         //set profile image view properties
-        profilePictureImageView.setViewProperties(borderWidth: borderWidth, borderColor: borderColor)
+        profilePictureImageView.setProperties(borderWidth: borderWidth, borderColor: borderColor, cornerRadius: nil)
         
         //set view shape
-        profilePictureImageView.makeViewCircle()
+        profilePictureImageView.makeCircle()
     }
     
-
-
-
+}
