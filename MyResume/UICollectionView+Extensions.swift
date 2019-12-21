@@ -12,7 +12,7 @@ import UIKit
 extension UICollectionView {
 
 //Define / configure and create UICollectionView compositional layout
-    func setUpUICollectionViewCompositionLayout() -> UICollectionViewCompositionalLayout {
+    func setUpCompositionLayout() -> UICollectionViewCompositionalLayout {
 
         //Define Layout
         let layout = UICollectionViewCompositionalLayout {
@@ -26,8 +26,8 @@ extension UICollectionView {
             
             //Define Group
             let group = NSCollectionLayoutGroup.horizontal(
-                layoutSize: NSCollectionLayoutSize(widthDimension: .estimated(250),
-                heightDimension: .absolute(170)),
+                layoutSize: NSCollectionLayoutSize(widthDimension: .absolute(300), //was .estimated(250)
+                heightDimension: .absolute(150)), //was 170
                 subitem: item,
                 count: 1)
             

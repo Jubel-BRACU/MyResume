@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfessionlExperienceCell" id="gTV-IL-0wX" customClass="ProfessionalExperienceCell" customModule="My_Resume" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExperienceCell" id="gTV-IL-0wX" customClass="ExperienceCell" customModule="My_Resume" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -49,7 +49,7 @@
                                     <constraint firstAttribute="width" constant="20" id="lyz-7H-cP0"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Ttile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laH-vl-d1W">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laH-vl-d1W">
                                 <rect key="frame" x="30" y="0.0" width="270" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -87,6 +87,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="imageView" destination="x5o-4d-jgm" id="0Yw-aG-pPg"/>
                 <outlet property="textView" destination="PYS-5y-Clt" id="gxL-wK-Enp"/>
                 <outletCollection property="labels" destination="KLJ-y8-x8Y" collectionClass="NSMutableArray" id="mSX-bI-spH"/>
                 <outletCollection property="labels" destination="HL1-kB-909" collectionClass="NSMutableArray" id="yc9-oC-ygs"/>

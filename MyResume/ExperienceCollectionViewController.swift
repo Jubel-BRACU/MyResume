@@ -9,8 +9,7 @@
 import UIKit
 
 private let sectionHeaderReuseIdentifier = "SectionHeaderResuableView"
-private let professionalExperienceReuseIdentifier = "ProfessionlExperienceCell" 
-private let developerExperienceReuseIdentifier = "DeveloperExperienceCell"
+private let experienceReuseIdentifier = "ExperienceCell"
 
 class ExperienceCollectionViewController: UICollectionViewController {
     
@@ -24,19 +23,15 @@ class ExperienceCollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Register cell classes and nib files
+        //Register cell classes and nib files
         //Section Header Resuable View Class
         experienceCollectionView.register(UINib(nibName: "SectionHeaderReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier)
 
         //Cell Class
-        //Section 0 cells (Professional Experience)
-        experienceCollectionView.register(UINib(nibName: "ProfessionalExperienceCell", bundle: nil), forCellWithReuseIdentifier: professionalExperienceReuseIdentifier)
-        
-        //Section 1 cells (Professional Experience)
-        experienceCollectionView.register(UINib(nibName: "DeveloperExperienceCell", bundle: nil), forCellWithReuseIdentifier: developerExperienceReuseIdentifier)
+        experienceCollectionView.register(UINib(nibName: "ExperienceCell", bundle: nil), forCellWithReuseIdentifier: experienceReuseIdentifier)
         
         //Setup compositional layout
-        experienceCollectionView.collectionViewLayout = self.experienceCollectionView.setUpUICollectionViewCompositionLayout()
+        experienceCollectionView.collectionViewLayout = self.experienceCollectionView.setUpCompositionLayout()
         
         //set layout
 //        let layout = UICollectionViewFlowLayout()
@@ -112,33 +107,79 @@ class ExperienceCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard ViewController.resume != nil else {fatalError()}
         
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: experienceReuseIdentifier, for: indexPath) as! ExperienceCell
+        
         //set cell data object
         switch ExperienceSection(rawValue: indexPath.section) {
-        
+            
         //professional Experience Cell
         case .professionalExperience:
-            let experience = ViewController.resume!.professionalExperience[indexPath.item]
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: professionalExperienceReuseIdentifier, for: indexPath) as! ProfessionalExperienceCell
-                cell.setExperienceLabelsText(using: experience)
-                cell.setDescrptionText(using: experience)
             
+            let experiences = ViewController.resume!.professionalExperience[indexPath.item]
+            for experience in experiences {
+                switch experience.key {
+                
+                case "company":
+                    cell.setLabelsText(using: experiences[experience.key]!, for: 0)
+
+                 case "location":
+                    cell.setLabelsText(using: experiences[experience.key]!, for: 1)
+                 
+                 case "period":
+                    cell.setLabelsText(using: experiences[experience.key]!, for: 2)
+                    
+                 case "job title":
+                    cell.setLabelsText(using: experiences[experience.key]!, for: 3)
+                    
+                case "description":
+                    cell.setDescriptionText(using: experiences[experience.key]!)
+                    
+                 default:
+                    break
+                }
+            }
+            
+            let image = UIImage(systemName: "briefcase.fill")
+            cell.setImage(with: image!)
             print("Cell for section \(indexPath.section) set")
             return cell
             
         //developer experience cell
         case .developerExperience:
-            let experience = ViewController.resume!.developerExperience[indexPath.item]
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: developerExperienceReuseIdentifier, for: indexPath) as! DeveloperExperienceCell
-                cell.setExperienceLabelsText(using: experience)
-                cell.setDescrptionText(using: experience)
             
+            let experiences = ViewController.resume!.developerExperience[indexPath.item]
+            for experience in experiences {
+                switch experience.key {
+                
+                case "language":
+                    cell.setLabelsText(using: experiences[experience.key]!, for: 0)
+
+                 case "location":
+                    cell.setLabelsText(using: experiences[experience.key]!, for: 1)
+                 
+                 case "period":
+                    cell.setLabelsText(using: experiences[experience.key]!, for: 2)
+                    
+                 case "projects":
+                    cell.setLabelsText(using: experiences[experience.key]!, for: 3)
+                    
+                case "description":
+                    cell.setDescriptionText(using: experiences[experience.key]!)
+                    
+                 default:
+                    break
+                }
+            }
+            
+            let image = UIImage(systemName: "globe")
+            cell.setImage(with: image!)
             print("Cell for section \(indexPath.section) set")
             return cell
 
         default:
             fatalError("Error! Failed to set cell objects")
             
-        } //end of switch
+        } //end of outer switch
     }
 
     // MARK: UICollectionViewDelegate
