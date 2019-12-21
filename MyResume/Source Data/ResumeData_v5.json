@@ -9,7 +9,7 @@
 
     "profile": [
       {
-        "profession":"iOS Developer, Web Systems Product Director, Senior Project Manager & Business Analyst",
+        "profession":"iOS / Swift Developer, Web Systems Product Director, Snr. Project Manager & Bus. Analyst",
         "general": "A very experienced, exceptionally skilled and accomplished software development professional, successfully holding positions as Product Manager / Director, Program Manager, Senior Project Manager and Business Analyst over 15+ years, specializing in sophisticated web and mobile platforms across the Beauty, Finance, and Online Advertising industries. I’m recently also a self taught iOS (Swift) Engineer with a keen interest in ML (Machine Learning), AI (Artificial Intelligence) and AR (Augmented Reality), with an extensive range of self written apps and algorithms completed.",
         "value proposition": "After many fruitful and wonderful years leading, managing and mentoring teams across a myriad of high profile, large web & mobile app development projects, from concept through to production, I have made the very challenging transition to iOS Engineer and will therefore be a strong asset to any organization looking to add an exceptional, seasoned software development professional to their iOS team. Whether it be for delivery of new features to a preexisting feature set, or delivery of a new, MVP application."
       }
@@ -221,8 +221,8 @@
       {
         "language": "Swift programming language",
         "location": "Remote (Melbourne, New York City, Europe, Asia)",
-        "period": "Apr 2018 to current",
-        "service": "1.5+ years",
+        "period": "Oct 2019 to current",
+        "duration": "0.25 years",
         "description": "60+ iOS apps using Apple’s broad and powerful range of frameworks such as UIKit, SpriteKit, SceneKit, CoreML / CreateML, CoreMotion, WatchKit, CoreGraphics, NotificationCenter, Delegate Protocol Pattern, Notifications and Observers, MVC, Extensions, UITableViewController, UICollectionViewController, Encodable/Decodable Protocols, JSON Encoder/Decoder, CoreData",
         "projects": "https://github.com/simonitalia"
       }
@@ -230,8 +230,8 @@
 
     "experience overview": [
       {
-        "job type": "iOS Developer",
-        "years experience": "1+ years"
+        "job type": "iOS Swift Developer",
+        "years experience": "0.25 year"
       },
         
       {
@@ -240,13 +240,18 @@
       },
 
       {
-        "job type": "Web Systems Senior Project Manager, Senior Business Analyst",
+        "job type": "Web Systems Senior Project Manager",
+        "years experience": "15+ years"
+      },
+      
+      {
+        "job type": "Web Systems Senior Business Analyst",
         "years experience": "15+ years"
       },
 
       {
         "job type": "Agile Scrum Master",
-        "years experience": "10+ years"
+        "years experience": "15+ years"
       }
     ],
 

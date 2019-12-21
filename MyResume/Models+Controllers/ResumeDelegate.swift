@@ -10,5 +10,10 @@ import Foundation
 
 //protocol method to pass json data to ViewController
 protocol ResumeDelegate {
-    func jsonDataLoaded(_ data: Resume, _ filename: String)
+    func jsonDataLoaded(_ data: Resume?, _ filename: String?)
 }
+
+
+
+
+

@@ -16,7 +16,21 @@ enum ContactLabels: Int {
     case name = 0, phone, email
 }
 
-enum ProfileLabels: Int {
-    case profession = 0, general, valueProposition
+enum ProfileTextViews: Int {
+    case general = 0, valueProposition
+}
+
+enum ProfessionalExperience: Int {
+    case company = 0, location, period, jobTitle, description, accomplishments
+}
+
+enum DeveloperExperience: Int {
+    case language = 0, location, period, projects, description
+}
+
+enum ExperienceSection: Int {
+    case professionalExperience = 0, developerExperience
     
 }
+
+

@@ -12,25 +12,27 @@ import UIKit
 class ViewController: UIViewController, ResumeDelegate {
     
     //MARK: - Custom Protocols
+    
     //protocol method to receive json data once loaded
-    func jsonDataLoaded(_ data: Resume, _ filename: String) {
-        resume = data
+    func jsonDataLoaded(_ data: Resume?, _ filename: String?) {
+    //      print("Success! Delegate / Protocol pattern is working.\n")
+        ViewController.resume = data
         jsonFilename = filename
-        //      print("Success! Delegate / Protocol pattern is working.\n")
     }
     
     //MARK: - UI Outlets
     //IB Properties
     @IBOutlet weak var profilePictureImageView: UIImageView!
+    @IBOutlet weak var professionLabel: UILabel!
     @IBOutlet var contactInformationLabels: [UILabel]!
     @IBOutlet var websiteLabels: [UILabel]!
-    
+
     //IB Programmatic properties
     @IBInspectable var borderWidth: CGFloat = 2
-    @IBInspectable var borderColor: UIColor = .gray
+    @IBInspectable var borderColor: UIColor = .darkGray
     @IBInspectable var cornerRadius: CGFloat = 0
     
-    //Website Labels Gesture Recognizers
+    //website labels gesture recognizers
     @IBAction func linkedinLabelTapped(_ sender: Any) {
         let url = "https://www.linkedin.com/in/simonitalia/"
         self.loadWebsite(url: url)
@@ -51,18 +53,15 @@ class ViewController: UIViewController, ResumeDelegate {
         callNumber(number: number)
     }
 
-
     //MARK: - Custom Properties
-    //properties
-    var resume: Resume?
+    static var resume: Resume? = nil
     var jsonFilename: String?
     
-    //MARK: - Managed UIView methods
-    
+    //MARK: - Built-in UIView methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+    
         //set VC to delegate to respond when json data is loaded
         ResumeController.shared.delegate = self
         
@@ -79,20 +78,23 @@ class ViewController: UIViewController, ResumeDelegate {
         }
     }
     
-    //View UI handler
+    //view UI handler
     func updateUI() {
-        
-        //set contact information labels
-        resume?.setContactInfoLabels(resume: resume, labels: contactInformationLabels)
-        
-        //set website links labels
-        resume?.setWebsiteLabels(resume: resume, labels: websiteLabels)
         
         //set profile image view properties
         profilePictureImageView.setProperties(borderWidth: borderWidth, borderColor: borderColor, cornerRadius: nil)
         
         //set view shape
         profilePictureImageView.makeCircle()
+        
+        //set contact information labels
+        setContactInfoLabels(resume: ViewController.resume, labels: contactInformationLabels)
+        
+        //set website links labels
+        setWebsiteLabels(resume: ViewController.resume, labels: websiteLabels)
+        
+        //set profile info (profession, about section)
+        setProfileInfo(resume: ViewController.resume, label: professionLabel, textViews: nil)
     }
-    
+
 }

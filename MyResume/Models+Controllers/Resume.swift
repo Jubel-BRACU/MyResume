@@ -56,57 +56,23 @@ struct Resume: Decodable {
         case hobbies
     }
     
-    func setContactInfoLabels(resume: Resume?, labels: [UILabel]) {
-        guard resume != nil else { return }
+    
+    //MARK: - Methods to pull out data from dictionaries
+    func getDictKeys(dictionary: [String:String]) -> [String] {
         
-        let dict = resume?.contactInformation.first
-        for label in labels {
-            
-            switch label.tag {
-            case ContactLabels.name.rawValue:
-                label.text = dict?["name"]
-                
-            case ContactLabels.phone.rawValue:
-                label.text = dict?["phone"]
-                
-            case ContactLabels.email.rawValue:
-                label.text = dict?["email"]
-                
-            default:
-                break
-            }
-        }
-    }
-
-    func setWebsiteLabels(resume: Resume?, labels: [UILabel]) {
-        guard resume != nil else { return }
+        //get keys and insert into new array in same order
+        var keys = [String]()
         
-        let urlType = "https://"
-        let dict = resume?.websites.first
-       
-        for label in labels {
-
-            switch label.tag {
-            case WebsiteLabels.linkedin.rawValue:
-                let string = dict!["linkedin"]!
-                let text = string.createAtrributedString(type: urlType)
-                label.attributedText = text
-                    
-            case WebsiteLabels.github.rawValue:
-                let string = dict!["github"]!
-                let text = string.createAtrributedString(type: urlType)
-                label.attributedText = text
-                
-            case WebsiteLabels.businessWebsite.rawValue:
-                let string = dict!["businesss website"]!
-                let text = string.createAtrributedString(type: urlType)
-                label.attributedText = text
-                
-            default:
-                break
-            }
+        for key in dictionary.keys {
+            keys.insert(key, at: keys.startIndex)
         }
+        
+        return keys
     }
+    
+    
+    
+    
 }
 
 

@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0F75F923ACA9D50057AADD /* DeveloperExperienceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F75F723ACA9D50057AADD /* DeveloperExperienceCell.swift */; };
+		2A0F75FA23ACA9D50057AADD /* DeveloperExperienceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0F75F823ACA9D50057AADD /* DeveloperExperienceCell.xib */; };
+		2A0F75FC23AD08460057AADD /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F75FB23AD08460057AADD /* UICollectionView+Extensions.swift */; };
 		2A11378C23A704390097B8AA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11378B23A704390097B8AA /* UIView+Extensions.swift */; };
+		2A11378F23A7AC300097B8AA /* ProfessionalExperienceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11378D23A7AC300097B8AA /* ProfessionalExperienceCell.swift */; };
+		2A11379023A7AC300097B8AA /* ProfessionalExperienceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A11378E23A7AC300097B8AA /* ProfessionalExperienceCell.xib */; };
+		2A11379423A7AC990097B8AA /* SectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11379223A7AC990097B8AA /* SectionHeaderReusableView.swift */; };
+		2A11379523A7AC990097B8AA /* SectionHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A11379323A7AC990097B8AA /* SectionHeaderReusableView.xib */; };
+		2A11379B23A7ADF70097B8AA /* ExperienceCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11379923A7ADF70097B8AA /* ExperienceCollectionViewController.swift */; };
 		2A6740B723A390A400685D1E /* profile_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6740B623A390A400685D1E /* profile_image.png */; };
 		2AA4527023A5AA2C00A30E9F /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4526F23A5AA2C00A30E9F /* ViewController+Extensions.swift */; };
 		2AA4527423A5B28100A30E9F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4527323A5B28100A30E9F /* Enums.swift */; };
@@ -26,7 +34,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A0F75F723ACA9D50057AADD /* DeveloperExperienceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperExperienceCell.swift; sourceTree = "<group>"; };
+		2A0F75F823ACA9D50057AADD /* DeveloperExperienceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeveloperExperienceCell.xib; sourceTree = "<group>"; };
+		2A0F75FB23AD08460057AADD /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Extensions.swift"; path = "MyResume/UICollectionView+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		2A11378B23A704390097B8AA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		2A11378D23A7AC300097B8AA /* ProfessionalExperienceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalExperienceCell.swift; sourceTree = "<group>"; };
+		2A11378E23A7AC300097B8AA /* ProfessionalExperienceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfessionalExperienceCell.xib; sourceTree = "<group>"; };
+		2A11379223A7AC990097B8AA /* SectionHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderReusableView.swift; sourceTree = "<group>"; };
+		2A11379323A7AC990097B8AA /* SectionHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderReusableView.xib; sourceTree = "<group>"; };
+		2A11379923A7ADF70097B8AA /* ExperienceCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCollectionViewController.swift; sourceTree = "<group>"; };
 		2A6740B623A390A400685D1E /* profile_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_image.png; sourceTree = "<group>"; };
 		2AA4526F23A5AA2C00A30E9F /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
 		2AA4527323A5B28100A30E9F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -57,11 +73,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A11379123A7AC380097B8AA /* CustomUICollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				2A11379723A7ACBB0097B8AA /* Header */,
+				2A11379823A7ACC60097B8AA /* ExperienceCells */,
+			);
+			path = CustomUICollectionViewCells;
+			sourceTree = "<group>";
+		};
+		2A11379723A7ACBB0097B8AA /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				2A11379223A7AC990097B8AA /* SectionHeaderReusableView.swift */,
+				2A11379323A7AC990097B8AA /* SectionHeaderReusableView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		2A11379823A7ACC60097B8AA /* ExperienceCells */ = {
+			isa = PBXGroup;
+			children = (
+				2A11378E23A7AC300097B8AA /* ProfessionalExperienceCell.xib */,
+				2A11378D23A7AC300097B8AA /* ProfessionalExperienceCell.swift */,
+				2A0F75F823ACA9D50057AADD /* DeveloperExperienceCell.xib */,
+				2A0F75F723ACA9D50057AADD /* DeveloperExperienceCell.swift */,
+			);
+			path = ExperienceCells;
+			sourceTree = "<group>";
+		};
 		2AA4527523A5B2CB00A30E9F /* Models+Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2AAF875423A0B6F900043F01 /* Resume.swift */,
 				2AA4527323A5B28100A30E9F /* Enums.swift */,
+				2AAF875423A0B6F900043F01 /* Resume.swift */,
 				2AAF875823A1D57E00043F01 /* ResumeDelegate.swift */,
 				2AAF875623A1BC6000043F01 /* ResumeController.swift */,
 			);
@@ -87,14 +132,16 @@
 		2AA6F59B239DF1F200DF0FE4 /* MyResume */ = {
 			isa = PBXGroup;
 			children = (
-				2AAF876623A268D600043F01 /* Helpers+Extensions */,
-				2AA4527523A5B2CB00A30E9F /* Models+Controllers */,
 				2AA6F59C239DF1F200DF0FE4 /* AppDelegate.swift */,
 				2AA6F59E239DF1F200DF0FE4 /* SceneDelegate.swift */,
+				2AAF876623A268D600043F01 /* Helpers+Extensions */,
+				2AA4527523A5B2CB00A30E9F /* Models+Controllers */,
 				2AA6F5A0239DF1F200DF0FE4 /* ViewController.swift */,
+				2A11379923A7ADF70097B8AA /* ExperienceCollectionViewController.swift */,
+				2A11379123A7AC380097B8AA /* CustomUICollectionViewCells */,
+				2AAF876C23A3253400043F01 /* Source Data */,
 				2AA6F5A2239DF1F200DF0FE4 /* Main.storyboard */,
 				2AA6F5A7239DF1F400DF0FE4 /* LaunchScreen.storyboard */,
-				2AAF876C23A3253400043F01 /* Source Data */,
 				2AA6F5A5239DF1F400DF0FE4 /* Assets.xcassets */,
 				2A6740B623A390A400685D1E /* profile_image.png */,
 				2AA6F5AA239DF1F400DF0FE4 /* Info.plist */,
@@ -109,6 +156,7 @@
 				2AC3BCCE23A4A87A0097073C /* String+Extensions.swift */,
 				2AA4526F23A5AA2C00A30E9F /* ViewController+Extensions.swift */,
 				2A11378B23A704390097B8AA /* UIView+Extensions.swift */,
+				2A0F75FB23AD08460057AADD /* UICollectionView+Extensions.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -183,7 +231,10 @@
 				2AA6F5A6239DF1F400DF0FE4 /* Assets.xcassets in Resources */,
 				2AA6F5A4239DF1F200DF0FE4 /* Main.storyboard in Resources */,
 				2A6740B723A390A400685D1E /* profile_image.png in Resources */,
+				2A11379023A7AC300097B8AA /* ProfessionalExperienceCell.xib in Resources */,
+				2A11379523A7AC990097B8AA /* SectionHeaderReusableView.xib in Resources */,
 				2AAF876A23A315B900043F01 /* ResumeData_v5.json in Resources */,
+				2A0F75FA23ACA9D50057AADD /* DeveloperExperienceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,10 +245,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A11378F23A7AC300097B8AA /* ProfessionalExperienceCell.swift in Sources */,
 				2AA6F5A1239DF1F200DF0FE4 /* ViewController.swift in Sources */,
 				2AAF876523A267A900043F01 /* JSONValue.swift in Sources */,
 				2AA4527423A5B28100A30E9F /* Enums.swift in Sources */,
+				2A0F75FC23AD08460057AADD /* UICollectionView+Extensions.swift in Sources */,
+				2A11379B23A7ADF70097B8AA /* ExperienceCollectionViewController.swift in Sources */,
+				2A0F75F923ACA9D50057AADD /* DeveloperExperienceCell.swift in Sources */,
 				2AA6F59D239DF1F200DF0FE4 /* AppDelegate.swift in Sources */,
+				2A11379423A7AC990097B8AA /* SectionHeaderReusableView.swift in Sources */,
 				2AA6F59F239DF1F200DF0FE4 /* SceneDelegate.swift in Sources */,
 				2A11378C23A704390097B8AA /* UIView+Extensions.swift in Sources */,
 				2AA4527023A5AA2C00A30E9F /* ViewController+Extensions.swift in Sources */,

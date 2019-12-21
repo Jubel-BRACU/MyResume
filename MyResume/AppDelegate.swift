@@ -10,9 +10,26 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //instantiate Custom UICollectionViewController
+        //Set app's root VC
+//        if let rootVC = window?.rootViewController as? ViewController {
+//            
+//            //Reference root VCs SB ID, set manually
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//
+//            //intantiate the ResumeCollectionViewController
+//            let vc = storyboard.instantiateViewController(withIdentifier: "ExperienceCollectionViewController") as! ExperienceCollectionViewController
+//
+//            rootVC.addChild(vc)
+//
+//        }
+        
         return true
     }
 
