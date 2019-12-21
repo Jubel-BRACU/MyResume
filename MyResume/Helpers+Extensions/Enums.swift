@@ -33,4 +33,8 @@ enum ExperienceSection: Int {
     
 }
 
+enum SegmentControl: Int {
+    case experience = 0, iosProjects, education, swiftTraining
+}
+
 

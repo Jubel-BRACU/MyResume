@@ -26,7 +26,11 @@ class ViewController: UIViewController, ResumeDelegate {
     @IBOutlet weak var professionLabel: UILabel!
     @IBOutlet var contactInformationLabels: [UILabel]!
     @IBOutlet var websiteLabels: [UILabel]!
-
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBAction func segmentedControlTapped(_ sender: Any) {
+        
+    }
+    
     //IB Programmatic properties
     @IBInspectable var borderWidth: CGFloat = 2
     @IBInspectable var borderColor: UIColor = .darkGray
@@ -67,9 +71,19 @@ class ViewController: UIViewController, ResumeDelegate {
         
         //fire load of json data file
         fetchData()
+        
+        //Initial UI setup on view load
+        setupInitialUI()
+ 
     }
     
     //MARK: - Custom methods
+    func setupInitialUI() {
+        
+        //Set segmented control to default
+        segmentedControl.selectedSegmentIndex = SegmentControl.experience.rawValue
+    }
+    
     //fetch json data
     func fetchData() {
         ResumeController.shared.loadJSONData { [unowned self] (success) in
@@ -96,5 +110,7 @@ class ViewController: UIViewController, ResumeDelegate {
         //set profile info (profession, about section)
         setProfileInfo(resume: ViewController.resume, label: professionLabel, textViews: nil)
     }
+    
+    
 
 }

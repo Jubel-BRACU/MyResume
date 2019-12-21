@@ -171,6 +171,9 @@
                                             <segment title="Education"/>
                                             <segment title="Swift Training"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="segmentedControlTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="cpW-Vf-I0Q"/>
+                                        </connections>
                                     </segmentedControl>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLT-MH-6Qs">
                                         <rect key="frame" x="0.0" y="60" width="394" height="444"/>
@@ -205,6 +208,7 @@
                     <connections>
                         <outlet property="professionLabel" destination="2TH-bv-F1B" id="fMp-cZ-xMi"/>
                         <outlet property="profilePictureImageView" destination="27C-h4-bEQ" id="pvE-eb-rvb"/>
+                        <outlet property="segmentedControl" destination="eMO-iW-XBu" id="ocm-05-B6C"/>
                         <outletCollection property="contactInformationLabels" destination="qLh-g2-3Is" collectionClass="NSMutableArray" id="cYB-52-adV"/>
                         <outletCollection property="contactInformationLabels" destination="eej-m8-Hbt" collectionClass="NSMutableArray" id="Kdt-DF-lLr"/>
                         <outletCollection property="contactInformationLabels" destination="U3k-0G-3oE" collectionClass="NSMutableArray" id="01Y-px-emA"/>
@@ -260,7 +264,7 @@
             <objects>
                 <viewController storyboardIdentifier="ExperienceCollectionViewController" id="EBH-R8-7WF" customClass="ExperienceCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="bQR-d2-8hU">
-                        <rect key="frame" x="0.0" y="0.0" width="394" height="449"/>
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="444"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rfR-dE-eo5">
