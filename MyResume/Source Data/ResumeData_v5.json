@@ -145,11 +145,11 @@
         },
 
         {
-          "job title": "EMEA Market E-Commerce Platform / Web Applications Product Director",
+          "job title": "European E-Comm. Platform Product Director",
           "description": "A European Markets focused position, with roles covering Product Management, Project Management and BA leadership and oversight of large scale IT projects for Estee Lauder’s in house E-Commerce platform.",
-          "company": "Estee Lauder Companies Online (An Estee Lauder Company)",
+          "company": "Estee Lauder Companies (Online)",
           "company description": "Estee Lauder Companies is a global leader in the Beauty Industry, with online / E-Commerce sales exceeding $1BN annually.",
-          "company website": "https://www.elcompanies.com/",
+          "company website": "https://www.elcompanies.com",
           "location": "London, UK",
           "period": "Apr 2017 to Apr 2018",
           "duration": "1 year",
@@ -157,11 +157,11 @@
         },
 
         {
-          "job title": "Global E-Commerce Platform / Web Applications Product Director",
-          "description": "A US and Global markets focused position with roles covering Product Management, Project Management and BA leadership on large scale projects for Estee Lauder’s E-Comm platform. Mar 2011 to Apr 2017",
-          "company": "Estee Lauder Companies Online (An Estee Lauder Company)",
+          "job title": "Global E-Comm. Platform Product Director",
+          "description": "A US and Global markets focused position with roles covering Product Management, Project Management and BA leadership on large scale projects for Estee Lauder’s E-Comm platform.",
+          "company": "Estee Lauder Companies (Online)",
           "company description": "Estee Lauder Companies is a global leader in the Beauty Industry, with online / E-Commerce sales exceeding $1BN annually.",
-          "company website": "",
+          "company website": "https://www.elcompanies.com",
           "location": "New York City, USA",
           "period": "Mar 2011 to Apr 2017",
           "duration": "6 years",
@@ -169,9 +169,9 @@
         },
 
         {
-          "job title": "Equities & Funds Research Web Platform Project Manager / Scrum Master",
+          "job title": "Research Web Platform PM / Scrum Master",
           "description": "Project Management for the delivery of the new, v2.0 Equities Research platforms MSA & FMR, and subsequent features",
-          "company": "Standard & Poor's Global (Market Intelligence), A McGraw-Hill Company",
+          "company": "S&P Global (Market Intelligence)",
           "company description": "Dedicated to providing clients with timely, objective, and actionable investment intelligence, Standard & Poor’s Equity Research Services delivers a broad range of strategies and recommendations which enables clients to navigate and seek success in even the most complex global markets",
           "company website": "https://www.spglobal.com/marketintelligence",
           "location": "New York City, USA",
@@ -183,7 +183,7 @@
         {
           "job title": "Program Manager / Senior Project Manager",
           "description": "A senior role requiring strong Project leadership of cross-functional teams for the timely delivery of web software development projects. Project responsibilities included authoring & maintenance of project scope, schedules/milestones, risks & issues identification and mitigation strategies. Agile with SCRUM exercised on all projects. Regular status meetings with Stakeholders and product reviews with Product Owners to continually monitor and update product backlog. In this position I also managed and mentored direct reports from the PM, BA & QA / Test teams.",
-          "company": "Fairfax Digital, (A Fairfax Media Business)",
+          "company": "Fairfax Media (Online / Digital)",
           "company description": "Fairfax Digital is Australia's leading provider of online news and classifieds. Comprising around 30 interactive sites which reach over eight million visitors each month.",
           "company website": "https://www.fairfaxmedia.com.au",
           "location": "Melbourne, Australia",
@@ -195,7 +195,7 @@
         {
           "job title": "Senior Business Analyst",
           "description": "A senior role requiring strong Project & BA leadership of cross-functional teams for the timely delivery of web software development projects. Project responsibilities included authoring & maintenance of project scope, schedules/milestones, requirements, user interface and business rules, risks & issues identification and mitigation strategies. Agile with SCRUM exercised on all projects. In this position I also managed and mentored direct reports from the BA & QA / Test teams.",
-          "company": "Fairfax Digital, (A Fairfax Media Business)",
+          "company": "Fairfax Media (Online / Digital)",
           "company description": "Fairfax Digital is Australia's leading provider of online news and classifieds. Comprising around 30 interactive sites which reach over eight million visitors each month",
           "company website": "https://www.fairfaxmedia.com.au",
           "location": "Melbourne, Australia",
@@ -205,7 +205,7 @@
         },
 
         {
-          "job title": "E-Commerce Solutions & Operations Manager",
+          "job title": "E-Commerce Solutions Manager",
           "description": "Management and execution of web-based software projects for the Business Travel industry. This position required strong project team leadership and stakeholder interaction skills to identify client requirements and translate discovered requirements into specifications for the Company's technology vendors. In this position I managed and mentored 6 reports, and presented our Technology solutions to potential clients.",
           "company": "Hogg Robinson Group",
           "company description": "HRG is a major, global provider of Business Travel, offering clients technological solutions for managing employees travel needs.",
@@ -220,7 +220,7 @@
     "developer experience": [
       {
         "language": "Swift programming language",
-        "location": "Remote (Melbourne, New York City, Europe, Asia)",
+        "location": "Remote",
         "period": "Oct 2019 to current",
         "duration": "0.25 years",
         "description": "60+ iOS apps using Apple’s broad and powerful range of frameworks such as UIKit, SpriteKit, SceneKit, CoreML / CreateML, CoreMotion, WatchKit, CoreGraphics, NotificationCenter, Delegate Protocol Pattern, Notifications and Observers, MVC, Extensions, UITableViewController, UICollectionViewController, Encodable/Decodable Protocols, JSON Encoder/Decoder, CoreData",

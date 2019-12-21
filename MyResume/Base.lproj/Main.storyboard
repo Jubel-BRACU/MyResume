@@ -52,7 +52,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2mV-fo-oes">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2mV-fo-oes">
                                 <rect key="frame" x="20" y="218" width="374" height="130"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RfJ-ed-biy">
@@ -174,7 +174,6 @@
                                     </segmentedControl>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLT-MH-6Qs">
                                         <rect key="frame" x="0.0" y="60" width="394" height="444"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <segue destination="EBH-R8-7WF" kind="embed" id="JDP-ip-4CW"/>
                                         </connections>
@@ -261,9 +260,9 @@
             <objects>
                 <viewController storyboardIdentifier="ExperienceCollectionViewController" id="EBH-R8-7WF" customClass="ExperienceCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="bQR-d2-8hU">
-                        <rect key="frame" x="0.0" y="0.0" width="394" height="444"/>
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="449"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.88724222340000003" green="0.43159508810000002" blue="0.41319261759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rfR-dE-eo5">
                             <size key="itemSize" width="300" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -276,9 +275,6 @@
                             <outlet property="delegate" destination="EBH-R8-7WF" id="kYl-N1-cxt"/>
                         </connections>
                     </collectionView>
-                    <connections>
-                        <outlet property="experienceCollectionView" destination="bQR-d2-8hU" id="clS-eX-yjP"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLK-bx-W2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

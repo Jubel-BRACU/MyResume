@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SoB-eJ-KMU" customClass="SectionHeaderReusableView" customModule="My_Resume" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoo-H1-tLc">
+                    <rect key="frame" x="10" y="0.0" width="394" height="50"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Uoo-H1-tLc" firstAttribute="leading" secondItem="SoB-eJ-KMU" secondAttribute="leading" constant="10" id="JBa-e8-P9C"/>
+                <constraint firstItem="Uoo-H1-tLc" firstAttribute="top" secondItem="SoB-eJ-KMU" secondAttribute="top" id="QN3-Vz-J8V"/>
+                <constraint firstItem="fYq-b3-MDH" firstAttribute="bottom" secondItem="Uoo-H1-tLc" secondAttribute="bottom" id="Sgr-vU-jSf"/>
+                <constraint firstAttribute="trailing" secondItem="Uoo-H1-tLc" secondAttribute="trailing" constant="10" id="VRs-yy-5lg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fYq-b3-MDH"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
+                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="sectionHeaderLabel" destination="Uoo-H1-tLc" id="ova-b0-YFc"/>
+            </connections>
+            <point key="canvasLocation" x="349.27536231884062" y="26.785714285714285"/>
+        </collectionReusableView>
+    </objects>
+</document>

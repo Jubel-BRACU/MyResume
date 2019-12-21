@@ -13,8 +13,23 @@ private let experienceReuseIdentifier = "ExperienceCell"
 
 class ExperienceCollectionViewController: UICollectionViewController {
     
-    //IB / UI Outlets
-    @IBOutlet weak var experienceCollectionView: UICollectionView!
+    private lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
+        let layout = UICollectionViewCompositionalLayout { [weak self]
+            (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            
+            switch ExperienceSection(rawValue: sectionIndex) {
+            case .professionalExperience:
+                return self?.setupProfessionalExperienceLayout()
+                
+            case .developerExperience:
+                return self?.setupDeveloperExperienceLayout()
+                
+            case .none:
+                fatalError("Should not be none ")
+            }
+        }
+        return layout
+    }()
     
     //MARK: - Built in View handlers / methods
     override func viewDidLoad() {
@@ -25,18 +40,15 @@ class ExperienceCollectionViewController: UICollectionViewController {
 
         //Register cell classes and nib files
         //Section Header Resuable View Class
-        experienceCollectionView.register(UINib(nibName: "SectionHeaderReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier)
+        collectionView.register(UINib(nibName: "SectionHeaderReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier)
 
         //Cell Class
-        experienceCollectionView.register(UINib(nibName: "ExperienceCell", bundle: nil), forCellWithReuseIdentifier: experienceReuseIdentifier)
+        collectionView.register(UINib(nibName: "ExperienceCell", bundle: nil), forCellWithReuseIdentifier: experienceReuseIdentifier)
         
         //Setup compositional layout
-        experienceCollectionView.collectionViewLayout = self.experienceCollectionView.setUpCompositionLayout()
+        collectionView.collectionViewLayout = compositionalLayout
+        collectionView.contentInsetAdjustmentBehavior = .scrollableAxes
         
-        //set layout
-//        let layout = UICollectionViewFlowLayout()
-//        layout.headerReferenceSize = CGSize(width: self.view.frame.size.width, height: 30)
-
     }
     
     // MARK: - UICollectionView Delegates
@@ -132,7 +144,7 @@ class ExperienceCollectionViewController: UICollectionViewController {
                     cell.setLabelsText(using: experiences[experience.key]!, for: 3)
                     
                 case "description":
-                    cell.setDescriptionText(using: experiences[experience.key]!)
+                    cell.setLabelsText(using: experiences[experience.key]!, for: 4)
                     
                  default:
                     break
@@ -164,7 +176,7 @@ class ExperienceCollectionViewController: UICollectionViewController {
                     cell.setLabelsText(using: experiences[experience.key]!, for: 3)
                     
                 case "description":
-                    cell.setDescriptionText(using: experiences[experience.key]!)
+                    cell.setLabelsText(using: experiences[experience.key]!, for: 4)
                     
                  default:
                     break
@@ -222,11 +234,10 @@ class ExperienceCollectionViewController: UICollectionViewController {
 //    }
     
     
-
-        
-
-    
-    
 }
+    
+    
+
+
 
 

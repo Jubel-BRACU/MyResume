@@ -11,7 +11,7 @@ import UIKit
 class SectionHeaderReusableView: UICollectionReusableView {
     
     //cell UI Outlets
-    @IBOutlet weak var sectionHeadeLabel: UILabel!
+    @IBOutlet weak var sectionHeaderLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,7 +19,7 @@ class SectionHeaderReusableView: UICollectionReusableView {
     }
     
     func setLabelTextWith(string text: String) {
-        sectionHeadeLabel.text = text
+        sectionHeaderLabel.text = text
         
     }
 
