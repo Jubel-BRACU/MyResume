@@ -184,6 +184,18 @@
                                     <segue destination="7mt-4U-hZz" kind="embed" id="Rrd-Hl-BvA"/>
                                 </connections>
                             </containerView>
+                            <containerView hidden="YES" opaque="NO" alpha="0.0" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1q-gr-bl0" userLabel="Education Container View">
+                                <rect key="frame" x="10" y="426" width="394" height="431"/>
+                                <connections>
+                                    <segue destination="HAh-ME-gKD" kind="embed" id="ce9-UJ-zgi"/>
+                                </connections>
+                            </containerView>
+                            <containerView hidden="YES" opaque="NO" alpha="0.0" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cz4-Hd-GNN" userLabel="Training Container View">
+                                <rect key="frame" x="10" y="426" width="394" height="431"/>
+                                <connections>
+                                    <segue destination="kgV-aX-wPj" kind="embed" id="Tng-Np-gpE"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -191,6 +203,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2TH-bv-F1B" secondAttribute="trailing" constant="20" id="1pJ-s7-KM8"/>
                             <constraint firstItem="U3k-0G-3oE" firstAttribute="leading" secondItem="27C-h4-bEQ" secondAttribute="trailing" constant="40" id="4aP-5W-lsx"/>
                             <constraint firstItem="27C-h4-bEQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="583-l2-G7h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o1q-gr-bl0" secondAttribute="trailing" constant="10" id="5NW-X1-rU1"/>
+                            <constraint firstItem="Cz4-Hd-GNN" firstAttribute="top" secondItem="eMO-iW-XBu" secondAttribute="bottom" constant="8" symbolic="YES" id="7UT-Uk-Ic4"/>
+                            <constraint firstItem="Cz4-Hd-GNN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="BpB-k5-7Td"/>
+                            <constraint firstItem="o1q-gr-bl0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Bvq-ML-v5E"/>
                             <constraint firstItem="eMO-iW-XBu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="DKr-LV-LRS"/>
                             <constraint firstItem="2mV-fo-oes" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="HC1-DS-Ebd"/>
                             <constraint firstItem="xDL-hd-bio" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="IG5-55-B32"/>
@@ -199,6 +215,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eMO-iW-XBu" secondAttribute="trailing" constant="10" id="MnU-kR-PeR"/>
                             <constraint firstItem="xDL-hd-bio" firstAttribute="top" secondItem="eMO-iW-XBu" secondAttribute="bottom" id="RFy-QM-PFj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2mV-fo-oes" secondAttribute="trailing" constant="20" id="ReA-Hk-leg"/>
+                            <constraint firstItem="o1q-gr-bl0" firstAttribute="top" secondItem="eMO-iW-XBu" secondAttribute="bottom" constant="8" symbolic="YES" id="U9B-Z9-d9f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cz4-Hd-GNN" secondAttribute="bottom" constant="5" id="Ufe-lt-pxU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o1q-gr-bl0" secondAttribute="bottom" constant="5" id="Xy2-GA-u01"/>
                             <constraint firstItem="2mV-fo-oes" firstAttribute="top" secondItem="27C-h4-bEQ" secondAttribute="bottom" constant="15" id="YbW-qN-g89"/>
                             <constraint firstItem="rLT-MH-6Qs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="bFe-OT-bk9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rLT-MH-6Qs" secondAttribute="bottom" constant="5" id="csn-B4-aqq"/>
@@ -206,6 +225,7 @@
                             <constraint firstItem="2TH-bv-F1B" firstAttribute="leading" secondItem="27C-h4-bEQ" secondAttribute="trailing" constant="40" id="gKh-wR-5cy"/>
                             <constraint firstItem="27C-h4-bEQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kFm-OG-9Gp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xDL-hd-bio" secondAttribute="bottom" constant="5" id="mSV-lB-YdR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cz4-Hd-GNN" secondAttribute="trailing" constant="10" id="qbY-cD-Hig"/>
                             <constraint firstItem="eMO-iW-XBu" firstAttribute="top" secondItem="2mV-fo-oes" secondAttribute="bottom" constant="20" id="quG-5j-qTr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U3k-0G-3oE" secondAttribute="trailing" constant="20" id="qzv-fG-5Eu"/>
                             <constraint firstItem="rLT-MH-6Qs" firstAttribute="top" secondItem="eMO-iW-XBu" secondAttribute="bottom" id="xhN-N9-vTV"/>
@@ -224,6 +244,8 @@
                         <outletCollection property="websiteLabels" destination="o03-TM-lbQ" collectionClass="NSMutableArray" id="IsS-fK-tUx"/>
                         <outletCollection property="containerViews" destination="rLT-MH-6Qs" collectionClass="NSMutableArray" id="o8H-xM-ASD"/>
                         <outletCollection property="containerViews" destination="xDL-hd-bio" collectionClass="NSMutableArray" id="Wy8-40-L5Y"/>
+                        <outletCollection property="containerViews" destination="o1q-gr-bl0" collectionClass="NSMutableArray" id="Seo-o6-I6W"/>
+                        <outletCollection property="containerViews" destination="Cz4-Hd-GNN" collectionClass="NSMutableArray" id="nIH-PS-1FA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -292,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLK-bx-W2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1919" y="1009"/>
+            <point key="canvasLocation" x="1261" y="1046"/>
         </scene>
         <!--iOS Projects Collection View Controller-->
         <scene sceneID="K52-OL-YNz">
@@ -313,7 +335,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Id-5c-IIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="1009"/>
+            <point key="canvasLocation" x="617" y="1046"/>
+        </scene>
+        <!--Education Collection View Controller-->
+        <scene sceneID="d7o-sU-96A">
+            <objects>
+                <viewController id="HAh-ME-gKD" customClass="EducationCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="MM4-p2-S65">
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="431"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FRA-mn-z0H">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                    </collectionView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXm-0z-bVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1893" y="1043"/>
+        </scene>
+        <!--Training Collection View Controller-->
+        <scene sceneID="Fj8-Yn-njH">
+            <objects>
+                <viewController id="kgV-aX-wPj" customClass="TrainingCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wRs-Qp-msF">
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="431"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vrV-fb-unN">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                    </collectionView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NgG-dn-kEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2549" y="1043"/>
         </scene>
     </scenes>
     <resources>

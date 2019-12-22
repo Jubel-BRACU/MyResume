@@ -135,7 +135,7 @@ extension ViewController: MFMailComposeViewControllerDelegate {
                 let text = string?.createAtrributedString(type: urlType)
                 label.attributedText = text
                 
-            case WebsiteLabel.businessWebsite.rawValue:
+            case WebsiteLabel.website.rawValue:
                 let string = dict?["businesss website"]
                 let text = string?.createAtrributedString(type: urlType)
                 label.attributedText = text

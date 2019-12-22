@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EducationCell" id="gTV-IL-0wX" customClass="EducationCell" customModule="My_Resume" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="302" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="302" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FeJ-sZ-5iO">
+                        <rect key="frame" x="10" y="10" width="282" height="40"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OVY-nU-q82">
+                                <rect key="frame" x="0.0" y="-0.5" width="40" height="41.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7Ad-UL-rSY"/>
+                                    <constraint firstAttribute="width" constant="40" id="Plg-RE-5DT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAp-7X-UrW">
+                                <rect key="frame" x="45" y="0.0" width="237" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Cst-gv-eWj">
+                        <rect key="frame" x="10" y="60" width="282" height="14.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wg2-9t-G7c" userLabel="Location">
+                                <rect key="frame" x="0.0" y="0.0" width="126.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Graduated" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-4w-vqR">
+                                <rect key="frame" x="126.5" y="0.0" width="155.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supplier" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaI-Od-6I2">
+                        <rect key="frame" x="10" y="79.5" width="282" height="60.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.93000000000000005" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ZaI-Od-6I2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="CUe-fG-acU"/>
+                <constraint firstItem="Cst-gv-eWj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="CfE-BN-H5I"/>
+                <constraint firstAttribute="bottom" secondItem="ZaI-Od-6I2" secondAttribute="bottom" constant="20" id="KY9-xF-Rnx"/>
+                <constraint firstAttribute="trailing" secondItem="Cst-gv-eWj" secondAttribute="trailing" constant="10" id="RIw-x5-wgi"/>
+                <constraint firstItem="ZaI-Od-6I2" firstAttribute="top" secondItem="Cst-gv-eWj" secondAttribute="bottom" constant="5" id="Xz0-LY-3Jq"/>
+                <constraint firstItem="FeJ-sZ-5iO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="csV-oW-tKX"/>
+                <constraint firstItem="Cst-gv-eWj" firstAttribute="top" secondItem="FeJ-sZ-5iO" secondAttribute="bottom" constant="10" id="gRW-Ub-rRn"/>
+                <constraint firstAttribute="trailing" secondItem="ZaI-Od-6I2" secondAttribute="trailing" constant="10" id="i2g-tn-f0b"/>
+                <constraint firstAttribute="trailing" secondItem="FeJ-sZ-5iO" secondAttribute="trailing" constant="10" id="o31-0H-Yt6"/>
+                <constraint firstItem="FeJ-sZ-5iO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="sfy-DZ-4hV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="302" height="160"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                    <real key="value" value="7"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="viewBorderWidth">
+                    <real key="value" value="2"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
+                    <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="imageView" destination="OVY-nU-q82" id="0xc-9L-429"/>
+                <outletCollection property="labels" destination="cAp-7X-UrW" collectionClass="NSMutableArray" id="ONB-bM-adR"/>
+                <outletCollection property="labels" destination="wg2-9t-G7c" collectionClass="NSMutableArray" id="B5x-dA-FW6"/>
+                <outletCollection property="labels" destination="r5E-4w-vqR" collectionClass="NSMutableArray" id="dcU-jQ-1oJ"/>
+                <outletCollection property="labels" destination="ZaI-Od-6I2" collectionClass="NSMutableArray" id="jQW-ex-edF"/>
+            </connections>
+            <point key="canvasLocation" x="320.28985507246381" y="144.64285714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="checkmark.seal.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>

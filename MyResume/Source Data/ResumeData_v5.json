@@ -53,7 +53,7 @@
           "date": "December, 2019",
           "github": "https://github.com/simonitalia/simonitaliaresume",
           "description": "My Resume / CV Represented as an iOS App",
-          "technologies": "UIKit, UIImageView, UITabController, UINavigationController, CGAffineTransform"
+          "technologies": "UIKit, MessageUI, Safari Services, open.URL(), extension, UINavigationController, UICollectionView, UICollectionViewCell, Delegate/Protocol Pattern, JSON, JSON Encoder / Decoder, Segment Control, MVC Pattern,"
         }
     ],
 
@@ -292,7 +292,7 @@
         },
 
         {
-          "school": "Deakin University.",
+          "school": "Deakin University",
           "course": "Graduate Diploma, Accounting & Finance",
           "location": "Melbourne, Australia",
           "period": "Feb 2000 - Nov 2002",
@@ -301,7 +301,7 @@
 
         {
           "school": "Victoria University",
-          "course": "Bachelor of Business (Administration & Management)",
+          "course": "Bachelor of Business, Administration & Management",
           "location": "Melbourne, Australia",
           "period": "Feb 1992 - Jun 1996",
           "graduation year": "1996"
@@ -311,18 +311,21 @@
     "industry certifications": [
         {
           "certification": "SCRUM Master Certification​ – Agile Software Development",
+          "provider": "",
           "location": "Melbourne, Australia",
           "attainment year": "2007"
         },
 
         {
           "certification": "PRINCE 2​ ​Practitioner Certification​ and PRINCE 2 Foundation Certification",
+          "provider": "",
           "location": "Melbourne, Australia",
           "attainment year": "2007"
         },
 
         {
-          "certification": "Targeted Selection Interview Certification​ (Behavioral based interviewing)",
+          "certification": "Targeted Selection Interview Certification​ (Behavioral)",
+          "provider": "",
           "location": "Melbourne, Australia",
           "attainment year": "2006"
         }

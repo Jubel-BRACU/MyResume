@@ -17,6 +17,10 @@
 		2A11379523A7AC990097B8AA /* SectionHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A11379323A7AC990097B8AA /* SectionHeaderReusableView.xib */; };
 		2A11379B23A7ADF70097B8AA /* ExperienceCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11379923A7ADF70097B8AA /* ExperienceCollectionViewController.swift */; };
 		2A2EC2C423AED4B8006378C3 /* iOSProjectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EC2C223AED4B8006378C3 /* iOSProjectsCollectionViewController.swift */; };
+		2A368ECE23AF1C8800D2FB47 /* EducationCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368ECD23AF1C8800D2FB47 /* EducationCollectionViewController.swift */; };
+		2A368ED223AF1CD900D2FB47 /* EducationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368ED023AF1CD900D2FB47 /* EducationCell.swift */; };
+		2A368ED323AF1CD900D2FB47 /* EducationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A368ED123AF1CD900D2FB47 /* EducationCell.xib */; };
+		2A368ED523AF60B300D2FB47 /* TrainingCollectionViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368ED423AF60B300D2FB47 /* TrainingCollectionViewContoller.swift */; };
 		2A5B173023AE349100671EB8 /* iOSProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B172E23AE349100671EB8 /* iOSProjectCell.swift */; };
 		2A5B173123AE349100671EB8 /* iOSProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5B172F23AE349100671EB8 /* iOSProjectCell.xib */; };
 		2A6740B723A390A400685D1E /* profile_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6740B623A390A400685D1E /* profile_image.png */; };
@@ -47,6 +51,10 @@
 		2A11379323A7AC990097B8AA /* SectionHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderReusableView.xib; sourceTree = "<group>"; };
 		2A11379923A7ADF70097B8AA /* ExperienceCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCollectionViewController.swift; sourceTree = "<group>"; };
 		2A2EC2C223AED4B8006378C3 /* iOSProjectsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSProjectsCollectionViewController.swift; sourceTree = "<group>"; };
+		2A368ECD23AF1C8800D2FB47 /* EducationCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCollectionViewController.swift; sourceTree = "<group>"; };
+		2A368ED023AF1CD900D2FB47 /* EducationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCell.swift; sourceTree = "<group>"; };
+		2A368ED123AF1CD900D2FB47 /* EducationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EducationCell.xib; sourceTree = "<group>"; };
+		2A368ED423AF60B300D2FB47 /* TrainingCollectionViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCollectionViewContoller.swift; sourceTree = "<group>"; };
 		2A5B172E23AE349100671EB8 /* iOSProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSProjectCell.swift; sourceTree = "<group>"; };
 		2A5B172F23AE349100671EB8 /* iOSProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iOSProjectCell.xib; sourceTree = "<group>"; };
 		2A6740B623A390A400685D1E /* profile_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_image.png; sourceTree = "<group>"; };
@@ -83,8 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				2A11379723A7ACBB0097B8AA /* Section Header */,
-				2A11379823A7ACC60097B8AA /* Experience Cells */,
-				2A5B172D23AE343400671EB8 /* iOS Projects Cells */,
+				2A11379823A7ACC60097B8AA /* Experience */,
+				2A5B172D23AE343400671EB8 /* iOS Projects */,
+				2A368ECF23AF1C9400D2FB47 /* Education & Training */,
 			);
 			path = "Custom UICollectionViews";
 			sourceTree = "<group>";
@@ -98,14 +107,25 @@
 			path = "Section Header";
 			sourceTree = "<group>";
 		};
-		2A11379823A7ACC60097B8AA /* Experience Cells */ = {
+		2A11379823A7ACC60097B8AA /* Experience */ = {
 			isa = PBXGroup;
 			children = (
 				2A11379923A7ADF70097B8AA /* ExperienceCollectionViewController.swift */,
-				2A11378E23A7AC300097B8AA /* ExperienceCell.xib */,
 				2A11378D23A7AC300097B8AA /* ExperienceCell.swift */,
+				2A11378E23A7AC300097B8AA /* ExperienceCell.xib */,
 			);
-			path = "Experience Cells";
+			path = Experience;
+			sourceTree = "<group>";
+		};
+		2A368ECF23AF1C9400D2FB47 /* Education & Training */ = {
+			isa = PBXGroup;
+			children = (
+				2A368ECD23AF1C8800D2FB47 /* EducationCollectionViewController.swift */,
+				2A368ED423AF60B300D2FB47 /* TrainingCollectionViewContoller.swift */,
+				2A368ED023AF1CD900D2FB47 /* EducationCell.swift */,
+				2A368ED123AF1CD900D2FB47 /* EducationCell.xib */,
+			);
+			path = "Education & Training";
 			sourceTree = "<group>";
 		};
 		2A5B172C23ADC70600671EB8 /* Archive */ = {
@@ -117,14 +137,14 @@
 			path = Archive;
 			sourceTree = "<group>";
 		};
-		2A5B172D23AE343400671EB8 /* iOS Projects Cells */ = {
+		2A5B172D23AE343400671EB8 /* iOS Projects */ = {
 			isa = PBXGroup;
 			children = (
 				2A2EC2C223AED4B8006378C3 /* iOSProjectsCollectionViewController.swift */,
-				2A5B172F23AE349100671EB8 /* iOSProjectCell.xib */,
 				2A5B172E23AE349100671EB8 /* iOSProjectCell.swift */,
+				2A5B172F23AE349100671EB8 /* iOSProjectCell.xib */,
 			);
-			path = "iOS Projects Cells";
+			path = "iOS Projects";
 			sourceTree = "<group>";
 		};
 		2AA4527523A5B2CB00A30E9F /* Models+Controllers */ = {
@@ -255,6 +275,7 @@
 				2AA6F5A9239DF1F400DF0FE4 /* LaunchScreen.storyboard in Resources */,
 				2AA6F5A6239DF1F400DF0FE4 /* Assets.xcassets in Resources */,
 				2A5B173123AE349100671EB8 /* iOSProjectCell.xib in Resources */,
+				2A368ED323AF1CD900D2FB47 /* EducationCell.xib in Resources */,
 				2AA6F5A4239DF1F200DF0FE4 /* Main.storyboard in Resources */,
 				2A6740B723A390A400685D1E /* profile_image.png in Resources */,
 				2A11379023A7AC300097B8AA /* ExperienceCell.xib in Resources */,
@@ -280,7 +301,10 @@
 				2A11379B23A7ADF70097B8AA /* ExperienceCollectionViewController.swift in Sources */,
 				2A0F75F923ACA9D50057AADD /* DeveloperExperienceCell.swift in Sources */,
 				2AA6F59D239DF1F200DF0FE4 /* AppDelegate.swift in Sources */,
+				2A368ED223AF1CD900D2FB47 /* EducationCell.swift in Sources */,
 				2A11379423A7AC990097B8AA /* SectionHeaderReusableView.swift in Sources */,
+				2A368ED523AF60B300D2FB47 /* TrainingCollectionViewContoller.swift in Sources */,
+				2A368ECE23AF1C8800D2FB47 /* EducationCollectionViewController.swift in Sources */,
 				2AA6F59F239DF1F200DF0FE4 /* SceneDelegate.swift in Sources */,
 				2A11378C23A704390097B8AA /* UIView+Extensions.swift in Sources */,
 				2AA4527023A5AA2C00A30E9F /* ViewController+Extensions.swift in Sources */,

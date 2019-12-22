@@ -27,7 +27,7 @@ class ViewController: UIViewController, ResumeDelegate {
     @IBOutlet var contactInformationLabels: [UILabel]!
     @IBOutlet var websiteLabels: [UILabel]!
     
-    //Segment Control and container outlets
+    //Segment Control
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBAction func segmentedControlTapped(_ sender: Any) {
         
@@ -35,8 +35,8 @@ class ViewController: UIViewController, ResumeDelegate {
         showContainerView(forSegment: segmentedControl.selectedSegmentIndex)
     }
     
+    //Container Views
     @IBOutlet var containerViews: [UIView]!
-    
     
     //IB Programmatic properties
     @IBInspectable var borderWidth: CGFloat = 2

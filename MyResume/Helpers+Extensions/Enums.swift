@@ -8,9 +8,10 @@
 
 import Foundation
 
+//MARK: - Top secion
 //Profile / Contact section
 enum WebsiteLabel: Int {
-    case linkedin = 0, github, businessWebsite
+    case linkedin = 0, github, website
 }
 
 enum ContactLabel: Int {
@@ -21,15 +22,12 @@ enum ProfileTextViews: Int {
     case general = 0, valueProposition
 }
 
-//Segmentation sections
+//Segmentations
 enum SegmentControl: Int {
     case experience = 0, projects, education, training
 }
 
-//Container Views
-//enum ContainerView: Int {
-//    case experience = 0, projects, education, training
-//}
+//MARK: - Container Views
 
 //Experience segement
 enum ExperienceSection: Int {
@@ -49,8 +47,22 @@ enum ProjectSection: Int {
 
 enum Project: Int {
     case projectName = 0, date, description, gitHub, technologies
-    
 }
+
+//Education Segment
+enum EducationSection: Int {
+    case university = 0, certifications
+}
+
+enum TrainingSection: Int {
+    case projectBased = 0, foundational
+}
+
+enum Education: Int {
+    case course = 0, location, graduated, school
+}
+
+
 
 
 
