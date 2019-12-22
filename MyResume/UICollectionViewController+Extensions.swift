@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-extension ExperienceCollectionViewController {
+extension UICollectionViewController {
     
     //Define / configure and create UICollectionView compositional layout
-    func setupProfessionalExperienceLayout() -> NSCollectionLayoutSection {
+    func setupLayoutOne() -> NSCollectionLayoutSection {
         let item = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                heightDimension: .fractionalHeight(1.0)))
@@ -45,7 +45,7 @@ extension ExperienceCollectionViewController {
     }
     
     
-    func setupDeveloperExperienceLayout() -> NSCollectionLayoutSection {
+    func setupLayoutTwo() -> NSCollectionLayoutSection {
         
         let item = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
@@ -88,4 +88,8 @@ extension ExperienceCollectionViewController {
         return section
     }
     
+        
 }
+    
+    
+

@@ -100,13 +100,13 @@ extension ViewController: MFMailComposeViewControllerDelegate {
         for label in labels {
             
             switch label.tag {
-            case ContactLabels.name.rawValue:
+            case ContactLabel.name.rawValue:
                 label.text = dict?["name"]
                 
-            case ContactLabels.phone.rawValue:
+            case ContactLabel.phone.rawValue:
                 label.text = dict?["phone"]
                 
-            case ContactLabels.email.rawValue:
+            case ContactLabel.email.rawValue:
                 label.text = dict?["email"]
                 
             default:
@@ -125,17 +125,17 @@ extension ViewController: MFMailComposeViewControllerDelegate {
         for label in labels {
 
             switch label.tag {
-            case WebsiteLabels.linkedin.rawValue:
+            case WebsiteLabel.linkedin.rawValue:
                 let string = dict?["linkedin"]
                 let text = string?.createAtrributedString(type: urlType)
                 label.attributedText = text
                     
-            case WebsiteLabels.github.rawValue:
+            case WebsiteLabel.github.rawValue:
                 let string = dict?["github"]
                 let text = string?.createAtrributedString(type: urlType)
                 label.attributedText = text
                 
-            case WebsiteLabels.businessWebsite.rawValue:
+            case WebsiteLabel.businessWebsite.rawValue:
                 let string = dict?["businesss website"]
                 let text = string?.createAtrributedString(type: urlType)
                 label.attributedText = text

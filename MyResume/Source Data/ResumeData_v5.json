@@ -41,7 +41,7 @@
         },
 
         {
-          "project name": "Random Number Set Generator Algorithms",
+          "project name": "Random Numbers",
           "date": "August, 2019",
           "github": "private repository",
           "description": "Random number set generator combination sets using rules derived from statistical analysis / research to influence the sets of numbers generated",
@@ -49,7 +49,7 @@
         },
 
         {
-          "project name": "Simon Italia Resume",
+          "project name": "My Resume",
           "date": "December, 2019",
           "github": "https://github.com/simonitalia/simonitaliaresume",
           "description": "My Resume / CV Represented as an iOS App",
@@ -59,7 +59,7 @@
 
     "coursework projects": [
         {
-          "project name": "SwiftAlgorithmCodingChallenges",
+          "project name": "Swift Challenges",
           "date": "September, 2019",
           "github": "https://github.com/simonitalia/SwiftAlgorithmCodingChallenges",
           "description": "My solutions to over 40 swift coding challenges listed in the book Swift Coding Challenges, by Paul Hudson",

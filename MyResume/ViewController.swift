@@ -26,10 +26,17 @@ class ViewController: UIViewController, ResumeDelegate {
     @IBOutlet weak var professionLabel: UILabel!
     @IBOutlet var contactInformationLabels: [UILabel]!
     @IBOutlet var websiteLabels: [UILabel]!
+    
+    //Segment Control and container outlets
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBAction func segmentedControlTapped(_ sender: Any) {
         
+        //show relevant container views, hide other container views
+        showContainerView(forSegment: segmentedControl.selectedSegmentIndex)
     }
+    
+    @IBOutlet var containerViews: [UIView]!
+    
     
     //IB Programmatic properties
     @IBInspectable var borderWidth: CGFloat = 2
@@ -82,6 +89,27 @@ class ViewController: UIViewController, ResumeDelegate {
         
         //Set segmented control to default
         segmentedControl.selectedSegmentIndex = SegmentControl.experience.rawValue
+        
+        //hide all other containers
+        showContainerView(forSegment: SegmentControl.experience.rawValue)
+    }
+    
+    //handle display of conatiner views
+    func showContainerView(forSegment tag: Int) {
+        
+        for container in containerViews {
+            
+            //show container
+            if container.tag == tag {
+                container.alpha = 1
+                container.isHidden = false
+            
+            //hide container
+            } else {
+                container.alpha = 0
+                container.isHidden = true
+            }
+        }
     }
     
     //fetch json data
@@ -110,7 +138,4 @@ class ViewController: UIViewController, ResumeDelegate {
         //set profile info (profession, about section)
         setProfileInfo(resume: ViewController.resume, label: professionLabel, textViews: nil)
     }
-    
-    
-
 }
