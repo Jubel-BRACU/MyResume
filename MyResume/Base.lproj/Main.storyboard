@@ -185,26 +185,26 @@
                                 </connections>
                             </containerView>
                             <containerView hidden="YES" opaque="NO" alpha="0.0" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1q-gr-bl0" userLabel="Education Container View">
-                                <rect key="frame" x="10" y="426" width="394" height="431"/>
+                                <rect key="frame" x="10" y="418" width="394" height="439"/>
                                 <connections>
                                     <segue destination="HAh-ME-gKD" kind="embed" id="ce9-UJ-zgi"/>
                                 </connections>
                             </containerView>
                             <containerView hidden="YES" opaque="NO" alpha="0.0" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cz4-Hd-GNN" userLabel="Training Container View">
-                                <rect key="frame" x="10" y="426" width="394" height="431"/>
+                                <rect key="frame" x="10" y="418" width="394" height="439"/>
                                 <connections>
                                     <segue destination="kgV-aX-wPj" kind="embed" id="Tng-Np-gpE"/>
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rLT-MH-6Qs" secondAttribute="trailing" constant="10" id="12l-Zt-z65"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2TH-bv-F1B" secondAttribute="trailing" constant="20" id="1pJ-s7-KM8"/>
                             <constraint firstItem="U3k-0G-3oE" firstAttribute="leading" secondItem="27C-h4-bEQ" secondAttribute="trailing" constant="40" id="4aP-5W-lsx"/>
                             <constraint firstItem="27C-h4-bEQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="583-l2-G7h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o1q-gr-bl0" secondAttribute="trailing" constant="10" id="5NW-X1-rU1"/>
-                            <constraint firstItem="Cz4-Hd-GNN" firstAttribute="top" secondItem="eMO-iW-XBu" secondAttribute="bottom" constant="8" symbolic="YES" id="7UT-Uk-Ic4"/>
+                            <constraint firstItem="Cz4-Hd-GNN" firstAttribute="top" secondItem="eMO-iW-XBu" secondAttribute="bottom" id="7UT-Uk-Ic4"/>
                             <constraint firstItem="Cz4-Hd-GNN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="BpB-k5-7Td"/>
                             <constraint firstItem="o1q-gr-bl0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Bvq-ML-v5E"/>
                             <constraint firstItem="eMO-iW-XBu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="DKr-LV-LRS"/>
@@ -215,7 +215,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eMO-iW-XBu" secondAttribute="trailing" constant="10" id="MnU-kR-PeR"/>
                             <constraint firstItem="xDL-hd-bio" firstAttribute="top" secondItem="eMO-iW-XBu" secondAttribute="bottom" id="RFy-QM-PFj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2mV-fo-oes" secondAttribute="trailing" constant="20" id="ReA-Hk-leg"/>
-                            <constraint firstItem="o1q-gr-bl0" firstAttribute="top" secondItem="eMO-iW-XBu" secondAttribute="bottom" constant="8" symbolic="YES" id="U9B-Z9-d9f"/>
+                            <constraint firstItem="o1q-gr-bl0" firstAttribute="top" secondItem="eMO-iW-XBu" secondAttribute="bottom" id="U9B-Z9-d9f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cz4-Hd-GNN" secondAttribute="bottom" constant="5" id="Ufe-lt-pxU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o1q-gr-bl0" secondAttribute="bottom" constant="5" id="Xy2-GA-u01"/>
                             <constraint firstItem="2mV-fo-oes" firstAttribute="top" secondItem="27C-h4-bEQ" secondAttribute="bottom" constant="15" id="YbW-qN-g89"/>
@@ -342,7 +342,7 @@
             <objects>
                 <viewController id="HAh-ME-gKD" customClass="EducationCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="MM4-p2-S65">
-                        <rect key="frame" x="0.0" y="0.0" width="394" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="439"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FRA-mn-z0H">
@@ -363,7 +363,7 @@
             <objects>
                 <viewController id="kgV-aX-wPj" customClass="TrainingCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wRs-Qp-msF">
-                        <rect key="frame" x="0.0" y="0.0" width="394" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="439"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vrV-fb-unN">

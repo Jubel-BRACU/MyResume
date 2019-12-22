@@ -20,7 +20,6 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Uoo-H1-tLc" firstAttribute="leading" secondItem="SoB-eJ-KMU" secondAttribute="leading" constant="10" id="JBa-e8-P9C"/>
                 <constraint firstItem="Uoo-H1-tLc" firstAttribute="top" secondItem="SoB-eJ-KMU" secondAttribute="top" id="QN3-Vz-J8V"/>
@@ -28,11 +27,6 @@
                 <constraint firstAttribute="trailing" secondItem="Uoo-H1-tLc" secondAttribute="trailing" constant="10" id="VRs-yy-5lg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fYq-b3-MDH"/>
-            <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
-                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </userDefinedRuntimeAttribute>
-            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="sectionHeaderLabel" destination="Uoo-H1-tLc" id="ova-b0-YFc"/>
             </connections>
