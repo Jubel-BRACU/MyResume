@@ -118,7 +118,7 @@ class ExperienceCollectionViewController: UICollectionViewController {
 
     //configure cell with data object
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard ViewController.resume != nil else {fatalError()}
+        guard ViewController.resume != nil else { fatalError() }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! ExperienceCell
         
@@ -195,6 +195,37 @@ class ExperienceCollectionViewController: UICollectionViewController {
     }
 
     // MARK: UICollectionViewDelegate
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard ViewController.resume != nil else { fatalError() }
+        
+        //instantiate desitination vc
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        
+        //pass cell object data, based on cell of section
+        switch ExperienceSection(rawValue: indexPath.section) {
+        case .professional:
+            
+            //get object item
+            let item = ViewController.resume!.professionalExperience[indexPath.item]
+            vc.viewTitle = item["job title"]!
+            vc.viewDescription = item["description"]!
+            vc.viewDetails = item["accomplishments"]!
+
+        case .developer:
+            let item = ViewController.resume!.developerExperience[indexPath.item]
+            vc.viewTitle = item["language"]!
+            vc.viewDescription = item["description"]!
+            vc.viewDetails = item["technologies"]!
+               
+           default:
+               break
+           }
+         
+        //display DeatailVC
+        self.present(vc, animated: true, completion: nil)
+
+    }
+    
 
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
@@ -227,11 +258,12 @@ class ExperienceCollectionViewController: UICollectionViewController {
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //In a storyboard-based application, you will often want to do a little preparation before navigation
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using [segue destinationViewController].
-//        // Pass the selected object to the new view controller.
+//
 //    }
+    
+ 
     
 }
     

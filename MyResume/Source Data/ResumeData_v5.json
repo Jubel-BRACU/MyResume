@@ -51,7 +51,7 @@
         {
           "project name": "My Resume",
           "date": "December, 2019",
-          "github": "https://github.com/simonitalia/simonitaliaresume",
+          "github": "https://github.com/simonitalia/myresume",
           "description": "My Resume / CV Represented as an iOS App",
           "technologies": "UIKit, MessageUI, Safari Services, open.URL(), extension, UINavigationController, UICollectionView, UICollectionViewCell, Delegate/Protocol Pattern, JSON, JSON Encoder / Decoder, Segment Control, MVC Pattern,"
         }
@@ -219,11 +219,12 @@
 
     "developer experience": [
       {
-        "language": "Swift programming language",
+        "language": "Swift / iOS Developer",
         "location": "Remote",
         "period": "Oct 2019 to current",
         "duration": "0.25 years",
-        "description": "60+ iOS apps using Apple’s broad and powerful range of frameworks such as UIKit, SpriteKit, SceneKit, CoreML / CreateML, CoreMotion, WatchKit, CoreGraphics, NotificationCenter, Delegate Protocol Pattern, Notifications and Observers, MVC, Extensions, UITableViewController, UICollectionViewController, Encodable/Decodable Protocols, JSON Encoder/Decoder, CoreData",
+        "description": "60+ iOS apps developed using Apple’s broad and powerful range of frameworks.",
+        "technologies": "UIKit, SpriteKit, SceneKit, CoreML / CreateML, CoreMotion, WatchKit, CoreGraphics, NotificationCenter, Delegate Protocol Pattern, Notifications and Observers, MVC, Extensions, UITableViewController, UICollectionViewController, Encodable/Decodable Protocols, JSON Encoder/Decoder, CoreData",
         "projects": "https://github.com/simonitalia"
       }
     ],

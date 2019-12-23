@@ -21,6 +21,7 @@
 		2A368ED223AF1CD900D2FB47 /* EducationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368ED023AF1CD900D2FB47 /* EducationCell.swift */; };
 		2A368ED323AF1CD900D2FB47 /* EducationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A368ED123AF1CD900D2FB47 /* EducationCell.xib */; };
 		2A368ED523AF60B300D2FB47 /* TrainingCollectionViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368ED423AF60B300D2FB47 /* TrainingCollectionViewContoller.swift */; };
+		2A368ED723B0472600D2FB47 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368ED623B0472600D2FB47 /* DetailViewController.swift */; };
 		2A5B173023AE349100671EB8 /* iOSProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B172E23AE349100671EB8 /* iOSProjectCell.swift */; };
 		2A5B173123AE349100671EB8 /* iOSProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5B172F23AE349100671EB8 /* iOSProjectCell.xib */; };
 		2A6740B723A390A400685D1E /* profile_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6740B623A390A400685D1E /* profile_image.png */; };
@@ -55,6 +56,7 @@
 		2A368ED023AF1CD900D2FB47 /* EducationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCell.swift; sourceTree = "<group>"; };
 		2A368ED123AF1CD900D2FB47 /* EducationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EducationCell.xib; sourceTree = "<group>"; };
 		2A368ED423AF60B300D2FB47 /* TrainingCollectionViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCollectionViewContoller.swift; sourceTree = "<group>"; };
+		2A368ED623B0472600D2FB47 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2A5B172E23AE349100671EB8 /* iOSProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSProjectCell.swift; sourceTree = "<group>"; };
 		2A5B172F23AE349100671EB8 /* iOSProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iOSProjectCell.xib; sourceTree = "<group>"; };
 		2A6740B623A390A400685D1E /* profile_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_image.png; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A11379123A7AC380097B8AA /* Custom UICollectionViews */ = {
+		2A11379123A7AC380097B8AA /* UICollectionViewControllers+Cells */ = {
 			isa = PBXGroup;
 			children = (
 				2A11379723A7ACBB0097B8AA /* Section Header */,
@@ -95,7 +97,7 @@
 				2A5B172D23AE343400671EB8 /* iOS Projects */,
 				2A368ECF23AF1C9400D2FB47 /* Education & Training */,
 			);
-			path = "Custom UICollectionViews";
+			path = "UICollectionViewControllers+Cells";
 			sourceTree = "<group>";
 		};
 		2A11379723A7ACBB0097B8AA /* Section Header */ = {
@@ -181,7 +183,8 @@
 				2AAF876623A268D600043F01 /* Helpers+Extensions */,
 				2AA4527523A5B2CB00A30E9F /* Models+Controllers */,
 				2AA6F5A0239DF1F200DF0FE4 /* ViewController.swift */,
-				2A11379123A7AC380097B8AA /* Custom UICollectionViews */,
+				2A11379123A7AC380097B8AA /* UICollectionViewControllers+Cells */,
+				2A368ED623B0472600D2FB47 /* DetailViewController.swift */,
 				2AAF876C23A3253400043F01 /* Source Data */,
 				2A5B172C23ADC70600671EB8 /* Archive */,
 				2AA6F5A2239DF1F200DF0FE4 /* Main.storyboard */,
@@ -295,6 +298,7 @@
 				2A11378F23A7AC300097B8AA /* ExperienceCell.swift in Sources */,
 				2AA6F5A1239DF1F200DF0FE4 /* ViewController.swift in Sources */,
 				2A2EC2C423AED4B8006378C3 /* iOSProjectsCollectionViewController.swift in Sources */,
+				2A368ED723B0472600D2FB47 /* DetailViewController.swift in Sources */,
 				2AAF876523A267A900043F01 /* JSONValue.swift in Sources */,
 				2AA4527423A5B28100A30E9F /* Enums.swift in Sources */,
 				2A0F75FC23AD08460057AADD /* UICollectionViewController+Extensions.swift in Sources */,
