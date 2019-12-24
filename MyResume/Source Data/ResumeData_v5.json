@@ -25,19 +25,30 @@
 
     "personal projects": [
         {
-          "project name": "7 Marbles",
-          "date": "October, 2019",
-          "github": "https://github.com/simonitalia/SevenMarbles",
-          "description": "The aim of the game is to place and rest each of the 7 marbles in the middle of each of the seven circles of the playing area. The marbles are moved by tilting the device to move the marbles (using CoreMotion framework), and have physics so they respond to gravity and react to collisions like in the real world. Sound is also made when marbles collide with each other and / or the the playing area wall",
-          "technologies": "SpriteKit, GameplayKit, CoreMotion, CMMotionManager, SKSpriteNode, SKShapeNode, SKPhysicsWorld, SKPhysicsBody, CategoryBitMask, ContactTestBitMask, ContactBody, SKPhyscisConatct, SKAction, UIBezierPath, CGRect, enum, SKView, extension (UIView)"
+          "project name": "My Resume",
+          "date": "December, 2019",
+          "github": "https://github.com/simonitalia/myresume",
+          "description": "My Resume / CV Represented as an iOS App",
+          "technologies": "UIKit, MessageUI, Safari Services, open.URL(), extension, UINavigationController, UICollectionView, UICollectionViewCell, Delegate/Protocol Pattern, JSON, JSON Encoder / Decoder, Segment Control, MVC Pattern,",
+          "image": "myResume"
         },
-
+        
         {
           "project name": "Waiter's Friend",
           "date": "October, 2019",
           "github": "https://github.com/simonitalia/WaitersFriend",
           "description": "The aim of this app is to find how to make any cocktail. The app connects to a paid tier (patreon) 3rd party cocktail database, and utilizes JSON-API calls to fetch data on demand to populate the respective screens of the app. The also caches data to save on API calls, and saves data (as JSON data) to the app bundle (userDefaults) when a user saves cocktails to their favorites",
-          "technologies": "UIKit, CGAffineTransform, UIActivityIndicator, UICollectionView, UICollectionViewCompositionalLayout, UITableView, GestureRecognizer, SegmentController, .xib, JSON-APIs, JSON Encoder / Decoder, URLComponents, queryItems, appendingPathComponents, @escaping functions, UserDefaults, enum, extension (UIView), UITableViewCell, UIActivityIndicator, UISearchController, UIAlertController"
+          "technologies": "UIKit, CGAffineTransform, UIActivityIndicator, UICollectionView, UICollectionViewCompositionalLayout, UITableView, GestureRecognizer, SegmentController, .xib, JSON-APIs, JSON Encoder / Decoder, URLComponents, queryItems, appendingPathComponents, @escaping functions, UserDefaults, enum, extension (UIView), UITableViewCell, UIActivityIndicator, UISearchController, UIAlertController",
+          "image": "waitersFriend"
+        },
+        
+        {
+          "project name": "7 Marbles",
+          "date": "September, 2019",
+          "github": "https://github.com/simonitalia/SevenMarbles",
+          "description": "The aim of the game is to place and rest each of the 7 marbles in the middle of each of the seven circles of the playing area. The marbles are moved by tilting the device to move the marbles (using CoreMotion framework), and have physics so they respond to gravity and react to collisions like in the real world. Sound is also made when marbles collide with each other and / or the the playing area wall",
+          "technologies": "SpriteKit, GameplayKit, CoreMotion, CMMotionManager, SKSpriteNode, SKShapeNode, SKPhysicsWorld, SKPhysicsBody, CategoryBitMask, ContactTestBitMask, ContactBody, SKPhyscisConatct, SKAction, UIBezierPath, CGRect, enum, SKView, extension (UIView)",
+          "image": "7marbles"
         },
 
         {
@@ -45,15 +56,8 @@
           "date": "August, 2019",
           "github": "private repository",
           "description": "Random number set generator combination sets using rules derived from statistical analysis / research to influence the sets of numbers generated",
-          "technologies": "Swift Playgrounds"
-        },
-
-        {
-          "project name": "My Resume",
-          "date": "December, 2019",
-          "github": "https://github.com/simonitalia/myresume",
-          "description": "My Resume / CV Represented as an iOS App",
-          "technologies": "UIKit, MessageUI, Safari Services, open.URL(), extension, UINavigationController, UICollectionView, UICollectionViewCell, Delegate/Protocol Pattern, JSON, JSON Encoder / Decoder, Segment Control, MVC Pattern,"
+          "technologies": "Swift Playgrounds",
+          "image": "swift"
         }
     ],
 
@@ -65,6 +69,22 @@
           "description": "My solutions to over 40 swift coding challenges listed in the book Swift Coding Challenges, by Paul Hudson",
           "technologies": "String algorithms, Number algorithms (int, double, float, binary), Files / FileManager algorithms, Linked Lists algorithms"
         },
+        
+        {
+          "project name": "My Restaurant",
+          "date": "July, 2019",
+          "github": "https://github.com/simonitalia/MyRestaurant",
+          "description": "The aim of this app is develop a Restaurant menu customers can review and select items from, add to an order, and then submit the order. Menu / Category Data is provided in locally (computer) hosted JSON files, and order submission uses POST methods.",
+          "technologies": "UIKit, UITabBarController, UINavigationController, struct (Data Models), UITableView, JSON-APIs, JSON Encoder / Decoder, URLComponents, queryItems, appendingPathComponents, @escaping functions, UserDefaults, enum, UIAlertController"
+        },
+        
+        {
+          "project name": "AR Sight Spotter",
+          "date": "July, 2019",
+          "github": "https://github.com/simonitalia/ARSightSpotter",
+          "description": "The objective of this app is to overlay (augment) the real world with information (text) about what's around the user. The app works by using the iPhone camera to display the real world, the CoreLocation framework to figure out where in the world the user is, the wikipedia API to download data of based on the user's location, and the ARKit framework to overlay the additional, virtual data (node objects).",
+          "technologies": "ARKit, CoreLocation, SceneKit, SKScene, SpriteKit, SKLabelNode, CLLocationManager, CLLocation, simd_float4x4, SCNMatrix4MakeRotation, ARAnchor, JSON-API"
+        },
 
         {
           "project name": "Trade My Tesla",
@@ -72,6 +92,14 @@
           "github": "https://github.com/simonitalia/TradeMyTesla",
           "description": "This app uses historical Tesla sale data combined with Swift's ML framework to determine the resale value of a Tesla.",
           "technologies": "UIKit, CoreML, UIStackView, Python, MLModel, UISegmentController"
+        },
+        
+        {
+          "project name": "Bang",
+          "date": "February, 2019",
+          "github": "https://github.com/simonitalia/Bang",
+          "description": "The aim of this game is to score as many points as possible before the timer runs out. To score points shoot the bad character (Yosemite Sam). Score bonus points by shooting the Money bag when it appears. Lose points by shooting the good character (Donald Duck). Be sure to reload gun before it is emptied. The gun holds a maximum of 6 shots. Reload at any time.",
+          "technologies": "SpriteKit, GamePlayKit, GameScene, SKSpriteKitNode, SKAction, SKEmitterNode, UIBezierPath, CGPoint, UIAlertController, UIAlertAction, didSet, switch"
         },
 
         {
@@ -83,27 +111,11 @@
         },
 
         {
-          "project name": "My Restaurant",
-          "date": "September, 2019",
-          "github": "https://github.com/simonitalia/MyRestaurant",
-          "description": "The aim of this app is develop a Restaurant menu customers can review and select items from, add to an order, and then submit the order. Menu / Category Data is provided in locally (computer) hosted JSON files, and order submission uses POST methods.",
-          "technologies": "UIKit, UITabBarController, UINavigationController, struct (Data Models), UITableView, JSON-APIs, JSON Encoder / Decoder, URLComponents, queryItems, appendingPathComponents, @escaping functions, UserDefaults, enum, UIAlertController"
-        },
-
-        {
           "project name": "To Do List",
-          "date": "June 2018 (v1.0), January 2019 (v2.0)",
+          "date": "January 2019 (v2.0), June 2018 (v1.0)",
           "github": "https://github.com/simonitalia/ToDoList",
           "description": "The aim of this app is to allow users to create a To Do List where they can: Add a new to do item, edit existing to do item, delete a to do item, mark to do item as complete, add more details like due date and notes, search to do items by title.",
           "technologies": "UIKit, FileManager, UITableViewController, UINavigationController, DateFormatter, Class (Data Model), UISearchController, UITableViewCell"
-        },
-
-        {
-          "project name": "Bang",
-          "date": "February, 2019",
-          "github": "https://github.com/simonitalia/Bang",
-          "description": "The aim of this game is to score as many points as possible before the timer runs out. To score points shoot the bad character (Yosemite Sam). Score bonus points by shooting the Money bag when it appears. Lose points by shooting the good character (Donald Duck). Be sure to reload gun before it is emptied. The gun holds a maximum of 6 shots. Reload at any time.",
-          "technologies": "SpriteKit, GamePlayKit, GameScene, SKSpriteKitNode, SKAction, SKEmitterNode, UIBezierPath, CGPoint, UIAlertController, UIAlertAction, didSet, switch"
         },
 
         {
@@ -120,14 +132,6 @@
           "github": "https://github.com/simonitalia/BullsEye",
           "description": "The aim of this game is to drag the slider left or right and place it in a position that matches the random number you're given at the start of each round of the game.",
           "technologies": "UIKit, UIAlertController, UIWebView, html, UISliderView, Notifications, UIImageView, UIButtonView"
-        },
-
-        {
-          "project name": "AR Sight Spotter",
-          "date": "July, 2019",
-          "github": "https://github.com/simonitalia/ARSightSpotter",
-          "description": "The objective of this app is to overlay (augment) the real world with information (text) about what's around the user. The app works by using the iPhone camera to display the real world, the CoreLocation framework to figure out where in the world the user is, the wikipedia API to download data of based on the user's location, and the ARKit framework to overlay the additional, virtual data (node objects).",
-          "technologies": "ARKit, CoreLocation, SceneKit, SKScene, SpriteKit, SKLabelNode, CLLocationManager, CLLocation, simd_float4x4, SCNMatrix4MakeRotation, ARAnchor, JSON-API"
         }
     ],
 
@@ -141,7 +145,8 @@
           "location": "Melbourne, Australia",
           "period": "Jul 2018 to Dec 2018",
           "duration": "6 months",
-          "accomplishments": "Integrated app with a digital coin wallet for customer’s to store digital currency(ies) of choice, Integrated app with Airstayz booking platform, enabling customer account management and hotel booking capabilities, Designed and implemented the company’s JIRA workflow management process."
+          "accomplishments": "Integrated app with a digital coin wallet for customer’s to store digital currency(ies) of choice, Integrated app with Airstayz booking platform, enabling customer account management and hotel booking capabilities, Designed and implemented the company’s JIRA workflow management process",
+          "image": "airstayz"
         },
 
         {
@@ -153,7 +158,8 @@
           "location": "London, UK",
           "period": "Apr 2017 to Apr 2018",
           "duration": "1 year",
-          "accomplishments": "Payment system upgrade/migration from Global Collect to Ingenico for the EMEA market. Migration required major changes to the website’s front end/UI, API/Web services, database and fulfillment/Warehouse systems, Loyalty program functionality designed, developed and rolled out to key markets in Europe"
+          "accomplishments": "Payment system upgrade/migration from Global Collect to Ingenico for the EMEA market. Migration required major changes to the website’s front end/UI, API/Web services, database and fulfillment/Warehouse systems, Loyalty program functionality designed, developed and rolled out to key markets in Europe",
+          "image": "estee"
         },
 
         {
@@ -165,7 +171,8 @@
           "location": "New York City, USA",
           "period": "Mar 2011 to Apr 2017",
           "duration": "6 years",
-          "accomplishments": "E-Commerce / Omni-channel Loyalty program: Lead the development and integration of the company’s first truly integrated multi-channel Loyalty Program (Web, Mobile iOS app + POS/In-store) in the US and Canada markets, E-Commerce Checkout redesign: Lead the research, design and implementation of the new 1-page checkout interface, flows and technological architecture on Estee’s Global online platform, Social Login integration with Facebook."
+          "accomplishments": "E-Commerce / Omni-channel Loyalty program: Lead the development and integration of the company’s first truly integrated multi-channel Loyalty Program (Web, Mobile iOS app + POS/In-store) in the US and Canada markets, E-Commerce Checkout redesign: Lead the research, design and implementation of the new 1-page checkout interface, flows and technological architecture on Estee’s Global online platform, Social Login integration with Facebook",
+          "image": "estee"
         },
 
         {
@@ -177,7 +184,8 @@
           "location": "New York City, USA",
           "period": "Oct 2008 to Feb 2011",
           "duration": "2+ years",
-          "accomplishments": "Lead the project team to deliver the next generation equity research platform, Market Scope Adviser (MSA), Lead a secondary project team to deliver the next generation Fund Management Research (FMR) platform."
+          "accomplishments": "Lead the project team to deliver the next generation equity research platform, Market Scope Adviser (MSA), Lead a secondary project team to deliver the next generation Fund Management Research (FMR) platform",
+          "image": "sandp"
         },
 
         {
@@ -189,7 +197,8 @@
           "location": "Melbourne, Australia",
           "period": "Jun 2006 to Oct 2008",
           "duration": "2+ years",
-          "accomplishments": "Lead delivery of a technically complex project to display Premium, Executive job ads made for the company's print newspapers to online, Lead delivery of a new Classifieds website for Executive (100K+) job listings, Lead delivery of Premium product offering (Multi industry category listing and auto refresh)"
+          "accomplishments": "Lead delivery of a technically complex project to display Premium, Executive job ads made for the company's print newspapers to online, Lead delivery of a new Classifieds website for Executive (100K+) job listings, Lead delivery of Premium product offering (Multi industry category listing and auto refresh)",
+          "image": "fairfax"
         },
 
         {
@@ -201,7 +210,8 @@
           "location": "Melbourne, Australia",
           "period": "Oct 2005 to Jun 2006",
           "duration": "9 months",
-          "accomplishments": "Lead delivery of Premium product offering (Priority ad placement in search results), Lead the Taxonomy review & implementation project (updated industry and sub-industry categories)"
+          "accomplishments": "Lead delivery of Premium product offering (Priority ad placement in search results), Lead the Taxonomy review & implementation project (updated industry and sub-industry categories)",
+          "image": "fairfax"
         },
 
         {
@@ -213,7 +223,8 @@
           "location": "Melbourne, Australia",
           "period": "Jan 2003 to Sep 2005",
           "duration": "2+ years",
-          "accomplishments": "Lead delivery of a new web system for clients to view the company's travel and expenditure reports, Lead delivery of a new web based travel authorization system for corporate travelers"
+          "accomplishments": "Lead delivery of a new web system for clients to view the company's travel and expenditure reports, Lead delivery of a new web based travel authorization system for corporate travelers",
+          "image": "hrg"
         }
       ],
 
@@ -221,11 +232,12 @@
       {
         "language": "Swift / iOS Developer",
         "location": "Remote",
-        "period": "Oct 2019 to current",
+        "period": "Aug 2019 to current",
         "duration": "0.25 years",
         "description": "60+ iOS apps developed using Apple’s broad and powerful range of frameworks.",
         "technologies": "UIKit, SpriteKit, SceneKit, CoreML / CreateML, CoreMotion, WatchKit, CoreGraphics, NotificationCenter, Delegate Protocol Pattern, Notifications and Observers, MVC, Extensions, UITableViewController, UICollectionViewController, Encodable/Decodable Protocols, JSON Encoder/Decoder, CoreData",
-        "projects": "https://github.com/simonitalia"
+        "projects": "https://github.com/simonitalia",
+        "image": "swift"
       }
     ],
 
@@ -333,16 +345,6 @@
     ],
 
     "swift project based courses": [
-        {
-          "provider": "Paul Hudson",
-          "course": "Swift Coding Challenges",
-          "location": "iBooks",
-          "projects completed": "40+ algorithms",
-          "period": "Aug 2019 - Sep 2019",
-          "duration": "1 month",
-          "completion year": "2019"
-        },
-
         {
           "provider": "Paul Hudson",
           "course": "Advanced iOS - Volume 2",

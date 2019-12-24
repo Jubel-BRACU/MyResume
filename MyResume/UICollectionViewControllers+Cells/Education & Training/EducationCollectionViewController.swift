@@ -78,8 +78,8 @@ class EducationCollectionViewController: UICollectionViewController {
              sectionHeaderView.setLabelTextWith(string: headerText)
                 print("Header set for section: \(indexPath.section)")
             
-            default:
-                fatalError("Error! Failed to create section header")
+           case .none:
+                fatalError("Error! Unknown case, failed to create section header")
             }
         }
         
@@ -104,8 +104,8 @@ class EducationCollectionViewController: UICollectionViewController {
             print("Number of items for section \(section): \(count)\n")
             return count
             
-        default:
-            fatalError("Error! Failed to set number of items / rows in section")
+        case .none:
+            fatalError("Error! Unknown case, failed to set number of items / rows in section")
         }
     }
 
@@ -177,8 +177,8 @@ class EducationCollectionViewController: UICollectionViewController {
             print("Cell for section \(indexPath.section) set")
             return cell
 
-        default:
-            fatalError("Error! Failed to set cell objects")
+        case .none:
+            fatalError("Error! Unknown case, failed to set cell objects")
         }
     }
 

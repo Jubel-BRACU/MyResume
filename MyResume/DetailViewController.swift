@@ -11,16 +11,17 @@ import UIKit
 class DetailViewController: UIViewController {
     
     //IB Outlets
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var labels: [UILabel]!
+    @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
+        dismissView()
+    }
     
     //properties to receive data from passing VC
     var viewTitle: String?
     var viewDescription: String?
     var viewDetails: String?
-    
-    @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
-        dismissView()
-    }
+    var viewImage: String?
     
     
     override func viewDidLoad() {
@@ -49,11 +50,31 @@ class DetailViewController: UIViewController {
                 break
             }
         }
+        
+        //set image
+        if let image = viewImage {
+            let logo = getLogo(image: image, type: ".png")
+            imageView.image = logo
+        }
     }
     
-    @objc func dismissView() {
-        dismiss(animated: true, completion: nil)
+    //fetch image file from bundle
+    func getLogo(image named: String, type: String) -> UIImage {
+        let image = UIImage(named: named+type)
+        
+        if let image = image {
+            return image
+        
+        } else {
+            print("Error! Image cannot be loaded, or was not found. Loading default image")
+            return UIImage(systemName: "hammer.fill")!
+        }
+        
     }
+    
+    func dismissView() {
+           dismiss(animated: true, completion: nil)
+   }
     
 }
 

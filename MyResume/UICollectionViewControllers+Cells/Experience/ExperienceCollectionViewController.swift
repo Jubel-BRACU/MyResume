@@ -85,8 +85,8 @@ class ExperienceCollectionViewController: UICollectionViewController {
              sectionHeaderView.setLabelTextWith(string: headerText)
                 print("Header set for section: \(indexPath.section)")
             
-            default:
-                fatalError("Error! Failed to create section header")
+            case .none:
+                fatalError("Error! Unknown case, failed to create section header")
             }
         }
 
@@ -111,8 +111,8 @@ class ExperienceCollectionViewController: UICollectionViewController {
             print("Number of items for section \(section): \(count)\n")
             return count
             
-        default:
-            fatalError("Error! Failed to set number of items / rows in section")
+        case .none:
+            fatalError("Error! Unknown case, failed to set number of items / rows in section")
         }
     }
 
@@ -189,8 +189,8 @@ class ExperienceCollectionViewController: UICollectionViewController {
             print("Cell for section \(indexPath.section) set")
             return cell
 
-        default:
-            fatalError("Error! Failed to set cell objects")
+        case .none:
+            fatalError("Error! Unknown case, failed to set cell objects")
         }
     }
 
@@ -207,63 +207,25 @@ class ExperienceCollectionViewController: UICollectionViewController {
             
             //get object item
             let item = ViewController.resume!.professionalExperience[indexPath.item]
-            vc.viewTitle = item["job title"]!
-            vc.viewDescription = item["description"]!
-            vc.viewDetails = item["accomplishments"]!
+            vc.viewTitle = item["job title"]
+            vc.viewDescription = item["description"]
+            vc.viewDetails = item["accomplishments"]
+            vc.viewImage = item["image"]
 
         case .developer:
             let item = ViewController.resume!.developerExperience[indexPath.item]
-            vc.viewTitle = item["language"]!
-            vc.viewDescription = item["description"]!
-            vc.viewDetails = item["technologies"]!
+            vc.viewTitle = item["language"]
+            vc.viewDescription = item["description"]
+            vc.viewDetails = item["technologies"]
+            vc.viewImage = item["image"]
                
-           default:
-               break
-           }
+        case .none:
+            fatalError("Error! Unknown case, failed to set destination VC properties")
+       }
          
-        //display DeatailVC
+        //display DetailVC
         self.present(vc, animated: true, completion: nil)
-
     }
-    
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-    
-    // MARK: - Navigation
-
-    //In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//    }
-    
- 
     
 }
     

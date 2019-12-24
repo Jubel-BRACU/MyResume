@@ -28,7 +28,7 @@ class iOSProjectsCollectionViewController: UICollectionViewController {
                 return self?.setupLayoutOne()
                 
             case .none:
-                fatalError("Should not be none ")
+                fatalError("Should not be none")
             }
         }
         return layout
@@ -80,8 +80,8 @@ class iOSProjectsCollectionViewController: UICollectionViewController {
              sectionHeaderView.setLabelTextWith(string: headerText)
                 print("Header set for section: \(indexPath.section)")
             
-            default:
-                fatalError("Error! Failed to create section header")
+            case .none:
+                fatalError("Error! Unknown case, failed to set header section")
             }
         }
         
@@ -106,8 +106,8 @@ class iOSProjectsCollectionViewController: UICollectionViewController {
             print("Number of items for section \(section): \(count)\n")
             return count
             
-        default:
-            fatalError("Error! Failed to set number of items / rows in section")
+        case .none:
+            fatalError("Error! Unknown case, failed to set number of items / rows in section")
         }
     }
 
@@ -181,8 +181,41 @@ class iOSProjectsCollectionViewController: UICollectionViewController {
             return cell
 
         default:
-            fatalError("Error! Failed to set cell objects")
+            fatalError("Error! Unknown case, failed to set cell objects")
         }
+    }
+    
+    // MARK: UICollectionViewDelegate
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard ViewController.resume != nil else { fatalError() }
+        
+        //instantiate desitination vc
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        
+        //pass cell object data, based on cell of section
+        switch ProjectSection(rawValue: indexPath.section) {
+        case .personal:
+            
+            //get object item
+            let item = ViewController.resume!.personalProjects[indexPath.item]
+            vc.viewTitle = item["project name"]
+            vc.viewDescription = item["description"]
+            vc.viewDetails = item["technologies"]
+            vc.viewImage = item["image"]
+
+        case .coursework:
+            let item = ViewController.resume!.courseworkProjects[indexPath.item]
+            vc.viewTitle = item["project name"]
+            vc.viewDescription = item["description"]
+            vc.viewDetails = item["technologies"]
+            vc.viewImage = item["image"]
+               
+        case .none:
+               fatalError("Error! Unknown case, failed to set destinaton VC properties")
+           }
+         
+        //display DetailVC
+        self.present(vc, animated: true, completion: nil)
     }
     
 }

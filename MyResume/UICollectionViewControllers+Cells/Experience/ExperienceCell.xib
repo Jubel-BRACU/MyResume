@@ -64,9 +64,18 @@
                         </constraints>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqH-tj-kjR">
-                        <rect key="frame" x="10" y="84.5" width="280" height="55.5"/>
+                        <rect key="frame" x="10" y="84.5" width="280" height="40.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="more &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAE-ap-c9G">
+                        <rect key="frame" x="10" y="130" width="280" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="Puq-DM-747"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -74,18 +83,21 @@
             <color key="backgroundColor" white="0.93056844685175644" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Q6a-hP-tbN" firstAttribute="top" secondItem="KLJ-y8-x8Y" secondAttribute="bottom" constant="5" id="4sh-du-rql"/>
+                <constraint firstAttribute="trailing" secondItem="DAE-ap-c9G" secondAttribute="trailing" constant="10" id="Lic-Do-1Nq"/>
                 <constraint firstItem="Qlh-fL-Hy3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Os4-Bw-85y"/>
                 <constraint firstItem="Q6a-hP-tbN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="RRR-gs-kio"/>
                 <constraint firstItem="KLJ-y8-x8Y" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="SM6-4a-dWD"/>
                 <constraint firstItem="KLJ-y8-x8Y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="X1o-4Q-kNG"/>
-                <constraint firstAttribute="bottom" secondItem="aqH-tj-kjR" secondAttribute="bottom" constant="10" id="bNz-fl-D1P"/>
+                <constraint firstItem="DAE-ap-c9G" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="YSn-Ow-oG1"/>
                 <constraint firstAttribute="trailing" secondItem="aqH-tj-kjR" secondAttribute="trailing" constant="10" id="cVF-MB-3qk"/>
                 <constraint firstItem="aqH-tj-kjR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="ekX-dt-5OP"/>
                 <constraint firstAttribute="trailing" secondItem="KLJ-y8-x8Y" secondAttribute="trailing" constant="10" id="gDb-0P-S0N"/>
                 <constraint firstAttribute="trailing" secondItem="Qlh-fL-Hy3" secondAttribute="trailing" constant="10" id="kAy-fd-hAh"/>
                 <constraint firstAttribute="trailing" secondItem="Q6a-hP-tbN" secondAttribute="trailing" constant="10" id="lyj-TE-ADU"/>
+                <constraint firstItem="DAE-ap-c9G" firstAttribute="top" secondItem="aqH-tj-kjR" secondAttribute="bottom" constant="5" id="naB-na-MnO"/>
                 <constraint firstItem="aqH-tj-kjR" firstAttribute="top" secondItem="Qlh-fL-Hy3" secondAttribute="bottom" constant="5" id="tRT-Ll-QEs"/>
                 <constraint firstItem="Qlh-fL-Hy3" firstAttribute="top" secondItem="Q6a-hP-tbN" secondAttribute="bottom" constant="10" id="xCz-QW-Kc7"/>
+                <constraint firstAttribute="bottom" secondItem="DAE-ap-c9G" secondAttribute="bottom" constant="10" id="zlj-iT-zUA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <userDefinedRuntimeAttributes>
