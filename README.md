@@ -10,7 +10,7 @@ This is My Resume (as at December 2019) represented as an iOS App.
 # Demo
 ![Demo](Demo_29122019.gif)
 
-# Topics / milestones
+# Technologies
 
 - UIKit
 
