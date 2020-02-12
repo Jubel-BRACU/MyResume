@@ -36,9 +36,9 @@ This is My Resume (as at December 2019) represented as an iOS App.
 
 - JSON Encoder / Decoder
 
-- @escaping funcions
+- @escaping funtcions (completion handler)
 
-- Enum
+- enum
 
 - extensions (UIView, UICollectionView, ViewController)
 
