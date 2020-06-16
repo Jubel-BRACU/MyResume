@@ -18,7 +18,8 @@ class SectionHeaderReusableView: UICollectionReusableView {
         super.awakeFromNib()
     }
     
-    func setLabelTextWith(string text: String) {
+    
+   func setLabelTextWith(string text: String) {
         sectionHeaderLabel.text = text
     }
 }

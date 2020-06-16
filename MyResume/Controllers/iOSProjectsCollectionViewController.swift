@@ -8,11 +8,12 @@
 
 import UIKit
 
+
 private let sectionHeaderReuseIdentifier = "SectionHeaderReusableView"
 private let sectionHeaderReusableViewNibName = sectionHeaderReuseIdentifier
-
 private let cellReuseIdentifier = "iOSProjectCell"
 private let reusableCellNibName = cellReuseIdentifier
+
 
 class iOSProjectsCollectionViewController: UICollectionViewController {
     
@@ -34,14 +35,14 @@ class iOSProjectsCollectionViewController: UICollectionViewController {
         return layout
     }()
     
+    
+    //MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //Register cell classes and nib files
-        //Section Header Resuable View Class
+        //custom cell and xib file registrations
         collectionView.register(UINib(nibName: sectionHeaderReusableViewNibName, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier)
-
-        //Cell Class
         collectionView.register(UINib(nibName: reusableCellNibName, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
 
         //Setup compositional layout
@@ -49,18 +50,21 @@ class iOSProjectsCollectionViewController: UICollectionViewController {
         collectionView.contentInsetAdjustmentBehavior = .scrollableAxes
         
     }
+}
 
-    // MARK: UICollectionViewDataSource
+
+// MARK: - UICollectionViewDataSource
+    
+extension iOSProjectsCollectionViewController {
 
     //set number of sections
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
     
-    //set section header data
+    
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        //instantiate SectionHeaderCollectionReusableView
         let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier, for: indexPath) as! SectionHeaderReusableView
         
         if kind == UICollectionView.elementKindSectionHeader {
@@ -88,7 +92,7 @@ class iOSProjectsCollectionViewController: UICollectionViewController {
         return sectionHeaderView
     }
 
-    //define number of items per section
+
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard ViewController.resume != nil else { return 0 }
         
@@ -111,7 +115,7 @@ class iOSProjectsCollectionViewController: UICollectionViewController {
         }
     }
 
-    //configure cell with data object
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard ViewController.resume != nil else {fatalError()}
         
@@ -184,8 +188,12 @@ class iOSProjectsCollectionViewController: UICollectionViewController {
             fatalError("Error! Unknown case, failed to set cell objects")
         }
     }
+}
+
+// MARK:- UICollectionViewDelegate
+
+extension iOSProjectsCollectionViewController {
     
-    // MARK: UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard ViewController.resume != nil else { fatalError() }
         
@@ -217,5 +225,4 @@ class iOSProjectsCollectionViewController: UICollectionViewController {
         //display DetailVC
         self.present(vc, animated: true, completion: nil)
     }
-    
 }

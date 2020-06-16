@@ -11,7 +11,6 @@ import UIKit
 
 extension UICollectionViewController {
     
-    //Define / configure and create UICollectionView compositional layout
     func setupLayoutOne() -> NSCollectionLayoutSection {
         let item = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
@@ -87,9 +86,4 @@ extension UICollectionViewController {
                                                         trailing: 0.0)
         return section
     }
-    
-        
 }
-    
-    
-

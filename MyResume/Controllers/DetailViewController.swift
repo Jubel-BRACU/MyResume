@@ -24,12 +24,15 @@ class DetailViewController: UIViewController {
     var viewImage: String?
     
     
+    //MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Setup UI
         updateUI()
     }
+    
     
     func updateUI() {
         
@@ -58,6 +61,7 @@ class DetailViewController: UIViewController {
         }
     }
     
+    
     //fetch image file from bundle
     func getLogo(image named: String, type: String) -> UIImage {
         let image = UIImage(named: named+type)
@@ -73,8 +77,6 @@ class DetailViewController: UIViewController {
     }
     
     func dismissView() {
-           dismiss(animated: true, completion: nil)
+       dismiss(animated: true, completion: nil)
    }
-    
 }
-

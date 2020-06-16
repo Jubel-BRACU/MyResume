@@ -11,10 +11,10 @@ import UIKit
 import SafariServices
 import MessageUI
 
-//helper to open web links inside safari in app
+
 extension ViewController: MFMailComposeViewControllerDelegate {
     
-    //MARK: - Load Safari
+    //Load Safari
     func loadWebsite(url string: String) {
         DispatchQueue.main.async { [unowned self] in
             let url = URL(string: string)!
@@ -24,7 +24,6 @@ extension ViewController: MFMailComposeViewControllerDelegate {
     }
     
     
-    //MARK: - Load Mail Composer
     //Mail Controller delegate
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         
@@ -59,6 +58,7 @@ extension ViewController: MFMailComposeViewControllerDelegate {
         controller.dismiss(animated: true, completion: nil)
     }
     
+    
     //load Mail Composer
     func loadMailComposer(to emails: [String]) {
         
@@ -84,6 +84,7 @@ extension ViewController: MFMailComposeViewControllerDelegate {
             self.present(mailComposerVC, animated: true, completion: nil)
         }
     }
+    
     
     //trigger call phone number
     func callNumber(number: String) {
@@ -115,6 +116,7 @@ extension ViewController: MFMailComposeViewControllerDelegate {
         }
     }
     
+    
     //Set Webiste Links
     func setWebsiteLabels(resume: Resume?, labels: [UILabel]) {
         guard resume != nil else { return }
@@ -145,6 +147,7 @@ extension ViewController: MFMailComposeViewControllerDelegate {
             }
         }
     }
+    
     
     //Ste Profile info
     func setProfileInfo(resume: Resume?, label: UILabel, textViews: [UITextView]?) {

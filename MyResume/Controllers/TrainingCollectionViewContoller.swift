@@ -10,9 +10,9 @@ import UIKit
 
 private let sectionHeaderReuseIdentifier = "SectionHeaderReusableView"
 private let sectionHeaderReusableViewNibName = sectionHeaderReuseIdentifier
-
 private let cellReuseIdentifier = "EducationCell"
 private let reusableCellNibName = cellReuseIdentifier
+
 
 class TrainingCollectionViewController: UICollectionViewController {
 
@@ -34,28 +34,32 @@ class TrainingCollectionViewController: UICollectionViewController {
         return layout
     }()
     
+    
+    //MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //Register cell classes and nib files
-        //Section Header Resuable View Class
+        //custom cell and xib file registrations
         collectionView.register(UINib(nibName: sectionHeaderReusableViewNibName, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier)
-
-        //Cell Class
         collectionView.register(UINib(nibName: reusableCellNibName, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
 
         //Setup compositional layout
         collectionView.collectionViewLayout = compositionalLayout
         collectionView.contentInsetAdjustmentBehavior = .scrollableAxes
     }
+}
 
-    // MARK: UICollectionViewDataSource
+
+// MARK: - UICollectionViewDataSource
+
+extension TrainingCollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
     
-    //set section header data
+
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         //instantiate SectionHeaderCollectionReusableView
@@ -86,7 +90,7 @@ class TrainingCollectionViewController: UICollectionViewController {
         return sectionHeaderView
     }
 
-    //define number of items per section
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard ViewController.resume != nil else { return 0 }
         
@@ -110,7 +114,6 @@ class TrainingCollectionViewController: UICollectionViewController {
     }
 
     
-    //configure cell with data object
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard ViewController.resume != nil else {fatalError()}
         
@@ -181,6 +184,4 @@ class TrainingCollectionViewController: UICollectionViewController {
             fatalError("Error! Unknown case, failed to set cell objects")
         }
     }
-
-
 }

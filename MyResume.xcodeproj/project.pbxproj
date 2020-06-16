@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A0F75F923ACA9D50057AADD /* DeveloperExperienceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F75F723ACA9D50057AADD /* DeveloperExperienceCell.swift */; };
-		2A0F75FA23ACA9D50057AADD /* DeveloperExperienceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0F75F823ACA9D50057AADD /* DeveloperExperienceCell.xib */; };
 		2A0F75FC23AD08460057AADD /* UICollectionViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F75FB23AD08460057AADD /* UICollectionViewController+Extensions.swift */; };
 		2A11378C23A704390097B8AA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11378B23A704390097B8AA /* UIView+Extensions.swift */; };
 		2A11378F23A7AC300097B8AA /* ExperienceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11378D23A7AC300097B8AA /* ExperienceCell.swift */; };
@@ -50,8 +48,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A0F75F723ACA9D50057AADD /* DeveloperExperienceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperExperienceCell.swift; sourceTree = "<group>"; };
-		2A0F75F823ACA9D50057AADD /* DeveloperExperienceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeveloperExperienceCell.xib; sourceTree = "<group>"; };
 		2A0F75FB23AD08460057AADD /* UICollectionViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UICollectionViewController+Extensions.swift"; path = "MyResume/Controllers/Extensions/UICollectionViewController+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		2A11378B23A704390097B8AA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		2A11378D23A7AC300097B8AA /* ExperienceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCell.swift; sourceTree = "<group>"; };
@@ -115,13 +111,12 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		2A11379723A7ACBB0097B8AA /* Section Header */ = {
+		2A11379723A7ACBB0097B8AA /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				2A11379223A7AC990097B8AA /* SectionHeaderReusableView.swift */,
-				2A11379323A7AC990097B8AA /* SectionHeaderReusableView.xib */,
+				2A75970424985DD900AFC403 /* Headers */,
 			);
-			path = "Section Header";
+			path = Sections;
 			sourceTree = "<group>";
 		};
 		2A11379823A7ACC60097B8AA /* Experience */ = {
@@ -140,15 +135,6 @@
 				2A368ED123AF1CD900D2FB47 /* EducationCell.xib */,
 			);
 			path = "Education & Training";
-			sourceTree = "<group>";
-		};
-		2A5B172C23ADC70600671EB8 /* Archive */ = {
-			isa = PBXGroup;
-			children = (
-				2A0F75F823ACA9D50057AADD /* DeveloperExperienceCell.xib */,
-				2A0F75F723ACA9D50057AADD /* DeveloperExperienceCell.swift */,
-			);
-			path = Archive;
 			sourceTree = "<group>";
 		};
 		2A5B172D23AE343400671EB8 /* iOS Projects */ = {
@@ -198,7 +184,7 @@
 		2A7596FE249856B600AFC403 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2A11379723A7ACBB0097B8AA /* Section Header */,
+				2A11379723A7ACBB0097B8AA /* Sections */,
 				2A11379123A7AC380097B8AA /* Cells */,
 				2A7597002498570A00AFC403 /* Storyboards */,
 				2A7597022498584400AFC403 /* Extensions */,
@@ -250,6 +236,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2A75970424985DD900AFC403 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				2A11379223A7AC990097B8AA /* SectionHeaderReusableView.swift */,
+				2A11379323A7AC990097B8AA /* SectionHeaderReusableView.xib */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		2AA6F590239DF1F200DF0FE4 = {
 			isa = PBXGroup;
 			children = (
@@ -274,7 +269,6 @@
 				2A7596FD249856B000AFC403 /* Model */,
 				2A7596FE249856B600AFC403 /* Views */,
 				2A7596FC249856A600AFC403 /* Controllers */,
-				2A5B172C23ADC70600671EB8 /* Archive */,
 				2A7596FF249856F500AFC403 /* Assets */,
 			);
 			path = MyResume;
@@ -381,7 +375,6 @@
 				2A11379523A7AC990097B8AA /* SectionHeaderReusableView.xib in Resources */,
 				2ABAF75D23B1DA90000C437F /* hrg.png in Resources */,
 				2AAF876A23A315B900043F01 /* ResumeData_v5.json in Resources */,
-				2A0F75FA23ACA9D50057AADD /* DeveloperExperienceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +393,6 @@
 				2AA4527423A5B28100A30E9F /* Enums.swift in Sources */,
 				2A0F75FC23AD08460057AADD /* UICollectionViewController+Extensions.swift in Sources */,
 				2A11379B23A7ADF70097B8AA /* ExperienceCollectionViewController.swift in Sources */,
-				2A0F75F923ACA9D50057AADD /* DeveloperExperienceCell.swift in Sources */,
 				2AA6F59D239DF1F200DF0FE4 /* AppDelegate.swift in Sources */,
 				2A368ED223AF1CD900D2FB47 /* EducationCell.swift in Sources */,
 				2A11379423A7AC990097B8AA /* SectionHeaderReusableView.swift in Sources */,
@@ -557,16 +549,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4879TTCN72;
 				INFOPLIST_FILE = "$(SRCROOT)/MyResume/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicaltomato.MyResume;
 				PRODUCT_NAME = "My Resume";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -575,16 +569,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4879TTCN72;
 				INFOPLIST_FILE = "$(SRCROOT)/MyResume/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicaltomato.MyResume;
 				PRODUCT_NAME = "My Resume";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
