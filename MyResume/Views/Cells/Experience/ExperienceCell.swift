@@ -1,22 +1,26 @@
 //
-//  iOSProjectCell.swift
+//  ExperienceCollectionViewCell.swift
 //  MyResume
 //
-//  Created by Simon Italia on 12/21/19.
+//  Created by Simon Italia on 12/16/19.
 //  Copyright © 2019 SDI Group Inc. All rights reserved.
 //
 
 import UIKit
 
-class iOSProjectCell: UICollectionViewCell {
+
+class ExperienceCell: UICollectionViewCell {
     
     //cell UI Outlets
     @IBOutlet var labels: [UILabel]!
+    @IBOutlet weak var imageView: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
     
     //set labels text
     func setLabelsText(using text: String, for tag: Int) {
@@ -29,5 +33,8 @@ class iOSProjectCell: UICollectionViewCell {
         }
     }
     
-
+    //set image
+    func setImage(with image: UIImage) {
+        imageView.image = image
+    }
 }

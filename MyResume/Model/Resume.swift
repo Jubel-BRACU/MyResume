@@ -9,9 +9,11 @@
 import Foundation
 import UIKit
 
+
 struct Resumes: Decodable {
     var resumes: [Resume]
 }
+
 
 struct Resume: Decodable {
     
@@ -69,10 +71,6 @@ struct Resume: Decodable {
         
         return keys
     }
-    
-    
-    
-    
 }
 
 

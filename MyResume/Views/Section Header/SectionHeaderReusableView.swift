@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SectionHeaderReusableView: UICollectionReusableView {
     
     //cell UI Outlets
@@ -15,12 +16,9 @@ class SectionHeaderReusableView: UICollectionReusableView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func setLabelTextWith(string text: String) {
         sectionHeaderLabel.text = text
-        
     }
-
 }

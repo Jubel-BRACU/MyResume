@@ -8,11 +8,21 @@
 
 import Foundation
 
+
+//protocol method to pass json data to ViewController
+protocol ResumeDelegate {
+    func jsonDataLoaded(_ data: Resume?, _ filename: String?)
+}
+
+
 class ResumeController {
     
     //set to static so this class can be used by any VC without instantiating
     static let shared = ResumeController()
     var delegate: ResumeDelegate?
+    
+    private init() {}
+    
     
     //load data from local JSON file
     func loadJSONData(completion: @escaping (_ success: Bool?) -> Void) {
@@ -45,6 +55,7 @@ class ResumeController {
             print("Error! Resume object not created. Reason: \(error.localizedDescription)\n")
         }
     }
+    
     
     //get json data file name
     func getJSONFileName(directory: String, type: String) -> String {

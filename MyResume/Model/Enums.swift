@@ -8,7 +8,9 @@
 
 import Foundation
 
+
 //MARK: - Top secion
+
 //Profile / Contact section
 enum WebsiteLabel: Int {
     case linkedin = 0, github, website
@@ -22,10 +24,12 @@ enum ProfileTextViews: Int {
     case general = 0, valueProposition
 }
 
+
 //Segmentations
 enum SegmentControl: Int {
     case experience = 0, projects, education, training
 }
+
 
 //MARK: - Container Views
 
@@ -33,12 +37,14 @@ enum SegmentControl: Int {
 enum ExperienceSection: Int {
     case professional = 0, developer
 }
+
 enum ProfessionalExperience: Int {
     case company = 0, location, period, jobTitle, description, accomplishments
 }
 enum DeveloperExperience: Int {
     case language = 0, location, period, projects, description
 }
+
 
 //iOS Projects Segment
 enum ProjectSection: Int {
@@ -61,9 +67,3 @@ enum TrainingSection: Int {
 enum Education: Int {
     case course = 0, location, graduated, school
 }
-
-
-
-
-
-

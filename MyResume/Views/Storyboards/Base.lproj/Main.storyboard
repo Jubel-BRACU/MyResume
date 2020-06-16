@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X9C-UW-YZy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X9C-UW-YZy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -270,7 +270,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1503" y="431"/>
+            <point key="canvasLocation" x="1519" y="431"/>
         </scene>
         <!--Item-->
         <scene sceneID="Szf-YA-mqf">
@@ -317,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLK-bx-W2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="658" y="1042"/>
+            <point key="canvasLocation" x="1535" y="1082"/>
         </scene>
         <!--iOS Projects Collection View Controller-->
         <scene sceneID="K52-OL-YNz">
@@ -338,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Id-5c-IIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1283" y="1042"/>
+            <point key="canvasLocation" x="674" y="1104"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="njc-lO-f4Q">
@@ -473,7 +473,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1563.768115942029" y="1555.9151785714284"/>
+            <point key="canvasLocation" x="1535" y="1521"/>
         </scene>
         <!--Education Collection View Controller-->
         <scene sceneID="d7o-sU-96A">
@@ -494,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXm-0z-bVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1893" y="1042"/>
+            <point key="canvasLocation" x="2525" y="672"/>
         </scene>
         <!--Training Collection View Controller-->
         <scene sceneID="Fj8-Yn-njH">
@@ -515,13 +515,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgG-dn-kEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2506" y="1042"/>
+            <point key="canvasLocation" x="2525" y="206"/>
         </scene>
     </scenes>
     <resources>
-        <image name="envelope.fill" catalog="system" width="64" height="46"/>
-        <image name="globe" catalog="system" width="64" height="60"/>
-        <image name="phone.fill" catalog="system" width="64" height="56"/>
+        <image name="envelope.fill" catalog="system" width="128" height="93"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="profile_image.png" width="606" height="611"/>
     </resources>
 </document>

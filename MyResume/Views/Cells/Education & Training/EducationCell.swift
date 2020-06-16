@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class EducationCell: UICollectionViewCell {
     
     @IBOutlet var labels: [UILabel]!
@@ -18,6 +19,7 @@ class EducationCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
     
     //set labels text
     func setLabelsText(using text: String, for tag: Int) {
@@ -30,9 +32,9 @@ class EducationCell: UICollectionViewCell {
         }
     }
     
+    
     //set image
     func setImage(with image: UIImage) {
         imageView.image = image
     }
-
 }
