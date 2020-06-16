@@ -9,7 +9,7 @@
 
     "profile": [
       {
-        "profession":"iOS / Swift Developer, Web Systems Product Director, Snr. Project Manager & Bus. Analyst",
+        "profession":"iOS / Swift Developer, Web Systems Product Manager, Snr. Project Manager & Bus. Analyst",
         "general": "A very experienced, exceptionally skilled and accomplished software development professional, successfully holding positions as Product Manager / Director, Program Manager, Senior Project Manager and Business Analyst over 15+ years, specializing in sophisticated web and mobile platforms across the Beauty, Finance, and Online Advertising industries. I’m recently also a self taught iOS (Swift) Engineer with a keen interest in ML (Machine Learning), AI (Artificial Intelligence) and AR (Augmented Reality), with an extensive range of self written apps and algorithms completed.",
         "value proposition": "After many fruitful and wonderful years leading, managing and mentoring teams across a myriad of high profile, large web & mobile app development projects, from concept through to production, I have made the very challenging transition to iOS Engineer and will therefore be a strong asset to any organization looking to add an exceptional, seasoned software development professional to their iOS team. Whether it be for delivery of new features to a preexisting feature set, or delivery of a new, MVP application."
       }
@@ -32,7 +32,7 @@
           "technologies": "UIKit, MessageUI, Safari Services, open.URL(), extension, UINavigationController, UICollectionView, UICollectionViewCell, Delegate/Protocol Pattern, JSON, JSON Encoder / Decoder, Segment Control, MVC Pattern,",
           "image": "myResume"
         },
-        
+
         {
           "project name": "Waiter's Friend",
           "date": "October, 2019",
@@ -41,7 +41,7 @@
           "technologies": "UIKit, CGAffineTransform, UIActivityIndicator, UICollectionView, UICollectionViewCompositionalLayout, UITableView, GestureRecognizer, SegmentController, .xib, JSON-APIs, JSON Encoder / Decoder, URLComponents, queryItems, appendingPathComponents, @escaping functions, UserDefaults, enum, extension (UIView), UITableViewCell, UIActivityIndicator, UISearchController, UIAlertController",
           "image": "waitersFriend"
         },
-        
+
         {
           "project name": "7 Marbles",
           "date": "September, 2019",
@@ -69,7 +69,7 @@
           "description": "My solutions to over 40 swift coding challenges listed in the book Swift Coding Challenges, by Paul Hudson",
           "technologies": "String algorithms, Number algorithms (int, double, float, binary), Files / FileManager algorithms, Linked Lists algorithms"
         },
-        
+
         {
           "project name": "My Restaurant",
           "date": "July, 2019",
@@ -77,7 +77,7 @@
           "description": "The aim of this app is develop a Restaurant menu customers can review and select items from, add to an order, and then submit the order. Menu / Category Data is provided in locally (computer) hosted JSON files, and order submission uses POST methods.",
           "technologies": "UIKit, UITabBarController, UINavigationController, struct (Data Models), UITableView, JSON-APIs, JSON Encoder / Decoder, URLComponents, queryItems, appendingPathComponents, @escaping functions, UserDefaults, enum, UIAlertController"
         },
-        
+
         {
           "project name": "AR Sight Spotter",
           "date": "July, 2019",
@@ -93,7 +93,7 @@
           "description": "This app uses historical Tesla sale data combined with Swift's ML framework to determine the resale value of a Tesla.",
           "technologies": "UIKit, CoreML, UIStackView, Python, MLModel, UISegmentController"
         },
-        
+
         {
           "project name": "Bang",
           "date": "February, 2019",
@@ -140,7 +140,7 @@
           "job title": "iOS App Development Project Manager",
           "description": "Responsible for leading the engineering team to deliver and launch the company’s iOS (Beta) application.",
           "company": "Airstayz",
-          "company description": "Airtstayz is a travel booking platform with a focus on digital, keyless hotel entry as well as rewarding loyal customers with digital currency / token, called STAY.",
+          "company description": "Airtstayz is a travel booking platform startup with a focus on digital, keyless hotel entry as well as rewarding loyal customers with digital currency / token, called STAY.",
           "company website": "airstayz.com",
           "location": "Melbourne, Australia",
           "period": "Jul 2018 to Dec 2018",
@@ -246,7 +246,7 @@
         "job type": "iOS Swift Developer",
         "years experience": "0.25 year"
       },
-        
+
       {
         "job type": "Web Systems Product Director",
         "years experience": "10+ years"
@@ -256,7 +256,7 @@
         "job type": "Web Systems Senior Project Manager",
         "years experience": "15+ years"
       },
-      
+
       {
         "job type": "Web Systems Senior Business Analyst",
         "years experience": "15+ years"
@@ -403,7 +403,7 @@
           "location": "Online",
           "period": "Oct 2018 - Nov 2018",
           "duration": "1 month",
-          "completion year": "2019"
+          "completion year": "2018"
         },
 
         {
