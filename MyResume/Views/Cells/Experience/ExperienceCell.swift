@@ -33,7 +33,6 @@ class ExperienceCell: UICollectionViewCell {
         }
     }
     
-    
     //set image
     func setImage(with image: UIImage) {
         imageView.image = image

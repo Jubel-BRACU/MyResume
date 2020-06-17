@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Resume View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="ResumeViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -317,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLK-bx-W2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="1082"/>
+            <point key="canvasLocation" x="1188" y="1023"/>
         </scene>
         <!--iOS Projects Collection View Controller-->
         <scene sceneID="K52-OL-YNz">
@@ -338,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Id-5c-IIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="674" y="1104"/>
+            <point key="canvasLocation" x="1901" y="1023"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="njc-lO-f4Q">
@@ -473,7 +473,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1535" y="1521"/>
+            <point key="canvasLocation" x="1187" y="1459"/>
         </scene>
         <!--Education Collection View Controller-->
         <scene sceneID="d7o-sU-96A">
@@ -494,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXm-0z-bVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2525" y="672"/>
+            <point key="canvasLocation" x="2648" y="216"/>
         </scene>
         <!--Training Collection View Controller-->
         <scene sceneID="Fj8-Yn-njH">
@@ -515,7 +515,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgG-dn-kEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2525" y="206"/>
+            <point key="canvasLocation" x="2649" y="651"/>
         </scene>
     </scenes>
     <resources>

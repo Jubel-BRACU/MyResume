@@ -35,10 +35,20 @@ class ExperienceCollectionViewController: UICollectionViewController {
     }()
     
     
+    var resume: ResumeObject? {
+        ResumeViewController.resume
+    }
+    
+    
     //MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCollecionView()
+    }
+    
+    
+    private func configureCollecionView() {
         
         //custom cell and xib file registrations
         collectionView.register(UINib(nibName: sectionHeaderReusableViewNibName, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier)
@@ -49,8 +59,8 @@ class ExperienceCollectionViewController: UICollectionViewController {
         collectionView.contentInsetAdjustmentBehavior = .scrollableAxes
     }
 }
-    
 
+    
 // MARK: - UICollectionViewDataSource
 extension ExperienceCollectionViewController {
 
@@ -90,19 +100,19 @@ extension ExperienceCollectionViewController {
 
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard ViewController.resume != nil else { return 0 }
+        guard let resume = resume else { return 0 }
         
         switch ExperienceSection(rawValue: section) {
         
         //section 0
         case .professional:
-            let count = ViewController.resume!.professionalExperience.count
+            let count = resume.professionalExperience.count
             print("Number of items for section \(section): \(count)\n")
             return count
          
         //section 1
         case .developer:
-            let count = ViewController.resume!.developerExperience.count
+            let count = resume.developerExperience.count
             print("Number of items for section \(section): \(count)\n")
             return count
             
@@ -113,7 +123,7 @@ extension ExperienceCollectionViewController {
 
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard ViewController.resume != nil else { fatalError() }
+        guard let resume = resume else { return UICollectionViewCell() }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! ExperienceCell
         
@@ -122,66 +132,30 @@ extension ExperienceCollectionViewController {
             
         //section 0 cell
         case .professional:
-            
-            let experiences = ViewController.resume!.professionalExperience[indexPath.item]
-            for experience in experiences {
-                switch experience.key {
-                
-                case "company":
-                    cell.setLabelsText(using: experiences[experience.key]!, for: 0)
+            let experience = resume.professionalExperience[indexPath.item]
+            cell.setLabelsText(using: experience.company, for: 0)
+            cell.setLabelsText(using: experience.location, for: 1)
+            cell.setLabelsText(using: experience.period, for: 2)
+            cell.setLabelsText(using: experience.jobTitle, for: 3)
+            cell.setLabelsText(using: experience.professionalExperienceDescription, for: 4)
 
-                 case "location":
-                    cell.setLabelsText(using: experiences[experience.key]!, for: 1)
-                 
-                 case "period":
-                    cell.setLabelsText(using: experiences[experience.key]!, for: 2)
-                    
-                 case "job title":
-                    cell.setLabelsText(using: experiences[experience.key]!, for: 3)
-                    
-                case "description":
-                    cell.setLabelsText(using: experiences[experience.key]!, for: 4)
-                    
-                 default:
-                    break
-                }
-            }
-            
             let image = UIImage(systemName: "briefcase.fill")
             cell.setImage(with: image!)
-            print("Cell for section \(indexPath.section) set")
+//            print("Cell for section \(indexPath.section) set")
             return cell
             
         //section 1 cell
         case .developer:
-            
-            let experiences = ViewController.resume!.developerExperience[indexPath.item]
-            for experience in experiences {
-                switch experience.key {
-                
-                case "language":
-                    cell.setLabelsText(using: experiences[experience.key]!, for: 0)
-
-                 case "location":
-                    cell.setLabelsText(using: experiences[experience.key]!, for: 1)
-                 
-                 case "period":
-                    cell.setLabelsText(using: experiences[experience.key]!, for: 2)
-                    
-                 case "projects":
-                    cell.setLabelsText(using: experiences[experience.key]!, for: 3)
-                    
-                case "description":
-                    cell.setLabelsText(using: experiences[experience.key]!, for: 4)
-                    
-                 default:
-                    break
-                }
-            }
+            let experience = resume.developerExperience[indexPath.item]
+            cell.setLabelsText(using: experience.language, for: 0)
+            cell.setLabelsText(using: experience.location, for: 1)
+            cell.setLabelsText(using: experience.period, for: 2)
+            cell.setLabelsText(using: experience.projects, for: 3)
+            cell.setLabelsText(using: experience.developerExperienceDescription, for: 4)
             
             let image = UIImage(systemName: "globe")
             cell.setImage(with: image!)
-            print("Cell for section \(indexPath.section) set")
+//            print("Cell for section \(indexPath.section) set")
             return cell
 
         case .none:
@@ -196,28 +170,25 @@ extension ExperienceCollectionViewController {
 extension ExperienceCollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard ViewController.resume != nil else { fatalError() }
+        guard let resume = resume else { fatalError("Resume object should not be nil") }
         
-        //instantiate desitination vc
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         
-        //pass cell object data, based on cell of section
         switch ExperienceSection(rawValue: indexPath.section) {
-        case .professional:
             
-            //get object item
-            let item = ViewController.resume!.professionalExperience[indexPath.item]
-            vc.viewTitle = item["job title"]
-            vc.viewDescription = item["description"]
-            vc.viewDetails = item["accomplishments"]
-            vc.viewImage = item["image"]
-
+        case .professional:
+            let item = resume.professionalExperience[indexPath.item]
+            vc.viewTitle = item.jobTitle
+            vc.viewDescription = item.professionalExperienceDescription
+            vc.viewDetails = item.accomplishments
+            vc.viewImage = item.image
+            
         case .developer:
-            let item = ViewController.resume!.developerExperience[indexPath.item]
-            vc.viewTitle = item["language"]
-            vc.viewDescription = item["description"]
-            vc.viewDetails = item["technologies"]
-            vc.viewImage = item["image"]
+            let item = resume.developerExperience[indexPath.item]
+            vc.viewTitle = item.language
+            vc.viewDescription = item.developerExperienceDescription
+            vc.viewDetails = item.technologies
+            vc.viewImage = item.image
                
         case .none:
             fatalError("Error! Unknown case, failed to set destination VC properties")

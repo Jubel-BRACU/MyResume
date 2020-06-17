@@ -28,13 +28,11 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Setup UI
         updateUI()
     }
     
     
-    func updateUI() {
+    private func updateUI() {
         
         //setup labels
         for label in labels {
@@ -63,7 +61,7 @@ class DetailViewController: UIViewController {
     
     
     //fetch image file from bundle
-    func getLogo(image named: String, type: String) -> UIImage {
+    private func getLogo(image named: String, type: String) -> UIImage {
         let image = UIImage(named: named+type)
         
         if let image = image {
@@ -76,7 +74,7 @@ class DetailViewController: UIViewController {
         
     }
     
-    func dismissView() {
+    private func dismissView() {
        dismiss(animated: true, completion: nil)
    }
 }

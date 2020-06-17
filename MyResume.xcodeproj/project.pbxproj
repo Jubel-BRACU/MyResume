@@ -23,18 +23,19 @@
 		2A5B173023AE349100671EB8 /* iOSProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B172E23AE349100671EB8 /* iOSProjectCell.swift */; };
 		2A5B173123AE349100671EB8 /* iOSProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5B172F23AE349100671EB8 /* iOSProjectCell.xib */; };
 		2A6740B723A390A400685D1E /* profile_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6740B623A390A400685D1E /* profile_image.png */; };
+		2A75972C249892F800AFC403 /* Resume.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A75972A249892F800AFC403 /* Resume.xcdatamodeld */; };
+		2A7597302498D8DF00AFC403 /* Resume+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A75972F2498D8DF00AFC403 /* Resume+Extensions.swift */; };
 		2AA4527023A5AA2C00A30E9F /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4526F23A5AA2C00A30E9F /* ViewController+Extensions.swift */; };
 		2AA4527423A5B28100A30E9F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4527323A5B28100A30E9F /* Enums.swift */; };
 		2AA6F59D239DF1F200DF0FE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F59C239DF1F200DF0FE4 /* AppDelegate.swift */; };
 		2AA6F59F239DF1F200DF0FE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F59E239DF1F200DF0FE4 /* SceneDelegate.swift */; };
-		2AA6F5A1239DF1F200DF0FE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F5A0239DF1F200DF0FE4 /* ViewController.swift */; };
+		2AA6F5A1239DF1F200DF0FE4 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F5A0239DF1F200DF0FE4 /* ResumeViewController.swift */; };
 		2AA6F5A4239DF1F200DF0FE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F5A2239DF1F200DF0FE4 /* Main.storyboard */; };
 		2AA6F5A6239DF1F400DF0FE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F5A5239DF1F400DF0FE4 /* Assets.xcassets */; };
 		2AA6F5A9239DF1F400DF0FE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F5A7239DF1F400DF0FE4 /* LaunchScreen.storyboard */; };
-		2AAF875523A0B6F900043F01 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF875423A0B6F900043F01 /* Resume.swift */; };
+		2AAA39352499989F004FF6C7 /* ResumeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA39342499989F004FF6C7 /* ResumeResponse.swift */; };
+		2AAA39392499F99E004FF6C7 /* ResumeData_v5-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA39382499F99E004FF6C7 /* ResumeData_v5-2.json */; };
 		2AAF875723A1BC6000043F01 /* ResumeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF875623A1BC6000043F01 /* ResumeController.swift */; };
-		2AAF876523A267A900043F01 /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF876423A267A900043F01 /* JSONValue.swift */; };
-		2AAF876A23A315B900043F01 /* ResumeData_v5.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF876923A315B900043F01 /* ResumeData_v5.json */; };
 		2ABAF75A23B1DA90000C437F /* estee.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABAF75523B1DA90000C437F /* estee.png */; };
 		2ABAF75C23B1DA90000C437F /* fairfax.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABAF75723B1DA90000C437F /* fairfax.png */; };
 		2ABAF75D23B1DA90000C437F /* hrg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABAF75823B1DA90000C437F /* hrg.png */; };
@@ -64,20 +65,21 @@
 		2A5B172E23AE349100671EB8 /* iOSProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSProjectCell.swift; sourceTree = "<group>"; };
 		2A5B172F23AE349100671EB8 /* iOSProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iOSProjectCell.xib; sourceTree = "<group>"; };
 		2A6740B623A390A400685D1E /* profile_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_image.png; sourceTree = "<group>"; };
+		2A75972B249892F800AFC403 /* Resume.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Resume.xcdatamodel; sourceTree = "<group>"; };
+		2A75972F2498D8DF00AFC403 /* Resume+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resume+Extensions.swift"; sourceTree = "<group>"; };
 		2AA4526F23A5AA2C00A30E9F /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
 		2AA4527323A5B28100A30E9F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		2AA6F599239DF1F200DF0FE4 /* My Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Resume.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA6F59C239DF1F200DF0FE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AA6F59E239DF1F200DF0FE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2AA6F5A0239DF1F200DF0FE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2AA6F5A0239DF1F200DF0FE4 /* ResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
 		2AA6F5A3239DF1F200DF0FE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AA6F5A5239DF1F400DF0FE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AA6F5A8239DF1F400DF0FE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AA6F5AA239DF1F400DF0FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2AAF875423A0B6F900043F01 /* Resume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
+		2AAA39342499989F004FF6C7 /* ResumeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeResponse.swift; sourceTree = "<group>"; };
+		2AAA39382499F99E004FF6C7 /* ResumeData_v5-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ResumeData_v5-2.json"; sourceTree = "<group>"; };
 		2AAF875623A1BC6000043F01 /* ResumeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeController.swift; sourceTree = "<group>"; };
-		2AAF876423A267A900043F01 /* JSONValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONValue.swift; sourceTree = "<group>"; };
-		2AAF876923A315B900043F01 /* ResumeData_v5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ResumeData_v5.json; sourceTree = "<group>"; };
 		2ABAF75523B1DA90000C437F /* estee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estee.png; sourceTree = "<group>"; };
 		2ABAF75723B1DA90000C437F /* fairfax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fairfax.png; sourceTree = "<group>"; };
 		2ABAF75823B1DA90000C437F /* hrg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hrg.png; sourceTree = "<group>"; };
@@ -158,7 +160,7 @@
 		2A7596FC249856A600AFC403 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2AA6F5A0239DF1F200DF0FE4 /* ViewController.swift */,
+				2AA6F5A0239DF1F200DF0FE4 /* ResumeViewController.swift */,
 				2A11379923A7ADF70097B8AA /* ExperienceCollectionViewController.swift */,
 				2A2EC2C223AED4B8006378C3 /* iOSProjectsCollectionViewController.swift */,
 				2A368ECD23AF1C8800D2FB47 /* EducationCollectionViewController.swift */,
@@ -172,10 +174,9 @@
 		2A7596FD249856B000AFC403 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2AAF875423A0B6F900043F01 /* Resume.swift */,
-				2AAF875623A1BC6000043F01 /* ResumeController.swift */,
-				2AA4527323A5B28100A30E9F /* Enums.swift */,
-				2AAF876423A267A900043F01 /* JSONValue.swift */,
+				2A759728249892B300AFC403 /* ResumeResponse */,
+				2A7597322498DBA500AFC403 /* Constants+Enums */,
+				2A759729249892C300AFC403 /* Data Persistence */,
 				2A7597032498590800AFC403 /* Extensions */,
 			);
 			path = Model;
@@ -245,6 +246,40 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
+		2A759728249892B300AFC403 /* ResumeResponse */ = {
+			isa = PBXGroup;
+			children = (
+				2AAF875623A1BC6000043F01 /* ResumeController.swift */,
+				2AAA39342499989F004FF6C7 /* ResumeResponse.swift */,
+			);
+			path = ResumeResponse;
+			sourceTree = "<group>";
+		};
+		2A759729249892C300AFC403 /* Data Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				2A75972A249892F800AFC403 /* Resume.xcdatamodeld */,
+				2A7597312498DB2600AFC403 /* NSManaged Object Extensions */,
+			);
+			path = "Data Persistence";
+			sourceTree = "<group>";
+		};
+		2A7597312498DB2600AFC403 /* NSManaged Object Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A75972F2498D8DF00AFC403 /* Resume+Extensions.swift */,
+			);
+			path = "NSManaged Object Extensions";
+			sourceTree = "<group>";
+		};
+		2A7597322498DBA500AFC403 /* Constants+Enums */ = {
+			isa = PBXGroup;
+			children = (
+				2AA4527323A5B28100A30E9F /* Enums.swift */,
+			);
+			path = "Constants+Enums";
+			sourceTree = "<group>";
+		};
 		2AA6F590239DF1F200DF0FE4 = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +312,7 @@
 		2AAF876C23A3253400043F01 /* JSON Data */ = {
 			isa = PBXGroup;
 			children = (
-				2AAF876923A315B900043F01 /* ResumeData_v5.json */,
+				2AAA39382499F99E004FF6C7 /* ResumeData_v5-2.json */,
 			);
 			path = "JSON Data";
 			sourceTree = "<group>";
@@ -361,6 +396,7 @@
 				2ABAF77023B207CF000C437F /* 7marbles.png in Resources */,
 				2AA6F5A6239DF1F400DF0FE4 /* Assets.xcassets in Resources */,
 				2ABAF76823B1E18B000C437F /* sandp.png in Resources */,
+				2AAA39392499F99E004FF6C7 /* ResumeData_v5-2.json in Resources */,
 				2ABAF76F23B207CF000C437F /* waitersFriend.png in Resources */,
 				2ABAF75A23B1DA90000C437F /* estee.png in Resources */,
 				2A5B173123AE349100671EB8 /* iOSProjectCell.xib in Resources */,
@@ -374,7 +410,6 @@
 				2ABAF76623B1DEE3000C437F /* airstayz.png in Resources */,
 				2A11379523A7AC990097B8AA /* SectionHeaderReusableView.xib in Resources */,
 				2ABAF75D23B1DA90000C437F /* hrg.png in Resources */,
-				2AAF876A23A315B900043F01 /* ResumeData_v5.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,14 +420,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A75972C249892F800AFC403 /* Resume.xcdatamodeld in Sources */,
 				2A11378F23A7AC300097B8AA /* ExperienceCell.swift in Sources */,
-				2AA6F5A1239DF1F200DF0FE4 /* ViewController.swift in Sources */,
+				2AA6F5A1239DF1F200DF0FE4 /* ResumeViewController.swift in Sources */,
 				2A2EC2C423AED4B8006378C3 /* iOSProjectsCollectionViewController.swift in Sources */,
 				2A368ED723B0472600D2FB47 /* DetailViewController.swift in Sources */,
-				2AAF876523A267A900043F01 /* JSONValue.swift in Sources */,
+				2A7597302498D8DF00AFC403 /* Resume+Extensions.swift in Sources */,
 				2AA4527423A5B28100A30E9F /* Enums.swift in Sources */,
 				2A0F75FC23AD08460057AADD /* UICollectionViewController+Extensions.swift in Sources */,
 				2A11379B23A7ADF70097B8AA /* ExperienceCollectionViewController.swift in Sources */,
+				2AAA39352499989F004FF6C7 /* ResumeResponse.swift in Sources */,
 				2AA6F59D239DF1F200DF0FE4 /* AppDelegate.swift in Sources */,
 				2A368ED223AF1CD900D2FB47 /* EducationCell.swift in Sources */,
 				2A11379423A7AC990097B8AA /* SectionHeaderReusableView.swift in Sources */,
@@ -401,7 +438,6 @@
 				2AA6F59F239DF1F200DF0FE4 /* SceneDelegate.swift in Sources */,
 				2A11378C23A704390097B8AA /* UIView+Extensions.swift in Sources */,
 				2AA4527023A5AA2C00A30E9F /* ViewController+Extensions.swift in Sources */,
-				2AAF875523A0B6F900043F01 /* Resume.swift in Sources */,
 				2AAF875723A1BC6000043F01 /* ResumeController.swift in Sources */,
 				2AC3BCCF23A4A87A0097073C /* String+Extensions.swift in Sources */,
 				2A5B173023AE349100671EB8 /* iOSProjectCell.swift in Sources */,
@@ -606,6 +642,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2A75972A249892F800AFC403 /* Resume.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2A75972B249892F800AFC403 /* Resume.xcdatamodel */,
+			);
+			currentVersion = 2A75972B249892F800AFC403 /* Resume.xcdatamodel */;
+			path = Resume.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2AA6F591239DF1F200DF0FE4 /* Project object */;
 }

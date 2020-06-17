@@ -10,7 +10,7 @@ import UIKit
 
 
 @IBDesignable
-class ViewController: UIViewController {
+class ResumeViewController: UIViewController {
     
     //MARK: - Storyboard connections
     
@@ -31,8 +31,6 @@ class ViewController: UIViewController {
     
     //actions
     @IBAction func segmentedControlTapped(_ sender: Any) {
-        
-        //show relevant container views, hide other container views
         showContainerView(forSegment: segmentedControl.selectedSegmentIndex)
     }
     
@@ -60,16 +58,14 @@ class ViewController: UIViewController {
     
     //MARK: - Class Properties
     
-    static var resume: Resume? = nil
-    private var jsonFilename: String?
+    static var resume: ResumeObject?
     
     
     //MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ResumeController.shared.delegate = self //set resume delegate
-        fetchData()
+        fetchLocalResume()
         setupInitialUI()
     }
     
@@ -101,9 +97,21 @@ class ViewController: UIViewController {
     }
     
     
-    private func fetchData() {
-        ResumeController.shared.loadJSONData { [unowned self] (success) in
-            guard success != nil else { return }
+    private func fetchLocalResume() {
+        ResumeController.shared.getLocalResume { [unowned self] (resume, error) in
+            guard let _ = resume else {
+                //TODO: trigger fetch file from remote server
+                return
+            }
+            
+            if let resume = resume {
+                ResumeViewController.resume = resume
+            }
+            
+            if let error = error {
+                fatalError(error.localizedDescription)
+            }
+            
             self.updateUI()
         }
     }
@@ -112,19 +120,8 @@ class ViewController: UIViewController {
     private func updateUI() {
         profilePictureImageView.setProperties(borderWidth: borderWidth, borderColor: borderColor, cornerRadius: nil)
         profilePictureImageView.makeCircle()
-        setContactInfoLabels(resume: ViewController.resume, labels: contactInformationLabels)
-        setWebsiteLabels(resume: ViewController.resume, labels: websiteLabels)
-        setProfileInfo(resume: ViewController.resume, label: professionLabel, textViews: nil)
-    }
-}
-
-
-//MARK: - Resume Delegate
-
-extension ViewController: ResumeDelegate {
-    func jsonDataLoaded(_ data: Resume?, _ filename: String?) {
-//      print("Success! Delegate / Protocol pattern is working.\n")
-        ViewController.resume = data
-        jsonFilename = filename
+        setContactInfoLabels(resume: ResumeViewController.resume, labels: contactInformationLabels)
+        setWebsiteLabels(resume: ResumeViewController.resume, labels: websiteLabels)
+        setProfileInfo(resume: ResumeViewController.resume, label: professionLabel, textViews: nil)
     }
 }

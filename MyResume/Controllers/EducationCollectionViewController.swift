@@ -35,11 +35,20 @@ class EducationCollectionViewController: UICollectionViewController {
     }()
     
     
+    var resume: ResumeObject? {
+        ResumeViewController.resume
+    }
+    
+    
     //MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureCollecionView()
+    }
+    
+    
+    private func configureCollecionView() {
         //custom cell and xib file registrations
         collectionView.register(UINib(nibName: sectionHeaderReusableViewNibName, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier)
         collectionView.register(UINib(nibName: reusableCellNibName, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
@@ -74,13 +83,13 @@ extension EducationCollectionViewController {
             case .university:
                 let headerText = "University"
                 sectionHeaderView.setLabelTextWith(string: headerText)
-                print("Header set for section: \(indexPath.section)")
+//                print("Header set for section: \(indexPath.section)")
               
             //section 1
             case .certifications:
                 let headerText = "Industry Certifications"
-             sectionHeaderView.setLabelTextWith(string: headerText)
-                print("Header set for section: \(indexPath.section)")
+                sectionHeaderView.setLabelTextWith(string: headerText)
+//                print("Header set for section: \(indexPath.section)")
             
            case .none:
                 fatalError("Error! Unknown case, failed to create section header")
@@ -92,19 +101,19 @@ extension EducationCollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard ViewController.resume != nil else { return 0 }
+        guard let resume = resume else { return 0 }
         
         switch EducationSection(rawValue: section) {
         
         //section 0
         case .university:
-            let count = ViewController.resume!.education.count
+            let count = resume.education.count
             print("Number of items for section \(section): \(count)\n")
             return count
          
         //section 1
         case .certifications:
-            let count = ViewController.resume!.industryCertifications.count
+            let count = resume.industryCertifications.count
             print("Number of items for section \(section): \(count)\n")
             return count
             
@@ -115,7 +124,7 @@ extension EducationCollectionViewController {
 
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard ViewController.resume != nil else {fatalError()}
+        guard let resume = resume else { return UICollectionViewCell() }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! EducationCell
         
@@ -124,60 +133,28 @@ extension EducationCollectionViewController {
             
         //section 0 cell
         case .university:
-            
-            let courses = ViewController.resume!.education[indexPath.item]
-            for course in courses {
-                switch course.key {
-                
-                case "course":
-                    cell.setLabelsText(using: courses[course.key]!, for: 0)
-
-                 case "location":
-                    cell.setLabelsText(using: courses[course.key]!, for: 1)
-                 
-                 case "graduation year":
-                    cell.setLabelsText(using: courses[course.key]!, for: 2)
-                    
-                 case "school":
-                    cell.setLabelsText(using: courses[course.key]!, for: 3)
-                    
-                 default:
-                    break
-                }
-            }
+            let courses = resume.education[indexPath.item]
+            cell.setLabelsText(using: courses.course, for: 0)
+            cell.setLabelsText(using: courses.location, for: 1)
+            cell.setLabelsText(using: courses.graduationYear, for: 2)
+            cell.setLabelsText(using: courses.school, for: 3)
             
             let image = UIImage(systemName: "checkmark.seal.fill")
             cell.setImage(with: image!)
-            print("Cell for section \(indexPath.section) set")
+//            print("Cell for section \(indexPath.section) set")
             return cell
             
         //section 1 cell
         case .certifications:
-            
-            let courses = ViewController.resume!.industryCertifications[indexPath.item]
-            for course in courses {
-                switch course.key {
-                
-                case "certification":
-                    cell.setLabelsText(using: courses[course.key]!, for: 0)
-
-                 case "location":
-                    cell.setLabelsText(using: courses[course.key]!, for: 1)
-                 
-                 case "attainment year":
-                    cell.setLabelsText(using: courses[course.key]!, for: 2)
-                    
-                case "provider":
-                cell.setLabelsText(using: courses[course.key]!, for: 3)
-                    
-                 default:
-                    break
-                }
-            }
+            let certifications = resume.industryCertifications[indexPath.item]
+            cell.setLabelsText(using: certifications.certification, for: 0)
+            cell.setLabelsText(using: certifications.location, for: 1)
+            cell.setLabelsText(using: certifications.attainmentYear, for: 2)
+            cell.setLabelsText(using: certifications.provider, for: 3)
             
             let image = UIImage(systemName: "doc.plaintext")
             cell.setImage(with: image!)
-            print("Cell for section \(indexPath.section) set")
+//            print("Cell for section \(indexPath.section) set")
             return cell
 
         case .none:

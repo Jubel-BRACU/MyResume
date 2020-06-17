@@ -41,6 +41,7 @@ enum ExperienceSection: Int {
 enum ProfessionalExperience: Int {
     case company = 0, location, period, jobTitle, description, accomplishments
 }
+
 enum DeveloperExperience: Int {
     case language = 0, location, period, projects, description
 }

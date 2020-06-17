@@ -12,7 +12,7 @@ import SafariServices
 import MessageUI
 
 
-extension ViewController: MFMailComposeViewControllerDelegate {
+extension ResumeViewController: MFMailComposeViewControllerDelegate {
     
     //Load Safari
     func loadWebsite(url string: String) {
@@ -28,10 +28,7 @@ extension ViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         
         if let error = error {
-            //show error alert
             print(error.localizedDescription)
-           
-            //dimiss the controller
            controller.dismiss(animated: true, completion: nil)
            return
        }
@@ -49,12 +46,10 @@ extension ViewController: MFMailComposeViewControllerDelegate {
             case .sent:
                 print("Mail sent")
             
-        //deal with unknown cases
         @unknown default:
             fatalError("Fatal error: \(String(describing: error?.localizedDescription))")
         }
-        
-        //dismiss mail controller
+
         controller.dismiss(animated: true, completion: nil)
     }
     
@@ -64,7 +59,6 @@ extension ViewController: MFMailComposeViewControllerDelegate {
         
         guard MFMailComposeViewController.canSendMail() else {
             DispatchQueue.main.async { [unowned self] in
-                //show error alert
                 let ac = UIAlertController(title: "ERROR!", message: "Mail app not configured.", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "Dismiss", style: .default))
                 self.present(ac, animated: true)
@@ -94,21 +88,24 @@ extension ViewController: MFMailComposeViewControllerDelegate {
     
     
     //Set Contact info labels
-    func setContactInfoLabels(resume: Resume?, labels: [UILabel]) {
-        guard resume != nil else { return }
+    func setContactInfoLabels(resume: ResumeObject?, labels: [UILabel]) {
+        guard let resume = resume else { return }
         
-        let dict = resume?.contactInformation.first
+//        let dict = resume?.contactInformation.first
         for label in labels {
             
             switch label.tag {
             case ContactLabel.name.rawValue:
-                label.text = dict?["name"]
+//                label.text = dict?["name"]
+                label.text = resume.contactInformation.name
                 
             case ContactLabel.phone.rawValue:
-                label.text = dict?["phone"]
+//                label.text = dict?["phone"]
+                label.text = resume.contactInformation.phone
                 
             case ContactLabel.email.rawValue:
-                label.text = dict?["email"]
+//                label.text = dict?["email"]
+                label.text = resume.contactInformation.email
                 
             default:
                 break
@@ -118,27 +115,36 @@ extension ViewController: MFMailComposeViewControllerDelegate {
     
     
     //Set Webiste Links
-    func setWebsiteLabels(resume: Resume?, labels: [UILabel]) {
-        guard resume != nil else { return }
+    func setWebsiteLabels(resume: ResumeObject?, labels: [UILabel]) {
+        guard let resume = resume else { return }
         
         let urlType = "https://"
-        let dict = resume?.websites.first
+//        let dict = resume?.websites.first
        
         for label in labels {
 
             switch label.tag {
             case WebsiteLabel.linkedin.rawValue:
-                let string = dict?["linkedin"]
+//                let string = dict?["linkedin"]
+//                let text = string?.createAtrributedString(type: urlType)
+                
+                let string = resume.websites[label.tag].websiteURL
                 let text = string?.createAtrributedString(type: urlType)
                 label.attributedText = text
                     
             case WebsiteLabel.github.rawValue:
-                let string = dict?["github"]
-                let text = string?.createAtrributedString(type: urlType)
-                label.attributedText = text
+//                let string = dict?["github"]
+//                let text = string?.createAtrributedString(type: urlType)
+                
+                 let string = resume.websites[label.tag].websiteURL
+                 let text = string?.createAtrributedString(type: urlType)
+                 label.attributedText = text
                 
             case WebsiteLabel.website.rawValue:
-                let string = dict?["businesss website"]
+//                let string = dict?["businesss website"]
+//                let text = string?.createAtrributedString(type: urlType)
+                
+                let string = resume.websites[label.tag].websiteURL
                 let text = string?.createAtrributedString(type: urlType)
                 label.attributedText = text
                 
@@ -150,14 +156,15 @@ extension ViewController: MFMailComposeViewControllerDelegate {
     
     
     //Ste Profile info
-    func setProfileInfo(resume: Resume?, label: UILabel, textViews: [UITextView]?) {
-        guard resume != nil else { return }
+    func setProfileInfo(resume: ResumeObject?, label: UILabel, textViews: [UITextView]?) {
+        guard let resume = resume else { return }
         
-        let dict = resume?.profile.first
+//        let dict = resume?.profile.first
         
         //set labels
-        let text = dict?["profession"]
-        label.text = text
+//        let text = dict?["profession"]
+//        label.text = text
+        label.text = resume.profile.profession
         
         //set text views
         if let textViews = textViews {
@@ -165,10 +172,14 @@ extension ViewController: MFMailComposeViewControllerDelegate {
             
                 switch textView.tag {
                 case ProfileTextViews.general.rawValue:
-                    textView.text = dict?["general"]
+//                    textView.text = dict?["general"]
+                    
+                    textView.text = resume.profile.general
                     
                 case ProfileTextViews.valueProposition.rawValue:
-                    textView.text = dict?["value proposition"]
+//                    textView.text = dict?["value proposition"]
+                    
+                    textView.text = resume.profile.valueProposition
                     
                 default:
                     break
