@@ -94,7 +94,7 @@ extension ResumeViewController: MFMailComposeViewControllerDelegate {
             
             switch label.tag {
             case ContactLabel.name.rawValue:
-                label.text = resume.contactInformation.name
+                label.text = resume.contactInformation.name.uppercased()
                 
             case ContactLabel.phone.rawValue:
                 label.text = resume.contactInformation.phone

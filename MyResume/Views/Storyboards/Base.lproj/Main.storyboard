@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Resume View Controller-->
+        <!--RESUME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="ResumeViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="27C-h4-bEQ">
-                                <rect key="frame" x="20" y="59" width="100" height="100"/>
+                                <rect key="frame" x="20" y="54" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="9vg-I0-0wc"/>
                                     <constraint firstAttribute="width" constant="100" id="s6b-Uc-g0f"/>
@@ -35,7 +35,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3k-0G-3oE">
-                                <rect key="frame" x="160" y="69" width="195" height="30"/>
+                                <rect key="frame" x="160" y="54" width="195" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="YI4-Vl-lTY"/>
                                 </constraints>
@@ -44,16 +44,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profession" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TH-bv-F1B">
-                                <rect key="frame" x="160" y="99" width="195" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="UhU-H0-d2a"/>
-                                </constraints>
+                                <rect key="frame" x="160" y="84" width="195" height="70"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2mV-fo-oes">
-                                <rect key="frame" x="20" y="174" width="335" height="130"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2mV-fo-oes">
+                                <rect key="frame" x="20" y="164" width="335" height="115"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RfJ-ed-biy">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="25"/>
@@ -81,7 +78,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Vx-nK-GKB">
-                                        <rect key="frame" x="0.0" y="35" width="335" height="25"/>
+                                        <rect key="frame" x="0.0" y="30" width="335" height="25"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4il-99-pNe">
                                                 <rect key="frame" x="0.0" y="1.5" width="25" height="21.5"/>
@@ -106,7 +103,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="J0d-xx-ngq">
-                                        <rect key="frame" x="0.0" y="70" width="335" height="25"/>
+                                        <rect key="frame" x="0.0" y="60" width="335" height="25"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PbX-1m-Ip2">
                                                 <rect key="frame" x="0.0" y="1" width="25" height="23.5"/>
@@ -131,7 +128,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zIs-NW-XXD">
-                                        <rect key="frame" x="0.0" y="105" width="335" height="25"/>
+                                        <rect key="frame" x="0.0" y="90" width="335" height="25"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BUf-xs-hqt">
                                                 <rect key="frame" x="0.0" y="1" width="25" height="23.5"/>
@@ -158,40 +155,40 @@
                                 </subviews>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eMO-iW-XBu">
-                                <rect key="frame" x="10" y="324" width="355" height="51"/>
+                                <rect key="frame" x="5" y="289" width="365" height="41"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="AbM-Si-44U"/>
+                                    <constraint firstAttribute="height" constant="40" id="AbM-Si-44U"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Experience"/>
                                     <segment title="iOS Projects"/>
                                     <segment title="Education"/>
-                                    <segment title="Swift Training"/>
+                                    <segment title="iOS Training"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentedControlTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="cpW-Vf-I0Q"/>
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLT-MH-6Qs" userLabel="Experience Container View">
-                                <rect key="frame" x="10" y="374" width="355" height="288"/>
+                                <rect key="frame" x="10" y="329" width="355" height="333"/>
                                 <connections>
                                     <segue destination="EBH-R8-7WF" kind="embed" id="JDP-ip-4CW"/>
                                 </connections>
                             </containerView>
                             <containerView hidden="YES" opaque="NO" alpha="0.0" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDL-hd-bio" userLabel="Projects Container View">
-                                <rect key="frame" x="10" y="374" width="355" height="288"/>
+                                <rect key="frame" x="10" y="329" width="355" height="333"/>
                                 <connections>
                                     <segue destination="7mt-4U-hZz" kind="embed" id="Rrd-Hl-BvA"/>
                                 </connections>
                             </containerView>
                             <containerView hidden="YES" opaque="NO" alpha="0.0" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1q-gr-bl0" userLabel="Education Container View">
-                                <rect key="frame" x="10" y="374" width="355" height="288"/>
+                                <rect key="frame" x="10" y="329" width="355" height="333"/>
                                 <connections>
                                     <segue destination="HAh-ME-gKD" kind="embed" id="ce9-UJ-zgi"/>
                                 </connections>
                             </containerView>
                             <containerView hidden="YES" opaque="NO" alpha="0.0" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cz4-Hd-GNN" userLabel="Training Container View">
-                                <rect key="frame" x="10" y="374" width="355" height="288"/>
+                                <rect key="frame" x="10" y="329" width="355" height="333"/>
                                 <connections>
                                     <segue destination="kgV-aX-wPj" kind="embed" id="Tng-Np-gpE"/>
                                 </connections>
@@ -202,37 +199,38 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rLT-MH-6Qs" secondAttribute="trailing" constant="10" id="12l-Zt-z65"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2TH-bv-F1B" secondAttribute="trailing" constant="20" id="1pJ-s7-KM8"/>
                             <constraint firstItem="U3k-0G-3oE" firstAttribute="leading" secondItem="27C-h4-bEQ" secondAttribute="trailing" constant="40" id="4aP-5W-lsx"/>
-                            <constraint firstItem="27C-h4-bEQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="583-l2-G7h"/>
+                            <constraint firstItem="27C-h4-bEQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="583-l2-G7h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o1q-gr-bl0" secondAttribute="trailing" constant="10" id="5NW-X1-rU1"/>
                             <constraint firstItem="Cz4-Hd-GNN" firstAttribute="top" secondItem="eMO-iW-XBu" secondAttribute="bottom" id="7UT-Uk-Ic4"/>
                             <constraint firstItem="Cz4-Hd-GNN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="BpB-k5-7Td"/>
                             <constraint firstItem="o1q-gr-bl0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Bvq-ML-v5E"/>
-                            <constraint firstItem="eMO-iW-XBu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="DKr-LV-LRS"/>
+                            <constraint firstItem="eMO-iW-XBu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="DKr-LV-LRS"/>
                             <constraint firstItem="2mV-fo-oes" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="HC1-DS-Ebd"/>
                             <constraint firstItem="xDL-hd-bio" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="IG5-55-B32"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xDL-hd-bio" secondAttribute="trailing" constant="10" id="JX3-Zf-XGs"/>
-                            <constraint firstItem="2mV-fo-oes" firstAttribute="top" secondItem="2TH-bv-F1B" secondAttribute="bottom" constant="15" id="LNU-9T-xrq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eMO-iW-XBu" secondAttribute="trailing" constant="10" id="MnU-kR-PeR"/>
+                            <constraint firstItem="2mV-fo-oes" firstAttribute="top" secondItem="2TH-bv-F1B" secondAttribute="bottom" constant="10" id="LNU-9T-xrq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eMO-iW-XBu" secondAttribute="trailing" constant="5" id="MnU-kR-PeR"/>
                             <constraint firstItem="xDL-hd-bio" firstAttribute="top" secondItem="eMO-iW-XBu" secondAttribute="bottom" id="RFy-QM-PFj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2mV-fo-oes" secondAttribute="trailing" constant="20" id="ReA-Hk-leg"/>
                             <constraint firstItem="o1q-gr-bl0" firstAttribute="top" secondItem="eMO-iW-XBu" secondAttribute="bottom" id="U9B-Z9-d9f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cz4-Hd-GNN" secondAttribute="bottom" constant="5" id="Ufe-lt-pxU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o1q-gr-bl0" secondAttribute="bottom" constant="5" id="Xy2-GA-u01"/>
-                            <constraint firstItem="2mV-fo-oes" firstAttribute="top" secondItem="27C-h4-bEQ" secondAttribute="bottom" constant="15" id="YbW-qN-g89"/>
+                            <constraint firstItem="2mV-fo-oes" firstAttribute="top" secondItem="27C-h4-bEQ" secondAttribute="bottom" constant="10" id="YbW-qN-g89"/>
                             <constraint firstItem="rLT-MH-6Qs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="bFe-OT-bk9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rLT-MH-6Qs" secondAttribute="bottom" constant="5" id="csn-B4-aqq"/>
                             <constraint firstItem="2TH-bv-F1B" firstAttribute="top" secondItem="U3k-0G-3oE" secondAttribute="bottom" id="eUd-Az-2xo"/>
                             <constraint firstItem="2TH-bv-F1B" firstAttribute="leading" secondItem="27C-h4-bEQ" secondAttribute="trailing" constant="40" id="gKh-wR-5cy"/>
+                            <constraint firstItem="U3k-0G-3oE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="kFJ-UP-UrH"/>
                             <constraint firstItem="27C-h4-bEQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kFm-OG-9Gp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xDL-hd-bio" secondAttribute="bottom" constant="5" id="mSV-lB-YdR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cz4-Hd-GNN" secondAttribute="trailing" constant="10" id="qbY-cD-Hig"/>
-                            <constraint firstItem="eMO-iW-XBu" firstAttribute="top" secondItem="2mV-fo-oes" secondAttribute="bottom" constant="20" id="quG-5j-qTr"/>
+                            <constraint firstItem="eMO-iW-XBu" firstAttribute="top" secondItem="2mV-fo-oes" secondAttribute="bottom" constant="10" id="quG-5j-qTr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U3k-0G-3oE" secondAttribute="trailing" constant="20" id="qzv-fG-5Eu"/>
                             <constraint firstItem="rLT-MH-6Qs" firstAttribute="top" secondItem="eMO-iW-XBu" secondAttribute="bottom" id="xhN-N9-vTV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SjO-eb-TPu"/>
+                    <navigationItem key="navigationItem" title="RESUME" id="SjO-eb-TPu"/>
                     <connections>
                         <outlet property="professionLabel" destination="2TH-bv-F1B" id="fMp-cZ-xMi"/>
                         <outlet property="profilePictureImageView" destination="27C-h4-bEQ" id="pvE-eb-rvb"/>
@@ -296,7 +294,7 @@
             <objects>
                 <viewController id="EBH-R8-7WF" customClass="ExperienceCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="bQR-d2-8hU">
-                        <rect key="frame" x="0.0" y="0.0" width="355" height="288"/>
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="333"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rfR-dE-eo5">
@@ -324,7 +322,7 @@
             <objects>
                 <viewController id="7mt-4U-hZz" customClass="iOSProjectsCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="iTi-Ej-UBk">
-                        <rect key="frame" x="0.0" y="0.0" width="355" height="288"/>
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="333"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mkW-Mu-5ez">
@@ -345,7 +343,7 @@
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" id="Wzz-cM-kLF" customClass="DetailViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7W2-yH-DbH">
-                        <rect key="frame" x="0.0" y="0.0" width="355" height="288"/>
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="333"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cb7-zg-45L">
@@ -393,7 +391,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="close X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5o-RP-OWv">
-                                <rect key="frame" x="10" y="228" width="335" height="50"/>
+                                <rect key="frame" x="10" y="273" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Tjh-qD-AHH"/>
                                 </constraints>
@@ -448,7 +446,7 @@
             <objects>
                 <viewController id="HAh-ME-gKD" customClass="EducationCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="MM4-p2-S65">
-                        <rect key="frame" x="0.0" y="0.0" width="355" height="288"/>
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="333"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FRA-mn-z0H">
@@ -462,14 +460,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXm-0z-bVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2648" y="216"/>
+            <point key="canvasLocation" x="2580" y="601"/>
         </scene>
         <!--Training Collection View Controller-->
         <scene sceneID="Fj8-Yn-njH">
             <objects>
                 <viewController id="kgV-aX-wPj" customClass="TrainingCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wRs-Qp-msF">
-                        <rect key="frame" x="0.0" y="0.0" width="355" height="288"/>
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="333"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vrV-fb-unN">
@@ -483,7 +481,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgG-dn-kEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2649" y="651"/>
+            <point key="canvasLocation" x="2580" y="203"/>
         </scene>
     </scenes>
     <resources>
