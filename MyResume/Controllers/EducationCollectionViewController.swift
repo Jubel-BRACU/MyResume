@@ -108,13 +108,13 @@ extension EducationCollectionViewController {
         //section 0
         case .university:
             let count = resume.education.count
-            print("Number of items for section \(section): \(count)\n")
+//            print("Number of items for section \(section): \(count)\n")
             return count
          
         //section 1
         case .certifications:
             let count = resume.industryCertifications.count
-            print("Number of items for section \(section): \(count)\n")
+//            print("Number of items for section \(section): \(count)\n")
             return count
             
         case .none:

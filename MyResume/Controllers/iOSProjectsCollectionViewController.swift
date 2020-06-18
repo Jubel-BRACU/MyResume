@@ -84,13 +84,13 @@ extension iOSProjectsCollectionViewController {
             case .personal:
                 let headerText = "Personal Projects"
                 sectionHeaderView.setLabelTextWith(string: headerText)
-                print("Header set for section: \(indexPath.section)")
+//                print("Header set for section: \(indexPath.section)")
               
             //section 1
             case .coursework:
                 let headerText = "Select Coursework Projects"
              sectionHeaderView.setLabelTextWith(string: headerText)
-                print("Header set for section: \(indexPath.section)")
+//                print("Header set for section: \(indexPath.section)")
             
             case .none:
                 fatalError("Error! Unknown case, failed to set header section")
@@ -109,14 +109,13 @@ extension iOSProjectsCollectionViewController {
         //section 0
         case .personal:
             let count = resume.personalProjects.count
-            
-            print("Number of items for section \(section): \(count)\n")
+//            print("Number of items for section \(section): \(count)\n")
             return count
          
         //section 1
         case .coursework:
             let count = resume.courseworkProjects.count
-            print("Number of items for section \(section): \(count)\n")
+//            print("Number of items for section \(section): \(count)\n")
             return count
             
         case .none:

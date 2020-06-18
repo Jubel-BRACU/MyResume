@@ -82,13 +82,13 @@ extension ExperienceCollectionViewController {
             case .professional:
                 let headerText = "Professional Experience"
                 sectionHeaderView.setLabelTextWith(string: headerText)
-                print("Header set for section: \(indexPath.section)")
+//                print("Header set for section: \(indexPath.section)")
               
             //section 1
             case .developer:
                 let headerText = "Developer Experience"
              sectionHeaderView.setLabelTextWith(string: headerText)
-                print("Header set for section: \(indexPath.section)")
+//                print("Header set for section: \(indexPath.section)")
             
             case .none:
                 fatalError("Error! Unknown case, failed to create section header")
@@ -107,13 +107,13 @@ extension ExperienceCollectionViewController {
         //section 0
         case .professional:
             let count = resume.professionalExperience.count
-            print("Number of items for section \(section): \(count)\n")
+//            print("Number of items for section \(section): \(count)")
             return count
          
         //section 1
         case .developer:
             let count = resume.developerExperience.count
-            print("Number of items for section \(section): \(count)\n")
+//            print("Number of items for section \(section): \(count)")
             return count
             
         case .none:
