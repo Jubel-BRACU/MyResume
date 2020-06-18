@@ -82,7 +82,6 @@ class ResumeViewController: UIViewController {
     private func showContainerView(forSegment tag: Int) {
         
         for container in containerViews {
-            
             //show container
             if container.tag == tag {
                 container.alpha = 1
@@ -118,10 +117,12 @@ class ResumeViewController: UIViewController {
     
     
     private func updateUI() {
+        guard let resume = ResumeViewController.resume else { return }
+        
         profilePictureImageView.setProperties(borderWidth: borderWidth, borderColor: borderColor, cornerRadius: nil)
         profilePictureImageView.makeCircle()
-        setContactInfoLabels(resume: ResumeViewController.resume, labels: contactInformationLabels)
-        setWebsiteLabels(resume: ResumeViewController.resume, labels: websiteLabels)
-        setProfileInfo(resume: ResumeViewController.resume, label: professionLabel, textViews: nil)
+        setContactInfoLabels(resume: resume, labels: contactInformationLabels)
+        setWebsiteLabels(resume: resume, labels: websiteLabels)
+        setProfileInfo(resume: resume, label: professionLabel, textViews: nil)
     }
 }
