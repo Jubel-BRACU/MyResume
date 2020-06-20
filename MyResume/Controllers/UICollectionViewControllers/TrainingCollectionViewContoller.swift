@@ -8,29 +8,38 @@
 
 import UIKit
 
-private let sectionHeaderReuseIdentifier = "SectionHeaderReusableView"
-private let sectionHeaderReusableViewNibName = sectionHeaderReuseIdentifier
-private let cellReuseIdentifier = "EducationCell"
-private let reusableCellNibName = cellReuseIdentifier
+//private let sectionHeaderReuseIdentifier = "SectionHeaderReusableView"
+//private let sectionHeaderReusableViewNibName = sectionHeaderReuseIdentifier
+fileprivate let cellReuseIdentifier = "EducationCell"
+fileprivate let reusableCellNibName = cellReuseIdentifier
 
 
-class TrainingCollectionViewController: UICollectionViewController {
+class TrainingCollectionViewController: UIViewController {
+    
 
+    //MARK: - Storyboard Connections
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    //MARK: - Class Properties
+    
     private lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self]
             (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
             
             switch TrainingSection(rawValue: sectionIndex) {
             case .projectBased:
-                return self?.setupLayoutOne()
-                
+                return self?.setupEducationAndTrainingLayout()
+
             case .foundational:
-                return self?.setupLayoutOne()
+                return self?.setupEducationAndTrainingLayout()
                 
-            case .none:
+            default:
                 fatalError("Should not be none ")
             }
         }
+        
         return layout
     }()
     
@@ -48,7 +57,11 @@ class TrainingCollectionViewController: UICollectionViewController {
     }
     
     
+    //MARK: - Configuration
+    
     private func configureCollectionView() {
+        collectionView.dataSource = self
+        
         //custom cell and xib file registrations
         collectionView.register(UINib(nibName: sectionHeaderReusableViewNibName, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier)
         collectionView.register(UINib(nibName: reusableCellNibName, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
@@ -62,14 +75,14 @@ class TrainingCollectionViewController: UICollectionViewController {
 
 // MARK: - UICollectionViewDataSource
 
-extension TrainingCollectionViewController {
+extension TrainingCollectionViewController: UICollectionViewDataSource {
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
     
 
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         //instantiate SectionHeaderCollectionReusableView
         let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier, for: indexPath) as! SectionHeaderReusableView
@@ -83,13 +96,11 @@ extension TrainingCollectionViewController {
             case .projectBased:
                 let headerText = "Project Based Courses"
                 sectionHeaderView.setLabelTextWith(string: headerText)
-//                print("Header set for section: \(indexPath.section)")
               
             //section 1
             case .foundational:
                 let headerText = "Foundational Courses"
              sectionHeaderView.setLabelTextWith(string: headerText)
-//                print("Header set for section: \(indexPath.section)")
             
             case .none:
                 fatalError("Error! Unknown case, failed to create section header")
@@ -100,7 +111,7 @@ extension TrainingCollectionViewController {
     }
 
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let resume = resume else { return 0 }
         
         switch TrainingSection(rawValue: section) {
@@ -108,13 +119,11 @@ extension TrainingCollectionViewController {
         //section 0
         case .projectBased:
             let count = resume.swiftProjectBasedCourses.count
-//            print("Number of items for section \(section): \(count)\n")
             return count
          
         //section 1
         case .foundational:
             let count = resume.swiftFoundationalCourses.count
-//            print("Number of items for section \(section): \(count)\n")
             return count
             
         case .none:
@@ -123,7 +132,7 @@ extension TrainingCollectionViewController {
     }
 
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let resume = resume else { fatalError("Resume object should not be nil") }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! EducationCell
@@ -141,7 +150,6 @@ extension TrainingCollectionViewController {
             
             let image = UIImage(systemName: "hammer.fill")
             cell.setImage(with: image!)
-//            print("Cell for section \(indexPath.section) set")
             return cell
             
         //section 1 cell
@@ -154,7 +162,6 @@ extension TrainingCollectionViewController {
             
             let image = UIImage(systemName: "book.fill")
             cell.setImage(with: image!)
-//            print("Cell for section \(indexPath.section) set")
             return cell
 
         case .none:

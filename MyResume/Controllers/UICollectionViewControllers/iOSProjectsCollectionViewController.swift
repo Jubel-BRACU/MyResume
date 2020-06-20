@@ -9,29 +9,36 @@
 import UIKit
 
 
-private let sectionHeaderReuseIdentifier = "SectionHeaderReusableView"
-private let sectionHeaderReusableViewNibName = sectionHeaderReuseIdentifier
-private let cellReuseIdentifier = "iOSProjectCell"
-private let reusableCellNibName = cellReuseIdentifier
+fileprivate let cellReuseIdentifier = "iOSProjectCell"
+fileprivate let reusableCellNibName = cellReuseIdentifier
 
 
-class iOSProjectsCollectionViewController: UICollectionViewController {
+class iOSProjectsCollectionViewController: UIViewController {
     
-    private lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
+    //MARK: - Storyboard Connections
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    //MARK: - Class Properties
+    
+    lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self]
             (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-            
+
             switch ProjectSection(rawValue: sectionIndex) {
             case .personal:
-                return self?.setupLayoutOne()
-                
+                return self?.setupExperienceAndProjectsLayout()
+
             case .coursework:
-                return self?.setupLayoutOne()
-                
-            case .none:
+                return self?.setupExperienceAndProjectsLayout()
+
+            default:
                 fatalError("Should not be none")
             }
+
         }
+
         return layout
     }()
     
@@ -49,7 +56,12 @@ class iOSProjectsCollectionViewController: UICollectionViewController {
     }
     
     
+    //MARK: - Configuration
+    
     private func configureCollecionView() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
         //custom cell and xib file registrations
         collectionView.register(UINib(nibName: sectionHeaderReusableViewNibName, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier)
         collectionView.register(UINib(nibName: reusableCellNibName, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
@@ -63,15 +75,15 @@ class iOSProjectsCollectionViewController: UICollectionViewController {
 
 // MARK: - UICollectionViewDataSource
     
-extension iOSProjectsCollectionViewController {
+extension iOSProjectsCollectionViewController: UICollectionViewDataSource {
 
     //set number of sections
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
     
     
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier, for: indexPath) as! SectionHeaderReusableView
         
@@ -84,13 +96,11 @@ extension iOSProjectsCollectionViewController {
             case .personal:
                 let headerText = "Personal Projects"
                 sectionHeaderView.setLabelTextWith(string: headerText)
-//                print("Header set for section: \(indexPath.section)")
               
             //section 1
             case .coursework:
                 let headerText = "Select Coursework Projects"
              sectionHeaderView.setLabelTextWith(string: headerText)
-//                print("Header set for section: \(indexPath.section)")
             
             case .none:
                 fatalError("Error! Unknown case, failed to set header section")
@@ -101,7 +111,7 @@ extension iOSProjectsCollectionViewController {
     }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let resume = resume else { return 0 }
         
         switch ProjectSection(rawValue: section) {
@@ -109,13 +119,11 @@ extension iOSProjectsCollectionViewController {
         //section 0
         case .personal:
             let count = resume.personalProjects.count
-//            print("Number of items for section \(section): \(count)\n")
             return count
          
         //section 1
         case .coursework:
             let count = resume.courseworkProjects.count
-//            print("Number of items for section \(section): \(count)\n")
             return count
             
         case .none:
@@ -124,7 +132,7 @@ extension iOSProjectsCollectionViewController {
     }
 
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let resume = resume else { return UICollectionViewCell() }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! iOSProjectCell
@@ -140,7 +148,6 @@ extension iOSProjectsCollectionViewController {
             cell.setLabelsText(using: projects.projectDescription, for: 2)
             cell.setLabelsText(using: projects.github, for: 3)
             cell.setLabelsText(using: projects.technologies, for: 4)
-//            print("Cell for section \(indexPath.section) set")
             return cell
             
         //section 1 cell
@@ -151,7 +158,6 @@ extension iOSProjectsCollectionViewController {
             cell.setLabelsText(using: projects.projectDescription, for: 2)
             cell.setLabelsText(using: projects.github, for: 3)
             cell.setLabelsText(using: projects.technologies, for: 4)
-//            print("Cell for section \(indexPath.section) set")
             return cell
 
         default:
@@ -162,9 +168,9 @@ extension iOSProjectsCollectionViewController {
 
 // MARK:- UICollectionViewDelegate
 
-extension iOSProjectsCollectionViewController {
+extension iOSProjectsCollectionViewController: UICollectionViewDelegate {
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let resume = resume else { fatalError("Resume object should not be nil") }
 
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController

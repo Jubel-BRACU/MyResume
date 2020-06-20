@@ -8,12 +8,17 @@
 
 import UIKit
 
+//MARK: - Global / Common collectionView properties
+
+let sectionHeaderReuseIdentifier = "SectionHeaderReusableView"
+let sectionHeaderReusableViewNibName = sectionHeaderReuseIdentifier
+
 
 @IBDesignable
 class ResumeViewController: UIViewController {
     
     //MARK: - Storyboard connections
-    
+
     //outlets
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var professionLabel: UILabel!
@@ -21,7 +26,7 @@ class ResumeViewController: UIViewController {
     @IBOutlet var websiteLabels: [UILabel]!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet var containerViews: [UIView]!
-     
+    
     
     //inspectables
     @IBInspectable var borderWidth: CGFloat = 2
@@ -57,30 +62,40 @@ class ResumeViewController: UIViewController {
     
     
     //MARK: - Class Properties
-    
     static var resume: ResumeObject?
-    
+
     
     //MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchLocalResume()
-        setupInitialUI()
+        configureVC()
     }
     
     
-    //MARK: - Custom methods
+    //MARK: - UI / Configuration
     
-    private func setupInitialUI() {
+    private func configureVC() {
         segmentedControl.selectedSegmentIndex = SegmentControl.experience.rawValue
-        showContainerView(forSegment: SegmentControl.experience.rawValue)
     }
     
     
+    func updateProfileSection() {
+        guard let resume = ResumeViewController.resume else { return }
+        
+        DispatchQueue.main.async {
+            self.profilePictureImageView.setProperties(borderWidth: self.borderWidth, borderColor: self.borderColor, cornerRadius: nil)
+            self.profilePictureImageView.makeCircle()
+            self.setContactInfoLabels(resume: resume, labels: self.contactInformationLabels)
+            self.setWebsiteLabels(resume: resume, labels: self.websiteLabels)
+            self.setProfileInfo(resume: resume, label: self.professionLabel, textViews: nil)
+        }
+    }
+    
+
     //handle display of conatiner views
     private func showContainerView(forSegment tag: Int) {
-        
         for container in containerViews {
             //show container
             if container.tag == tag {
@@ -96,33 +111,27 @@ class ResumeViewController: UIViewController {
     }
     
     
+   private func updateUI() {
+        self.updateProfileSection()
+    }
+    
+
     private func fetchLocalResume() {
         ResumeController.shared.getLocalResume { [unowned self] (resume, error) in
             guard let _ = resume else {
-                //TODO: trigger fetch file from remote server
+                //TODO: trigger error alert
+                
                 return
             }
             
             if let resume = resume {
                 ResumeViewController.resume = resume
+                self.updateUI()
             }
             
             if let error = error {
                 fatalError(error.localizedDescription)
             }
-            
-            self.updateUI()
         }
-    }
-    
-    
-    private func updateUI() {
-        guard let resume = ResumeViewController.resume else { return }
-        
-        profilePictureImageView.setProperties(borderWidth: borderWidth, borderColor: borderColor, cornerRadius: nil)
-        profilePictureImageView.makeCircle()
-        setContactInfoLabels(resume: resume, labels: contactInformationLabels)
-        setWebsiteLabels(resume: resume, labels: websiteLabels)
-        setProfileInfo(resume: resume, label: professionLabel, textViews: nil)
     }
 }

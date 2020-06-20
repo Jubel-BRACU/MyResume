@@ -8,25 +8,30 @@
 
 import UIKit
 
-private let sectionHeaderReuseIdentifier = "SectionHeaderReusableView"
-private let sectionHeaderReusableViewNibName = sectionHeaderReuseIdentifier
-private let cellReuseIdentifier = "ExperienceCell"
-private let reusableCellNibName = cellReuseIdentifier
 
+fileprivate let cellReuseIdentifier = "ExperienceCell"
+fileprivate let reusableCellNibName = cellReuseIdentifier
 
-class ExperienceCollectionViewController: UICollectionViewController {
+class ExperienceCollectionViewController: UIViewController {
+    
+    //MARK: - Storyboard Connections
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    //MARK: - Class Properties
     
     private lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self]
             (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-            
+
             switch ExperienceSection(rawValue: sectionIndex) {
             case .professional:
-                return self?.setupLayoutOne()
-                
+                return self?.setupExperienceAndProjectsLayout()
+
             case .developer:
-                return self?.setupLayoutTwo()
-                
+                return self?.setupExperienceAndProjectsLayout()
+
             case .none:
                 fatalError("Should not be none ")
             }
@@ -34,7 +39,7 @@ class ExperienceCollectionViewController: UICollectionViewController {
         return layout
     }()
     
-    
+
     var resume: ResumeObject? {
         ResumeViewController.resume
     }
@@ -48,11 +53,17 @@ class ExperienceCollectionViewController: UICollectionViewController {
     }
     
     
+    //MARK: - Configuration
+    
     private func configureCollecionView() {
         
+        collectionView.dataSource = self
+        collectionView.delegate = self
+
         //custom cell and xib file registrations
         collectionView.register(UINib(nibName: sectionHeaderReusableViewNibName, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier)
         collectionView.register(UINib(nibName: reusableCellNibName, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
+
         
         //Setup compositional layout
         collectionView.collectionViewLayout = compositionalLayout
@@ -60,17 +71,18 @@ class ExperienceCollectionViewController: UICollectionViewController {
     }
 }
 
-    
-// MARK: - UICollectionViewDataSource
-extension ExperienceCollectionViewController {
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+// MARK: - UICollectionViewDataSource
+
+extension ExperienceCollectionViewController: UICollectionViewDataSource {
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         print("Section set")
         return 2
     }
     
 
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier, for: indexPath) as! SectionHeaderReusableView
         
@@ -82,13 +94,11 @@ extension ExperienceCollectionViewController {
             case .professional:
                 let headerText = "Professional Experience"
                 sectionHeaderView.setLabelTextWith(string: headerText)
-//                print("Header set for section: \(indexPath.section)")
               
             //section 1
             case .developer:
                 let headerText = "Developer Experience"
              sectionHeaderView.setLabelTextWith(string: headerText)
-//                print("Header set for section: \(indexPath.section)")
             
             case .none:
                 fatalError("Error! Unknown case, failed to create section header")
@@ -99,7 +109,7 @@ extension ExperienceCollectionViewController {
     }
 
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let resume = resume else { return 0 }
         
         switch ExperienceSection(rawValue: section) {
@@ -107,13 +117,11 @@ extension ExperienceCollectionViewController {
         //section 0
         case .professional:
             let count = resume.professionalExperience.count
-//            print("Number of items for section \(section): \(count)")
             return count
          
         //section 1
         case .developer:
             let count = resume.developerExperience.count
-//            print("Number of items for section \(section): \(count)")
             return count
             
         case .none:
@@ -122,7 +130,7 @@ extension ExperienceCollectionViewController {
     }
 
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let resume = resume else { return UICollectionViewCell() }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! ExperienceCell
@@ -141,7 +149,6 @@ extension ExperienceCollectionViewController {
 
             let image = UIImage(systemName: "briefcase.fill")
             cell.setImage(with: image!)
-//            print("Cell for section \(indexPath.section) set")
             return cell
             
         //section 1 cell
@@ -155,7 +162,6 @@ extension ExperienceCollectionViewController {
             
             let image = UIImage(systemName: "globe")
             cell.setImage(with: image!)
-//            print("Cell for section \(indexPath.section) set")
             return cell
 
         case .none:
@@ -167,9 +173,9 @@ extension ExperienceCollectionViewController {
 
 // MARK: - UICollectionViewDelegate
 
-extension ExperienceCollectionViewController {
+extension ExperienceCollectionViewController: UICollectionViewDelegate {
 
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let resume = resume else { fatalError("Resume object should not be nil") }
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController

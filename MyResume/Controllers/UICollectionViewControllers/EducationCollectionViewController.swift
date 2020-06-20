@@ -8,13 +8,19 @@
 
 import UIKit
 
-private let sectionHeaderReuseIdentifier = "SectionHeaderReusableView"
-private let sectionHeaderReusableViewNibName = sectionHeaderReuseIdentifier
+
 private let cellReuseIdentifier = "EducationCell"
 private let reusableCellNibName = cellReuseIdentifier
 
 
-class EducationCollectionViewController: UICollectionViewController {
+class EducationCollectionViewController: UIViewController {
+    
+    //MARK: - Storyboard Connections
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    //MARK: - Class Properties
 
     private lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self]
@@ -22,15 +28,16 @@ class EducationCollectionViewController: UICollectionViewController {
             
             switch EducationSection(rawValue: sectionIndex) {
             case .university:
-                return self?.setupLayoutOne()
-                
+                return self?.setupEducationAndTrainingLayout()
+
             case .certifications:
-                return self?.setupLayoutOne()
+                return self?.setupEducationAndTrainingLayout()
                 
-            case .none:
+          default:
                 fatalError("Should not be none ")
             }
         }
+        
         return layout
     }()
     
@@ -48,7 +55,11 @@ class EducationCollectionViewController: UICollectionViewController {
     }
     
     
+    //MARK: - Configuration
+    
     private func configureCollecionView() {
+        collectionView.dataSource = self
+        
         //custom cell and xib file registrations
         collectionView.register(UINib(nibName: sectionHeaderReusableViewNibName, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier)
         collectionView.register(UINib(nibName: reusableCellNibName, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
@@ -62,14 +73,14 @@ class EducationCollectionViewController: UICollectionViewController {
 
 // MARK: UICollectionViewDataSource
 
-extension EducationCollectionViewController {
+extension EducationCollectionViewController: UICollectionViewDataSource {
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
     
 
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         //instantiate SectionHeaderCollectionReusableView
         let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier, for: indexPath) as! SectionHeaderReusableView
@@ -83,13 +94,11 @@ extension EducationCollectionViewController {
             case .university:
                 let headerText = "University"
                 sectionHeaderView.setLabelTextWith(string: headerText)
-//                print("Header set for section: \(indexPath.section)")
               
             //section 1
             case .certifications:
                 let headerText = "Industry Certifications"
                 sectionHeaderView.setLabelTextWith(string: headerText)
-//                print("Header set for section: \(indexPath.section)")
             
            case .none:
                 fatalError("Error! Unknown case, failed to create section header")
@@ -100,7 +109,7 @@ extension EducationCollectionViewController {
     }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let resume = resume else { return 0 }
         
         switch EducationSection(rawValue: section) {
@@ -108,13 +117,11 @@ extension EducationCollectionViewController {
         //section 0
         case .university:
             let count = resume.education.count
-//            print("Number of items for section \(section): \(count)\n")
             return count
          
         //section 1
         case .certifications:
             let count = resume.industryCertifications.count
-//            print("Number of items for section \(section): \(count)\n")
             return count
             
         case .none:
@@ -123,7 +130,7 @@ extension EducationCollectionViewController {
     }
 
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let resume = resume else { return UICollectionViewCell() }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! EducationCell
@@ -141,7 +148,6 @@ extension EducationCollectionViewController {
             
             let image = UIImage(systemName: "checkmark.seal.fill")
             cell.setImage(with: image!)
-//            print("Cell for section \(indexPath.section) set")
             return cell
             
         //section 1 cell
@@ -154,7 +160,6 @@ extension EducationCollectionViewController {
             
             let image = UIImage(systemName: "doc.plaintext")
             cell.setImage(with: image!)
-//            print("Cell for section \(indexPath.section) set")
             return cell
 
         case .none:

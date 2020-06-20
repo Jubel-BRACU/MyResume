@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,16 +34,16 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btf-RD-tE8">
-                        <rect key="frame" x="10" y="33" width="318" height="40"/>
+                        <rect key="frame" x="10" y="38" width="318" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="7uc-p8-ulJ"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZyH-TX-mF4">
-                        <rect key="frame" x="10" y="78" width="318" height="20"/>
+                        <rect key="frame" x="10" y="83" width="318" height="20"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mgO-Le-3ec">
                                 <rect key="frame" x="0.0" y="1" width="20" height="18.5"/>
@@ -63,7 +63,7 @@
                         </constraints>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technologies" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZf-El-46M" userLabel="Technologies">
-                        <rect key="frame" x="10" y="108" width="318" height="84"/>
+                        <rect key="frame" x="10" y="113" width="318" height="79"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -91,7 +91,7 @@
                 <constraint firstItem="WWb-Jm-x3U" firstAttribute="top" secondItem="uZf-El-46M" secondAttribute="bottom" constant="5" id="Qzw-ZG-9xK"/>
                 <constraint firstItem="ZyH-TX-mF4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="S1K-vi-utz"/>
                 <constraint firstItem="WWb-Jm-x3U" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="TVt-Bk-mCp"/>
-                <constraint firstItem="btf-RD-tE8" firstAttribute="top" secondItem="muN-Gv-JDX" secondAttribute="bottom" constant="5" id="ljN-QU-cun"/>
+                <constraint firstItem="btf-RD-tE8" firstAttribute="top" secondItem="muN-Gv-JDX" secondAttribute="bottom" constant="10" id="ljN-QU-cun"/>
                 <constraint firstAttribute="trailing" secondItem="uZf-El-46M" secondAttribute="trailing" constant="10" id="nPf-Iy-sG5"/>
                 <constraint firstItem="muN-Gv-JDX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="pvE-d0-4iQ"/>
                 <constraint firstAttribute="trailing" secondItem="WWb-Jm-x3U" secondAttribute="trailing" constant="10" id="sBV-Fg-ZhL"/>
@@ -122,6 +122,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="globe" catalog="system" width="64" height="60"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
     </resources>
 </document>

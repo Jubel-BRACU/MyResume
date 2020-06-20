@@ -10,12 +10,16 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    //MARK: - Storyboard connections
+    
     //IB Outlets
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var labels: [UILabel]!
     @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
         dismissView()
     }
+    
+    //MARK: - Class Properties
     
     //properties to receive data from passing VC
     var viewTitle: String?

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A0F75FC23AD08460057AADD /* UICollectionViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F75FB23AD08460057AADD /* UICollectionViewController+Extensions.swift */; };
 		2A11378C23A704390097B8AA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11378B23A704390097B8AA /* UIView+Extensions.swift */; };
 		2A11378F23A7AC300097B8AA /* ExperienceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11378D23A7AC300097B8AA /* ExperienceCell.swift */; };
 		2A11379023A7AC300097B8AA /* ExperienceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A11378E23A7AC300097B8AA /* ExperienceCell.xib */; };
@@ -25,7 +24,7 @@
 		2A6740B723A390A400685D1E /* profile_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6740B623A390A400685D1E /* profile_image.png */; };
 		2A75972C249892F800AFC403 /* Resume.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A75972A249892F800AFC403 /* Resume.xcdatamodeld */; };
 		2A7597302498D8DF00AFC403 /* Resume+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A75972F2498D8DF00AFC403 /* Resume+Extensions.swift */; };
-		2AA4527023A5AA2C00A30E9F /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4526F23A5AA2C00A30E9F /* ViewController+Extensions.swift */; };
+		2AA4527023A5AA2C00A30E9F /* ResumeViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4526F23A5AA2C00A30E9F /* ResumeViewController+Extensions.swift */; };
 		2AA4527423A5B28100A30E9F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4527323A5B28100A30E9F /* Enums.swift */; };
 		2AA6F59D239DF1F200DF0FE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F59C239DF1F200DF0FE4 /* AppDelegate.swift */; };
 		2AA6F59F239DF1F200DF0FE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F59E239DF1F200DF0FE4 /* SceneDelegate.swift */; };
@@ -46,10 +45,10 @@
 		2ABAF76F23B207CF000C437F /* waitersFriend.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABAF76C23B207CF000C437F /* waitersFriend.png */; };
 		2ABAF77023B207CF000C437F /* 7marbles.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABAF76D23B207CF000C437F /* 7marbles.png */; };
 		2AC3BCCF23A4A87A0097073C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC3BCCE23A4A87A0097073C /* String+Extensions.swift */; };
+		2ACAA0CA249DB56E0008D08C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAA0C9249DB56E0008D08C /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A0F75FB23AD08460057AADD /* UICollectionViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UICollectionViewController+Extensions.swift"; path = "MyResume/Controllers/Extensions/UICollectionViewController+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		2A11378B23A704390097B8AA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		2A11378D23A7AC300097B8AA /* ExperienceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCell.swift; sourceTree = "<group>"; };
 		2A11378E23A7AC300097B8AA /* ExperienceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperienceCell.xib; sourceTree = "<group>"; };
@@ -67,7 +66,7 @@
 		2A6740B623A390A400685D1E /* profile_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_image.png; sourceTree = "<group>"; };
 		2A75972B249892F800AFC403 /* Resume.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Resume.xcdatamodel; sourceTree = "<group>"; };
 		2A75972F2498D8DF00AFC403 /* Resume+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resume+Extensions.swift"; sourceTree = "<group>"; };
-		2AA4526F23A5AA2C00A30E9F /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
+		2AA4526F23A5AA2C00A30E9F /* ResumeViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResumeViewController+Extensions.swift"; sourceTree = "<group>"; };
 		2AA4527323A5B28100A30E9F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		2AA6F599239DF1F200DF0FE4 /* My Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Resume.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA6F59C239DF1F200DF0FE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		2ABAF76C23B207CF000C437F /* waitersFriend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waitersFriend.png; sourceTree = "<group>"; };
 		2ABAF76D23B207CF000C437F /* 7marbles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7marbles.png; sourceTree = "<group>"; };
 		2AC3BCCE23A4A87A0097073C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		2ACAA0C9249DB56E0008D08C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,10 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				2AA6F5A0239DF1F200DF0FE4 /* ResumeViewController.swift */,
-				2A11379923A7ADF70097B8AA /* ExperienceCollectionViewController.swift */,
-				2A2EC2C223AED4B8006378C3 /* iOSProjectsCollectionViewController.swift */,
-				2A368ECD23AF1C8800D2FB47 /* EducationCollectionViewController.swift */,
-				2A368ED423AF60B300D2FB47 /* TrainingCollectionViewContoller.swift */,
+				2AAA393C249CCCDE004FF6C7 /* UICollectionViewControllers */,
 				2A368ED623B0472600D2FB47 /* DetailViewController.swift */,
 				2A7597012498581200AFC403 /* Extensions */,
 			);
@@ -215,8 +212,8 @@
 		2A7597012498581200AFC403 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2AA4526F23A5AA2C00A30E9F /* ViewController+Extensions.swift */,
-				2A0F75FB23AD08460057AADD /* UICollectionViewController+Extensions.swift */,
+				2AA4526F23A5AA2C00A30E9F /* ResumeViewController+Extensions.swift */,
+				2ACAA0C9249DB56E0008D08C /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -307,6 +304,17 @@
 				2A7596FF249856F500AFC403 /* Assets */,
 			);
 			path = MyResume;
+			sourceTree = "<group>";
+		};
+		2AAA393C249CCCDE004FF6C7 /* UICollectionViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A11379923A7ADF70097B8AA /* ExperienceCollectionViewController.swift */,
+				2A2EC2C223AED4B8006378C3 /* iOSProjectsCollectionViewController.swift */,
+				2A368ECD23AF1C8800D2FB47 /* EducationCollectionViewController.swift */,
+				2A368ED423AF60B300D2FB47 /* TrainingCollectionViewContoller.swift */,
+			);
+			path = UICollectionViewControllers;
 			sourceTree = "<group>";
 		};
 		2AAF876C23A3253400043F01 /* JSON Data */ = {
@@ -425,9 +433,9 @@
 				2AA6F5A1239DF1F200DF0FE4 /* ResumeViewController.swift in Sources */,
 				2A2EC2C423AED4B8006378C3 /* iOSProjectsCollectionViewController.swift in Sources */,
 				2A368ED723B0472600D2FB47 /* DetailViewController.swift in Sources */,
+				2ACAA0CA249DB56E0008D08C /* UIViewController+Extensions.swift in Sources */,
 				2A7597302498D8DF00AFC403 /* Resume+Extensions.swift in Sources */,
 				2AA4527423A5B28100A30E9F /* Enums.swift in Sources */,
-				2A0F75FC23AD08460057AADD /* UICollectionViewController+Extensions.swift in Sources */,
 				2A11379B23A7ADF70097B8AA /* ExperienceCollectionViewController.swift in Sources */,
 				2AAA39352499989F004FF6C7 /* ResumeResponse.swift in Sources */,
 				2AA6F59D239DF1F200DF0FE4 /* AppDelegate.swift in Sources */,
@@ -437,7 +445,7 @@
 				2A368ECE23AF1C8800D2FB47 /* EducationCollectionViewController.swift in Sources */,
 				2AA6F59F239DF1F200DF0FE4 /* SceneDelegate.swift in Sources */,
 				2A11378C23A704390097B8AA /* UIView+Extensions.swift in Sources */,
-				2AA4527023A5AA2C00A30E9F /* ViewController+Extensions.swift in Sources */,
+				2AA4527023A5AA2C00A30E9F /* ResumeViewController+Extensions.swift in Sources */,
 				2AAF875723A1BC6000043F01 /* ResumeController.swift in Sources */,
 				2AC3BCCF23A4A87A0097073C /* String+Extensions.swift in Sources */,
 				2A5B173023AE349100671EB8 /* iOSProjectCell.swift in Sources */,
