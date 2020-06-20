@@ -1,5 +1,5 @@
 //
-//  EducationCollectionViewController.swift
+//  TrainingCollectionViewController.swift
 //  MyResume
 //
 //  Created by Simon Italia on 12/22/19.
@@ -9,31 +9,32 @@
 import UIKit
 
 
-private let cellReuseIdentifier = "EducationCell"
-private let reusableCellNibName = cellReuseIdentifier
+fileprivate let cellReuseIdentifier = "EducationCell"
+fileprivate let reusableCellNibName = cellReuseIdentifier
 
 
-class EducationCollectionViewController: UIViewController {
+class TrainingViewController: UIViewController {
     
+
     //MARK: - Storyboard Connections
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     
     //MARK: - Class Properties
-
+    
     private lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self]
             (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
             
-            switch EducationSection(rawValue: sectionIndex) {
-            case .university:
+            switch TrainingSection(rawValue: sectionIndex) {
+            case .projectBased:
                 return self?.setupEducationAndTrainingLayout()
 
-            case .certifications:
+            case .foundational:
                 return self?.setupEducationAndTrainingLayout()
                 
-          default:
+            default:
                 fatalError("Should not be none ")
             }
         }
@@ -42,8 +43,8 @@ class EducationCollectionViewController: UIViewController {
     }()
     
     
-    var resume: ResumeObject? {
-        ResumeViewController.resume
+    private var resume: ResumeObject? {
+        ResumeViewController.shared.resume
     }
     
     
@@ -51,13 +52,14 @@ class EducationCollectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureCollecionView()
+        configureCollectionView()
     }
     
     
     //MARK: - Configuration
     
-    private func configureCollecionView() {
+    private func configureCollectionView() {
+        ResumeViewController.shared.trainingDelegate = self
         collectionView.dataSource = self
         
         //custom cell and xib file registrations
@@ -71,10 +73,10 @@ class EducationCollectionViewController: UIViewController {
 }
 
 
-// MARK: UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 
-extension EducationCollectionViewController: UICollectionViewDataSource {
-    
+extension TrainingViewController: UICollectionViewDataSource {
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
@@ -88,19 +90,19 @@ extension EducationCollectionViewController: UICollectionViewDataSource {
         if kind == UICollectionView.elementKindSectionHeader {
             
             //set header text for eeach section
-            switch EducationSection(rawValue: indexPath.section) {
+            switch TrainingSection(rawValue: indexPath.section) {
                 
             //section 0
-            case .university:
-                let headerText = "University"
+            case .projectBased:
+                let headerText = "Project Based Courses"
                 sectionHeaderView.setLabelTextWith(string: headerText)
               
             //section 1
-            case .certifications:
-                let headerText = "Industry Certifications"
-                sectionHeaderView.setLabelTextWith(string: headerText)
+            case .foundational:
+                let headerText = "Foundational Courses"
+             sectionHeaderView.setLabelTextWith(string: headerText)
             
-           case .none:
+            case .none:
                 fatalError("Error! Unknown case, failed to create section header")
             }
         }
@@ -108,20 +110,20 @@ extension EducationCollectionViewController: UICollectionViewDataSource {
         return sectionHeaderView
     }
 
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let resume = resume else { return 0 }
         
-        switch EducationSection(rawValue: section) {
+        switch TrainingSection(rawValue: section) {
         
         //section 0
-        case .university:
-            let count = resume.education.count
+        case .projectBased:
+            let count = resume.swiftProjectBasedCourses.count
             return count
          
         //section 1
-        case .certifications:
-            let count = resume.industryCertifications.count
+        case .foundational:
+            let count = resume.swiftFoundationalCourses.count
             return count
             
         case .none:
@@ -131,39 +133,50 @@ extension EducationCollectionViewController: UICollectionViewDataSource {
 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let resume = resume else { return UICollectionViewCell() }
+        guard let resume = resume else { fatalError("Resume object should not be nil") }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! EducationCell
         
         //set cell data object
-        switch EducationSection(rawValue: indexPath.section) {
+        switch TrainingSection(rawValue: indexPath.section) {
             
         //section 0 cell
-        case .university:
-            let courses = resume.education[indexPath.item]
+        case .projectBased:
+            let courses = resume.swiftProjectBasedCourses[indexPath.item]
             cell.setLabelsText(using: courses.course, for: 0)
             cell.setLabelsText(using: courses.location, for: 1)
-            cell.setLabelsText(using: courses.graduationYear, for: 2)
-            cell.setLabelsText(using: courses.school, for: 3)
+            cell.setLabelsText(using: courses.completionYear, for: 2)
+            cell.setLabelsText(using: courses.provider, for: 3)
             
-            let image = UIImage(systemName: "checkmark.seal.fill")
+            let image = UIImage(systemName: "hammer.fill")
             cell.setImage(with: image!)
             return cell
             
         //section 1 cell
-        case .certifications:
-            let certifications = resume.industryCertifications[indexPath.item]
-            cell.setLabelsText(using: certifications.certification, for: 0)
-            cell.setLabelsText(using: certifications.location, for: 1)
-            cell.setLabelsText(using: certifications.attainmentYear, for: 2)
-            cell.setLabelsText(using: certifications.provider, for: 3)
+        case .foundational:
+            let courses = resume.swiftFoundationalCourses[indexPath.item]
+            cell.setLabelsText(using: courses.course, for: 0)
+            cell.setLabelsText(using: courses.location, for: 1)
+            cell.setLabelsText(using: courses.completionYear, for: 2)
+            cell.setLabelsText(using: courses.provider, for: 3)
             
-            let image = UIImage(systemName: "doc.plaintext")
+            let image = UIImage(systemName: "book.fill")
             cell.setImage(with: image!)
             return cell
 
         case .none:
             fatalError("Error! Unknown case, failed to set cell objects")
+        }
+    }
+}
+
+
+//MARK: - ResumeViewController Delegate
+
+extension TrainingViewController: ResumeViewControllerDelegate {
+    func reloadCollectionView() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
         }
     }
 }

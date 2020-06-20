@@ -172,25 +172,25 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8y-nZ-oR3">
                                 <rect key="frame" x="5" y="339" width="365" height="323"/>
                                 <connections>
-                                    <segue destination="lGu-SO-HQk" kind="embed" id="my5-QN-hf0"/>
+                                    <segue destination="lGu-SO-HQk" kind="embed" identifier="Experience" id="my5-QN-hf0"/>
                                 </connections>
                             </containerView>
                             <containerView hidden="YES" opaque="NO" alpha="0.0" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5M-Q9-pRm">
                                 <rect key="frame" x="5" y="339" width="365" height="323"/>
                                 <connections>
-                                    <segue destination="V3f-Qk-s3o" kind="embed" id="11a-v4-PM3"/>
+                                    <segue destination="V3f-Qk-s3o" kind="embed" identifier="iOSProjects" id="11a-v4-PM3"/>
                                 </connections>
                             </containerView>
                             <containerView hidden="YES" opaque="NO" alpha="0.0" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPQ-f4-Fru">
                                 <rect key="frame" x="5" y="339" width="365" height="323"/>
                                 <connections>
-                                    <segue destination="Utm-xd-BPs" kind="embed" id="YxM-RD-E1t"/>
+                                    <segue destination="Utm-xd-BPs" kind="embed" identifier="Education" id="YxM-RD-E1t"/>
                                 </connections>
                             </containerView>
                             <containerView hidden="YES" opaque="NO" alpha="0.0" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdZ-5H-Zaj">
                                 <rect key="frame" x="5" y="339" width="365" height="323"/>
                                 <connections>
-                                    <segue destination="HHA-e0-abv" kind="embed" id="kuf-ce-p97"/>
+                                    <segue destination="HHA-e0-abv" kind="embed" identifier="Training" id="kuf-ce-p97"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -391,15 +391,15 @@
             </objects>
             <point key="canvasLocation" x="2796" y="1193"/>
         </scene>
-        <!--iOS Projects Collection View Controller-->
+        <!--iOS Projects View Controller-->
         <scene sceneID="sNC-M2-A8W">
             <objects>
-                <viewController id="V3f-Qk-s3o" customClass="iOSProjectsCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V3f-Qk-s3o" customClass="iOSProjectsViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bZd-0g-sku">
                         <rect key="frame" x="0.0" y="0.0" width="365" height="323"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="K4X-MA-CgB">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="K4X-MA-CgB">
                                 <rect key="frame" x="0.0" y="0.0" width="365" height="323"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gIh-wW-K3X">
@@ -436,10 +436,10 @@
             </objects>
             <point key="canvasLocation" x="1166" y="1067"/>
         </scene>
-        <!--Experience Collection View Controller-->
+        <!--Experience View Controller-->
         <scene sceneID="vD5-f3-HwJ">
             <objects>
-                <viewController id="lGu-SO-HQk" customClass="ExperienceCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lGu-SO-HQk" customClass="ExperienceViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fN2-3X-B4c">
                         <rect key="frame" x="0.0" y="0.0" width="365" height="323"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -481,15 +481,15 @@
             </objects>
             <point key="canvasLocation" x="1870" y="1066"/>
         </scene>
-        <!--Education Collection View Controller-->
+        <!--Education View Controller-->
         <scene sceneID="JOd-rY-uLj">
             <objects>
-                <viewController id="Utm-xd-BPs" customClass="EducationCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Utm-xd-BPs" customClass="EducationViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OYd-Au-VKi">
                         <rect key="frame" x="0.0" y="0.0" width="365" height="323"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZP6-Ai-U0J">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZP6-Ai-U0J">
                                 <rect key="frame" x="0.0" y="0.0" width="365" height="323"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cPP-Rc-jG0">
@@ -526,15 +526,15 @@
             </objects>
             <point key="canvasLocation" x="2788" y="201"/>
         </scene>
-        <!--Training Collection View Controller-->
+        <!--Training View Controller-->
         <scene sceneID="2pe-xD-KTc">
             <objects>
-                <viewController id="HHA-e0-abv" customClass="TrainingCollectionViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HHA-e0-abv" customClass="TrainingViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qnn-p8-i73">
                         <rect key="frame" x="0.0" y="0.0" width="365" height="323"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tma-bi-oAz">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tma-bi-oAz">
                                 <rect key="frame" x="0.0" y="0.0" width="365" height="323"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OMk-fk-R3Y">

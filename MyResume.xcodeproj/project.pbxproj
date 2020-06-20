@@ -12,12 +12,12 @@
 		2A11379023A7AC300097B8AA /* ExperienceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A11378E23A7AC300097B8AA /* ExperienceCell.xib */; };
 		2A11379423A7AC990097B8AA /* SectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11379223A7AC990097B8AA /* SectionHeaderReusableView.swift */; };
 		2A11379523A7AC990097B8AA /* SectionHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A11379323A7AC990097B8AA /* SectionHeaderReusableView.xib */; };
-		2A11379B23A7ADF70097B8AA /* ExperienceCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11379923A7ADF70097B8AA /* ExperienceCollectionViewController.swift */; };
-		2A2EC2C423AED4B8006378C3 /* iOSProjectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EC2C223AED4B8006378C3 /* iOSProjectsCollectionViewController.swift */; };
-		2A368ECE23AF1C8800D2FB47 /* EducationCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368ECD23AF1C8800D2FB47 /* EducationCollectionViewController.swift */; };
+		2A11379B23A7ADF70097B8AA /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11379923A7ADF70097B8AA /* ExperienceViewController.swift */; };
+		2A2EC2C423AED4B8006378C3 /* iOSProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EC2C223AED4B8006378C3 /* iOSProjectsViewController.swift */; };
+		2A368ECE23AF1C8800D2FB47 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368ECD23AF1C8800D2FB47 /* EducationViewController.swift */; };
 		2A368ED223AF1CD900D2FB47 /* EducationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368ED023AF1CD900D2FB47 /* EducationCell.swift */; };
 		2A368ED323AF1CD900D2FB47 /* EducationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A368ED123AF1CD900D2FB47 /* EducationCell.xib */; };
-		2A368ED523AF60B300D2FB47 /* TrainingCollectionViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368ED423AF60B300D2FB47 /* TrainingCollectionViewContoller.swift */; };
+		2A368ED523AF60B300D2FB47 /* TrainingViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368ED423AF60B300D2FB47 /* TrainingViewContoller.swift */; };
 		2A368ED723B0472600D2FB47 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368ED623B0472600D2FB47 /* DetailViewController.swift */; };
 		2A5B173023AE349100671EB8 /* iOSProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B172E23AE349100671EB8 /* iOSProjectCell.swift */; };
 		2A5B173123AE349100671EB8 /* iOSProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5B172F23AE349100671EB8 /* iOSProjectCell.xib */; };
@@ -33,7 +33,6 @@
 		2AA6F5A6239DF1F400DF0FE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F5A5239DF1F400DF0FE4 /* Assets.xcassets */; };
 		2AA6F5A9239DF1F400DF0FE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F5A7239DF1F400DF0FE4 /* LaunchScreen.storyboard */; };
 		2AAA39352499989F004FF6C7 /* ResumeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA39342499989F004FF6C7 /* ResumeResponse.swift */; };
-		2AAA39392499F99E004FF6C7 /* ResumeData_v5-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA39382499F99E004FF6C7 /* ResumeData_v5-2.json */; };
 		2AAF875723A1BC6000043F01 /* ResumeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF875623A1BC6000043F01 /* ResumeController.swift */; };
 		2ABAF75A23B1DA90000C437F /* estee.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABAF75523B1DA90000C437F /* estee.png */; };
 		2ABAF75C23B1DA90000C437F /* fairfax.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABAF75723B1DA90000C437F /* fairfax.png */; };
@@ -54,12 +53,12 @@
 		2A11378E23A7AC300097B8AA /* ExperienceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperienceCell.xib; sourceTree = "<group>"; };
 		2A11379223A7AC990097B8AA /* SectionHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderReusableView.swift; sourceTree = "<group>"; };
 		2A11379323A7AC990097B8AA /* SectionHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderReusableView.xib; sourceTree = "<group>"; };
-		2A11379923A7ADF70097B8AA /* ExperienceCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCollectionViewController.swift; sourceTree = "<group>"; };
-		2A2EC2C223AED4B8006378C3 /* iOSProjectsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSProjectsCollectionViewController.swift; sourceTree = "<group>"; };
-		2A368ECD23AF1C8800D2FB47 /* EducationCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCollectionViewController.swift; sourceTree = "<group>"; };
+		2A11379923A7ADF70097B8AA /* ExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
+		2A2EC2C223AED4B8006378C3 /* iOSProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSProjectsViewController.swift; sourceTree = "<group>"; };
+		2A368ECD23AF1C8800D2FB47 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
 		2A368ED023AF1CD900D2FB47 /* EducationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCell.swift; sourceTree = "<group>"; };
 		2A368ED123AF1CD900D2FB47 /* EducationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EducationCell.xib; sourceTree = "<group>"; };
-		2A368ED423AF60B300D2FB47 /* TrainingCollectionViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCollectionViewContoller.swift; sourceTree = "<group>"; };
+		2A368ED423AF60B300D2FB47 /* TrainingViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewContoller.swift; sourceTree = "<group>"; };
 		2A368ED623B0472600D2FB47 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2A5B172E23AE349100671EB8 /* iOSProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSProjectCell.swift; sourceTree = "<group>"; };
 		2A5B172F23AE349100671EB8 /* iOSProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iOSProjectCell.xib; sourceTree = "<group>"; };
@@ -77,7 +76,6 @@
 		2AA6F5A8239DF1F400DF0FE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AA6F5AA239DF1F400DF0FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AAA39342499989F004FF6C7 /* ResumeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeResponse.swift; sourceTree = "<group>"; };
-		2AAA39382499F99E004FF6C7 /* ResumeData_v5-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ResumeData_v5-2.json"; sourceTree = "<group>"; };
 		2AAF875623A1BC6000043F01 /* ResumeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeController.swift; sourceTree = "<group>"; };
 		2ABAF75523B1DA90000C437F /* estee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estee.png; sourceTree = "<group>"; };
 		2ABAF75723B1DA90000C437F /* fairfax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fairfax.png; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				2AA6F5A5239DF1F400DF0FE4 /* Assets.xcassets */,
-				2AAF876C23A3253400043F01 /* JSON Data */,
 				2ABAF75423B1DA45000C437F /* Images */,
 			);
 			path = Assets;
@@ -309,20 +306,12 @@
 		2AAA393C249CCCDE004FF6C7 /* UICollectionViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2A11379923A7ADF70097B8AA /* ExperienceCollectionViewController.swift */,
-				2A2EC2C223AED4B8006378C3 /* iOSProjectsCollectionViewController.swift */,
-				2A368ECD23AF1C8800D2FB47 /* EducationCollectionViewController.swift */,
-				2A368ED423AF60B300D2FB47 /* TrainingCollectionViewContoller.swift */,
+				2A11379923A7ADF70097B8AA /* ExperienceViewController.swift */,
+				2A2EC2C223AED4B8006378C3 /* iOSProjectsViewController.swift */,
+				2A368ECD23AF1C8800D2FB47 /* EducationViewController.swift */,
+				2A368ED423AF60B300D2FB47 /* TrainingViewContoller.swift */,
 			);
 			path = UICollectionViewControllers;
-			sourceTree = "<group>";
-		};
-		2AAF876C23A3253400043F01 /* JSON Data */ = {
-			isa = PBXGroup;
-			children = (
-				2AAA39382499F99E004FF6C7 /* ResumeData_v5-2.json */,
-			);
-			path = "JSON Data";
 			sourceTree = "<group>";
 		};
 		2ABAF75423B1DA45000C437F /* Images */ = {
@@ -404,7 +393,6 @@
 				2ABAF77023B207CF000C437F /* 7marbles.png in Resources */,
 				2AA6F5A6239DF1F400DF0FE4 /* Assets.xcassets in Resources */,
 				2ABAF76823B1E18B000C437F /* sandp.png in Resources */,
-				2AAA39392499F99E004FF6C7 /* ResumeData_v5-2.json in Resources */,
 				2ABAF76F23B207CF000C437F /* waitersFriend.png in Resources */,
 				2ABAF75A23B1DA90000C437F /* estee.png in Resources */,
 				2A5B173123AE349100671EB8 /* iOSProjectCell.xib in Resources */,
@@ -431,18 +419,18 @@
 				2A75972C249892F800AFC403 /* Resume.xcdatamodeld in Sources */,
 				2A11378F23A7AC300097B8AA /* ExperienceCell.swift in Sources */,
 				2AA6F5A1239DF1F200DF0FE4 /* ResumeViewController.swift in Sources */,
-				2A2EC2C423AED4B8006378C3 /* iOSProjectsCollectionViewController.swift in Sources */,
+				2A2EC2C423AED4B8006378C3 /* iOSProjectsViewController.swift in Sources */,
 				2A368ED723B0472600D2FB47 /* DetailViewController.swift in Sources */,
 				2ACAA0CA249DB56E0008D08C /* UIViewController+Extensions.swift in Sources */,
 				2A7597302498D8DF00AFC403 /* Resume+Extensions.swift in Sources */,
 				2AA4527423A5B28100A30E9F /* Enums.swift in Sources */,
-				2A11379B23A7ADF70097B8AA /* ExperienceCollectionViewController.swift in Sources */,
+				2A11379B23A7ADF70097B8AA /* ExperienceViewController.swift in Sources */,
 				2AAA39352499989F004FF6C7 /* ResumeResponse.swift in Sources */,
 				2AA6F59D239DF1F200DF0FE4 /* AppDelegate.swift in Sources */,
 				2A368ED223AF1CD900D2FB47 /* EducationCell.swift in Sources */,
 				2A11379423A7AC990097B8AA /* SectionHeaderReusableView.swift in Sources */,
-				2A368ED523AF60B300D2FB47 /* TrainingCollectionViewContoller.swift in Sources */,
-				2A368ECE23AF1C8800D2FB47 /* EducationCollectionViewController.swift in Sources */,
+				2A368ED523AF60B300D2FB47 /* TrainingViewContoller.swift in Sources */,
+				2A368ECE23AF1C8800D2FB47 /* EducationViewController.swift in Sources */,
 				2AA6F59F239DF1F200DF0FE4 /* SceneDelegate.swift in Sources */,
 				2A11378C23A704390097B8AA /* UIView+Extensions.swift in Sources */,
 				2AA4527023A5AA2C00A30E9F /* ResumeViewController+Extensions.swift in Sources */,

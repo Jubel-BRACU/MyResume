@@ -138,7 +138,7 @@ extension ResumeViewController: MFMailComposeViewControllerDelegate {
     }
     
     
-    //Ste Profile info
+    //Set Profile info
     func setProfileInfo(resume: ResumeObject, label: UILabel, textViews: [UITextView]?) {
         
         label.text = resume.profile.profession

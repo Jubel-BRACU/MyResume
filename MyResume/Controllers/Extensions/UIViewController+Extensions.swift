@@ -12,7 +12,6 @@ import UIKit
 
 extension UIViewController {
     
-    
     //MARK: - Experience + iOS Projects UICollectionViews
     
     func setupExperienceAndProjectsLayout() -> NSCollectionLayoutSection {

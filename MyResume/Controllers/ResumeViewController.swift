@@ -8,6 +8,12 @@
 
 import UIKit
 
+
+protocol ResumeViewControllerDelegate {
+    func reloadCollectionView()
+}
+
+
 //MARK: - Global / Common collectionView properties
 
 let sectionHeaderReuseIdentifier = "SectionHeaderReusableView"
@@ -16,6 +22,8 @@ let sectionHeaderReusableViewNibName = sectionHeaderReuseIdentifier
 
 @IBDesignable
 class ResumeViewController: UIViewController {
+    
+    static let shared = ResumeViewController()
     
     //MARK: - Storyboard connections
 
@@ -62,14 +70,20 @@ class ResumeViewController: UIViewController {
     
     
     //MARK: - Class Properties
-    static var resume: ResumeObject?
+    var resume: ResumeObject?
+    
+    //delegates for containers
+    var experienceDelegate: ResumeViewControllerDelegate?
+    var iosProjectsDelegate: ResumeViewControllerDelegate?
+    var educationDelegate: ResumeViewControllerDelegate?
+    var trainingDelegate: ResumeViewControllerDelegate?
 
     
     //MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchLocalResume()
+        fetchRemoteResume()
         configureVC()
     }
     
@@ -82,7 +96,7 @@ class ResumeViewController: UIViewController {
     
     
     func updateProfileSection() {
-        guard let resume = ResumeViewController.resume else { return }
+        guard let resume = ResumeViewController.shared.resume else { return }
         
         DispatchQueue.main.async {
             self.profilePictureImageView.setProperties(borderWidth: self.borderWidth, borderColor: self.borderColor, cornerRadius: nil)
@@ -111,26 +125,30 @@ class ResumeViewController: UIViewController {
     }
     
     
-   private func updateUI() {
-        self.updateProfileSection()
+    private func updateUI() {
+        updateProfileSection()
     }
     
+    
+    private func updateContainerViewControllers() {
+        ResumeViewController.shared.experienceDelegate?.reloadCollectionView()
+        ResumeViewController.shared.iosProjectsDelegate?.reloadCollectionView()
+        ResumeViewController.shared.educationDelegate?.reloadCollectionView()
+        ResumeViewController.shared.trainingDelegate?.reloadCollectionView()
+    }
 
-    private func fetchLocalResume() {
-        ResumeController.shared.getLocalResume { [unowned self] (resume, error) in
-            guard let _ = resume else {
-                //TODO: trigger error alert
-                
-                return
-            }
-            
+
+    private func fetchRemoteResume() {
+        ResumeController.shared.getRemoteResume { [unowned self] (resume, error) in
             if let resume = resume {
-                ResumeViewController.resume = resume
+                ResumeViewController.shared.resume = resume
                 self.updateUI()
+                self.updateContainerViewControllers()
             }
-            
+       
             if let error = error {
-                fatalError(error.localizedDescription)
+               //trigger error alert
+               fatalError(error.localizedDescription)
             }
         }
     }

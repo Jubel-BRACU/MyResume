@@ -1,19 +1,18 @@
 //
-//  iOSProjectsCollectionViewController.swift
+//  CollectionViewController.swift
 //  MyResume
 //
-//  Created by Simon Italia on 12/22/19.
+//  Created by Simon Italia on 12/16/19.
 //  Copyright © 2019 SDI Group Inc. All rights reserved.
 //
 
 import UIKit
 
 
-fileprivate let cellReuseIdentifier = "iOSProjectCell"
+fileprivate let cellReuseIdentifier = "ExperienceCell"
 fileprivate let reusableCellNibName = cellReuseIdentifier
 
-
-class iOSProjectsCollectionViewController: UIViewController {
+class ExperienceViewController: UIViewController {
     
     //MARK: - Storyboard Connections
     
@@ -22,32 +21,29 @@ class iOSProjectsCollectionViewController: UIViewController {
     
     //MARK: - Class Properties
     
-    lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
+    private lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self]
             (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
 
-            switch ProjectSection(rawValue: sectionIndex) {
-            case .personal:
+            switch ExperienceSection(rawValue: sectionIndex) {
+            case .professional:
                 return self?.setupExperienceAndProjectsLayout()
 
-            case .coursework:
+            case .developer:
                 return self?.setupExperienceAndProjectsLayout()
 
-            default:
-                fatalError("Should not be none")
+            case .none:
+                fatalError("Should not be none ")
             }
-
         }
-
         return layout
     }()
     
-    
-    var resume: ResumeObject? {
-        ResumeViewController.resume
+
+    private var resume: ResumeObject? {
+        return ResumeViewController.shared.resume
     }
-    
-    
+
     //MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -59,13 +55,15 @@ class iOSProjectsCollectionViewController: UIViewController {
     //MARK: - Configuration
     
     private func configureCollecionView() {
+        ResumeViewController.shared.experienceDelegate = self
         collectionView.dataSource = self
         collectionView.delegate = self
-        
+
         //custom cell and xib file registrations
         collectionView.register(UINib(nibName: sectionHeaderReusableViewNibName, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier)
         collectionView.register(UINib(nibName: reusableCellNibName, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
 
+        
         //Setup compositional layout
         collectionView.collectionViewLayout = compositionalLayout
         collectionView.contentInsetAdjustmentBehavior = .scrollableAxes
@@ -74,56 +72,54 @@ class iOSProjectsCollectionViewController: UIViewController {
 
 
 // MARK: - UICollectionViewDataSource
-    
-extension iOSProjectsCollectionViewController: UICollectionViewDataSource {
 
-    //set number of sections
+extension ExperienceViewController: UICollectionViewDataSource {
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
     
-    
+
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: sectionHeaderReuseIdentifier, for: indexPath) as! SectionHeaderReusableView
         
         if kind == UICollectionView.elementKindSectionHeader {
             
-            //set header text for eeach section
-            switch ProjectSection(rawValue: indexPath.section) {
+            switch ExperienceSection(rawValue: indexPath.section) {
                 
             //section 0
-            case .personal:
-                let headerText = "Personal Projects"
+            case .professional:
+                let headerText = "Professional Experience"
                 sectionHeaderView.setLabelTextWith(string: headerText)
               
             //section 1
-            case .coursework:
-                let headerText = "Select Coursework Projects"
+            case .developer:
+                let headerText = "Developer Experience"
              sectionHeaderView.setLabelTextWith(string: headerText)
             
             case .none:
-                fatalError("Error! Unknown case, failed to set header section")
+                fatalError("Error! Unknown case, failed to create section header")
             }
         }
-        
+
         return sectionHeaderView
     }
 
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let resume = resume else { return 0 }
         
-        switch ProjectSection(rawValue: section) {
+        switch ExperienceSection(rawValue: section) {
         
         //section 0
-        case .personal:
-            let count = resume.personalProjects.count
+        case .professional:
+            let count = resume.professionalExperience.count
             return count
          
         //section 1
-        case .coursework:
-            let count = resume.courseworkProjects.count
+        case .developer:
+            let count = resume.developerExperience.count
             return count
             
         case .none:
@@ -135,65 +131,85 @@ extension iOSProjectsCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let resume = resume else { return UICollectionViewCell() }
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! iOSProjectCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! ExperienceCell
         
         //set cell data object
-        switch ProjectSection(rawValue: indexPath.section) {
+        switch ExperienceSection(rawValue: indexPath.section) {
             
         //section 0 cell
-        case .personal:
-            let projects = resume.personalProjects[indexPath.item]
-            cell.setLabelsText(using: projects.projectName, for: 0)
-            cell.setLabelsText(using: projects.date, for: 1)
-            cell.setLabelsText(using: projects.projectDescription, for: 2)
-            cell.setLabelsText(using: projects.github, for: 3)
-            cell.setLabelsText(using: projects.technologies, for: 4)
+        case .professional:
+            let experience = resume.professionalExperience[indexPath.item]
+            cell.setLabelsText(using: experience.company, for: 0)
+            cell.setLabelsText(using: experience.location, for: 1)
+            cell.setLabelsText(using: experience.period, for: 2)
+            cell.setLabelsText(using: experience.jobTitle, for: 3)
+            cell.setLabelsText(using: experience.professionalExperienceDescription, for: 4)
+
+            let image = UIImage(systemName: "briefcase.fill")
+            cell.setImage(with: image!)
             return cell
             
         //section 1 cell
-        case .coursework:
-            let projects = resume.courseworkProjects[indexPath.item]
-            cell.setLabelsText(using: projects.projectName, for: 0)
-            cell.setLabelsText(using: projects.date, for: 1)
-            cell.setLabelsText(using: projects.projectDescription, for: 2)
-            cell.setLabelsText(using: projects.github, for: 3)
-            cell.setLabelsText(using: projects.technologies, for: 4)
+        case .developer:
+            let experience = resume.developerExperience[indexPath.item]
+            cell.setLabelsText(using: experience.language, for: 0)
+            cell.setLabelsText(using: experience.location, for: 1)
+            cell.setLabelsText(using: experience.period, for: 2)
+            cell.setLabelsText(using: experience.projects, for: 3)
+            cell.setLabelsText(using: experience.developerExperienceDescription, for: 4)
+            
+            let image = UIImage(systemName: "globe")
+            cell.setImage(with: image!)
             return cell
 
-        default:
+        case .none:
             fatalError("Error! Unknown case, failed to set cell objects")
         }
     }
 }
+ 
 
-// MARK:- UICollectionViewDelegate
+// MARK: - UICollectionViewDelegate
 
-extension iOSProjectsCollectionViewController: UICollectionViewDelegate {
-    
+extension ExperienceViewController: UICollectionViewDelegate {
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let resume = resume else { fatalError("Resume object should not be nil") }
-
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         
-        switch ProjectSection(rawValue: indexPath.section) {
-        
-        case .personal:
-            let item = resume.personalProjects[indexPath.item]
-            vc.viewTitle = item.projectName
-            vc.viewDescription = item.projectDescription
+        switch ExperienceSection(rawValue: indexPath.section) {
+            
+        case .professional:
+            let item = resume.professionalExperience[indexPath.item]
+            vc.viewTitle = item.jobTitle
+            vc.viewDescription = item.professionalExperienceDescription
+            vc.viewDetails = item.accomplishments
+            vc.viewImage = item.image
+            
+        case .developer:
+            let item = resume.developerExperience[indexPath.item]
+            vc.viewTitle = item.language
+            vc.viewDescription = item.developerExperienceDescription
             vc.viewDetails = item.technologies
             vc.viewImage = item.image
-
-        case .coursework:
-            let item = resume.courseworkProjects[indexPath.item]
-            vc.viewTitle = item.projectName
-            vc.viewDescription = item.projectDescription
-            vc.viewDetails = item.technologies
                
         case .none:
-               fatalError("Error! Unknown case, failed to set destinaton VC properties")
-           }
-
+            fatalError("Error! Unknown case, failed to set destination VC properties")
+       }
+         
+        //display DetailVC
         self.present(vc, animated: true, completion: nil)
+    }
+}
+
+
+//MARK: - ResumeViewController Delegate
+
+extension ExperienceViewController: ResumeViewControllerDelegate {
+    func reloadCollectionView() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
 }
