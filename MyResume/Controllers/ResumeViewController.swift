@@ -28,6 +28,7 @@ class ResumeViewController: UIViewController {
     //MARK: - Storyboard connections
 
     //outlets
+    @IBOutlet weak var resumeActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var professionLabel: UILabel!
     @IBOutlet var contactInformationLabels: [UILabel]!
@@ -125,6 +126,15 @@ class ResumeViewController: UIViewController {
     }
     
     
+    private func showActivityIndicator(_ flag: Bool) {
+        DispatchQueue.main.async {
+            self.resumeActivityIndicator.isHidden = !flag
+            flag ? self.resumeActivityIndicator.startAnimating() : self.resumeActivityIndicator.stopAnimating()
+            flag ? self.view.bringSubviewToFront(self.resumeActivityIndicator) : self.view.sendSubviewToBack(self.resumeActivityIndicator)
+        }
+    }
+    
+    
     private func updateUI() {
         updateProfileSection()
     }
@@ -139,7 +149,11 @@ class ResumeViewController: UIViewController {
 
 
     private func fetchRemoteResume() {
+        showActivityIndicator(true)
+        
         ResumeController.shared.getRemoteResume { [unowned self] (resume, error) in
+            self.showActivityIndicator(false)
+            
             if let resume = resume {
                 ResumeViewController.shared.resume = resume
                 self.updateUI()

@@ -16,6 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="itQ-ox-3VK">
+                                <rect key="frame" x="177" y="347" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="27C-h4-bEQ">
                                 <rect key="frame" x="20" y="54" width="100" height="100"/>
                                 <constraints>
@@ -234,6 +239,7 @@
                     <connections>
                         <outlet property="professionLabel" destination="2TH-bv-F1B" id="fMp-cZ-xMi"/>
                         <outlet property="profilePictureImageView" destination="27C-h4-bEQ" id="pvE-eb-rvb"/>
+                        <outlet property="resumeActivityIndicator" destination="itQ-ox-3VK" id="T8F-P4-uCq"/>
                         <outlet property="segmentedControl" destination="eMO-iW-XBu" id="ocm-05-B6C"/>
                         <outletCollection property="contactInformationLabels" destination="qLh-g2-3Is" collectionClass="NSMutableArray" id="cYB-52-adV"/>
                         <outletCollection property="contactInformationLabels" destination="eej-m8-Hbt" collectionClass="NSMutableArray" id="Kdt-DF-lLr"/>
