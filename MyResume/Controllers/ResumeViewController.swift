@@ -147,8 +147,11 @@ class ResumeViewController: UIViewController {
             }
        
             if let error = error {
-               //trigger error alert
-               fatalError(error.localizedDescription)
+                DispatchQueue.main.async {
+                    let ac = UIAlertController(title: "Resume Download Error", message: error.localizedDescription, preferredStyle: .alert)
+                    ac.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(ac, animated: true)
+                }
             }
         }
     }

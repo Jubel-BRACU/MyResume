@@ -31,6 +31,9 @@ class ResumeController {
         
         enum ResourceID {
             static let jsonFile = "1-Jr-fl2xvW6Alsimu_CE2ZDgZLY4aJfg"
+            
+//            static let jsonFile = ""
+                //force download error for testing
         }
         
         case json
