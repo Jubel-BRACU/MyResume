@@ -100,8 +100,13 @@ class ResumeViewController: UIViewController {
         guard let resume = ResumeViewController.shared.resume else { return }
         
         DispatchQueue.main.async {
+            
+            //profile image item
             self.profilePictureImageView.setProperties(borderWidth: self.borderWidth, borderColor: self.borderColor, cornerRadius: nil)
             self.profilePictureImageView.makeCircle()
+            self.profilePictureImageView.image = UIImage(named: "profile_image")
+            
+            //other items
             self.setContactInfoLabels(resume: resume, labels: self.contactInformationLabels)
             self.setWebsiteLabels(resume: resume, labels: self.websiteLabels)
             self.setProfileInfo(resume: resume, label: self.professionLabel, textViews: nil)

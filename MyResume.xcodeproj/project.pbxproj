@@ -34,7 +34,7 @@
 		2AA6F5A9239DF1F400DF0FE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F5A7239DF1F400DF0FE4 /* LaunchScreen.storyboard */; };
 		2AAA39352499989F004FF6C7 /* ResumeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA39342499989F004FF6C7 /* ResumeResponse.swift */; };
 		2AAF875723A1BC6000043F01 /* ResumeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF875623A1BC6000043F01 /* ResumeController.swift */; };
-		2ABAF76E23B207CF000C437F /* myResume.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABAF76B23B207CF000C437F /* myResume.png */; };
+		2ABAF76E23B207CF000C437F /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABAF76B23B207CF000C437F /* appIcon.png */; };
 		2AC3BCCF23A4A87A0097073C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC3BCCE23A4A87A0097073C /* String+Extensions.swift */; };
 		2ACAA0CA249DB56E0008D08C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAA0C9249DB56E0008D08C /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -69,7 +69,7 @@
 		2AA6F5AA239DF1F400DF0FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AAA39342499989F004FF6C7 /* ResumeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeResponse.swift; sourceTree = "<group>"; };
 		2AAF875623A1BC6000043F01 /* ResumeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeController.swift; sourceTree = "<group>"; };
-		2ABAF76B23B207CF000C437F /* myResume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myResume.png; sourceTree = "<group>"; };
+		2ABAF76B23B207CF000C437F /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
 		2AC3BCCE23A4A87A0097073C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		2ACAA0C9249DB56E0008D08C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -302,7 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				2A6740B623A390A400685D1E /* profile_image.png */,
-				2ABAF76B23B207CF000C437F /* myResume.png */,
+				2ABAF76B23B207CF000C437F /* appIcon.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -370,7 +370,7 @@
 				2A5B173123AE349100671EB8 /* iOSProjectCell.xib in Resources */,
 				2A368ED323AF1CD900D2FB47 /* EducationCell.xib in Resources */,
 				2AA6F5A4239DF1F200DF0FE4 /* Main.storyboard in Resources */,
-				2ABAF76E23B207CF000C437F /* myResume.png in Resources */,
+				2ABAF76E23B207CF000C437F /* appIcon.png in Resources */,
 				2A6740B723A390A400685D1E /* profile_image.png in Resources */,
 				2A11379023A7AC300097B8AA /* ExperienceCell.xib in Resources */,
 				2A11379523A7AC990097B8AA /* SectionHeaderReusableView.xib in Resources */,

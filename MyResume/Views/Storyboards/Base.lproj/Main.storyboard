@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="27C-h4-bEQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="27C-h4-bEQ">
                                 <rect key="frame" x="20" y="54" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="9vg-I0-0wc"/>
@@ -552,6 +552,5 @@
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
-        <image name="profile_image.png" width="606" height="611"/>
     </resources>
 </document>
