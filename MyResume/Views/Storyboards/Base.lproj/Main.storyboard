@@ -302,14 +302,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cb7-zg-45L">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yrQ-ax-fBe">
+                                <rect key="frame" x="47.5" y="47.5" width="20" height="20"/>
+                                <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cb7-zg-45L">
                                 <rect key="frame" x="20" y="20" width="335" height="75"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nDz-hc-4Ux">
-                                        <rect key="frame" x="0.0" y="1" width="75" height="73.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nDz-hc-4Ux">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="b1e-uA-XOQ"/>
-                                            <constraint firstAttribute="height" constant="75" id="oWf-4L-QKm"/>
+                                            <constraint firstAttribute="height" constant="75" id="FwO-t8-fwQ"/>
+                                            <constraint firstAttribute="width" constant="75" id="pnX-rc-gzP"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
@@ -317,7 +321,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sm-4m-Nyj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sm-4m-Nyj">
                                         <rect key="frame" x="85" y="0.0" width="250" height="75"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -358,6 +362,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="yrQ-ax-fBe" firstAttribute="centerX" secondItem="nDz-hc-4Ux" secondAttribute="centerX" id="2YS-B5-l0d"/>
                             <constraint firstAttribute="trailing" secondItem="cb7-zg-45L" secondAttribute="trailing" constant="20" id="383-GS-RPV"/>
                             <constraint firstItem="EKD-cm-r3f" firstAttribute="leading" secondItem="7W2-yH-DbH" secondAttribute="leading" constant="20" id="42V-UH-Bse"/>
                             <constraint firstItem="e00-wv-K76" firstAttribute="top" secondItem="Tug-bf-lYt" secondAttribute="bottom" constant="10" id="Cj6-uT-Tho"/>
@@ -369,6 +374,7 @@
                             <constraint firstItem="cb7-zg-45L" firstAttribute="leading" secondItem="bBg-2h-DT2" secondAttribute="leading" constant="20" id="dij-fz-PWc"/>
                             <constraint firstItem="h5o-RP-OWv" firstAttribute="leading" secondItem="bBg-2h-DT2" secondAttribute="leading" constant="20" id="gVR-0A-Af8"/>
                             <constraint firstAttribute="trailing" secondItem="EKD-cm-r3f" secondAttribute="trailing" constant="20" id="hE1-t9-hYF"/>
+                            <constraint firstItem="yrQ-ax-fBe" firstAttribute="centerY" secondItem="nDz-hc-4Ux" secondAttribute="centerY" id="hdr-nl-3jI"/>
                             <constraint firstItem="e00-wv-K76" firstAttribute="leading" secondItem="bBg-2h-DT2" secondAttribute="leading" constant="20" id="htk-9X-VFY"/>
                             <constraint firstItem="bBg-2h-DT2" firstAttribute="trailing" secondItem="h5o-RP-OWv" secondAttribute="trailing" constant="20" id="khG-SU-6IN"/>
                             <constraint firstItem="EKD-cm-r3f" firstAttribute="top" secondItem="cb7-zg-45L" secondAttribute="bottom" constant="20" id="kon-pi-bd5"/>
@@ -382,6 +388,7 @@
                     <navigationItem key="navigationItem" id="ChY-oL-DSk"/>
                     <connections>
                         <outlet property="imageView" destination="nDz-hc-4Ux" id="UlK-Ls-jmn"/>
+                        <outlet property="logoActivityIndicator" destination="yrQ-ax-fBe" id="h93-wv-jpn"/>
                         <outletCollection property="labels" destination="2Sm-4m-Nyj" collectionClass="NSMutableArray" id="6Cr-ud-yb3"/>
                         <outletCollection property="labels" destination="EKD-cm-r3f" collectionClass="NSMutableArray" id="ojA-2n-qnp"/>
                         <outletCollection property="labels" destination="e00-wv-K76" collectionClass="NSMutableArray" id="NMG-dz-grs"/>

@@ -11,9 +11,11 @@ import UIKit
 class DetailViewController: UIViewController {
     
     //MARK: - Storyboard connections
+    @IBOutlet weak var logoActivityIndicator: UIActivityIndicatorView!
     
     //IB Outlets
-    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var imageView: UIImageView?
     @IBOutlet var labels: [UILabel]!
     @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
         dismissView()
@@ -33,6 +35,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        performFetchLogo(name: viewImage)
     }
     
     
@@ -55,28 +58,52 @@ class DetailViewController: UIViewController {
                 break
             }
         }
+    }
+    
+
+    private func performFetchLogo(name: String?) {
+        guard let name = name else {
+            self.setDefaultImage()
+            return
+        }
         
-        //set image
-        if let image = viewImage {
-            let logo = getLogo(image: image, type: ".png")
-            imageView.image = logo
+        showActivityIndicator(true)
+        
+        ResumeController.shared.getRemoteLogo(for: name) { [unowned self] (image, error) in
+            
+            self.showActivityIndicator(false)
+            
+            if let image = image {
+                DispatchQueue.main.async {
+                    self.imageView?.image = image
+                    return
+                }
+                
+            } else {
+                self.setDefaultImage()
+            }
+            
+            if let _ = error {
+                self.setDefaultImage()
+            }
         }
     }
     
     
-    //fetch image file from bundle
-    private func getLogo(image named: String, type: String) -> UIImage {
-        let image = UIImage(named: named+type)
-        
-        if let image = image {
-            return image
-        
-        } else {
-            print("Error! Image cannot be loaded, or was not found. Loading default image")
-            return UIImage(systemName: "hammer.fill")!
+    private func setDefaultImage() {
+        DispatchQueue.main.async {
+            self.imageView?.image = UIImage(systemName: "hammer.fill")
         }
-        
     }
+    
+    
+    private func showActivityIndicator(_ flag: Bool) {
+        DispatchQueue.main.async {
+            self.logoActivityIndicator.isHidden = !flag
+            flag ? self.logoActivityIndicator.startAnimating() : self.logoActivityIndicator.stopAnimating()
+        }
+    }
+    
     
     private func dismissView() {
        dismiss(animated: true, completion: nil)
