@@ -187,9 +187,6 @@ extension ResumeController {
                     return
                 }
                 
-                //save image to core data
-//                self.updateCoreData(image: photo, with: data)
-                
                 //pass image back to caller
                 completion(image, nil)
             }
