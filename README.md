@@ -8,7 +8,7 @@ My Resume
 This app is an iOS App represnation of my Resume. It's a failry intutive app, once installed and run. There is also a short gif included further below in this readme file demonstrating the app.
 
 # Additonal notes for Udacity Rubric Assessor/s
-I have highlighted how some of the specific rubric criteria has been meet: 
+I have highlighted here how some of the specific rubric criteria has been met: 
 
 *Networking service rubric requirement:
 - app uses URLSession to fetch json data enclosed within a file located on a remote server (google drive)
