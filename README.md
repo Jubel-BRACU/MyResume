@@ -22,13 +22,13 @@ I have highlighted here how some of the specific rubric criteria has been met:
 
 *//Networking service rubric requirement:*
 - app uses URLSession to fetch json data enclosed within a file located on a remote server (google drive)
-- app also fetches images from files also located on a remote server (google drive)
+- app also fetches image files located on remote server (google drive)
 - app uses JSON Decoder to decode fetched json
 - above networking code is encapsulated within its own class
 
 
 *//Networking failure alert rubric requirement:*
-- if download of json file fails for any reason, an alert is displayed to the user
+- if download of the json file fails for any reason, an alert is displayed to the user
 
 
 *//UIActivity Indicator rubric requirement:*
@@ -37,7 +37,7 @@ I have highlighted here how some of the specific rubric criteria has been met:
 
 
 *//Data Persistence rubric requirement:*
-- json data fetched from remote (google drive) server is saved as permanalty as NSObject within core data (Note! images fetched and dsiplayed on the DetailViewController are not persisted by design, to demonstarte networking per app launch without needing to uninstall and reinstall app).
+- json data fetched from remote (google drive) server persists permanently as Data within core data (Note! images fetched and dsiplayed on the DetailViewController are not persisted by design, to demonstrate networking per app launch without the need to uninstall and reinstall app).
 
 
 *//Installation and build requirements:*
