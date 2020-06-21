@@ -5,7 +5,16 @@ UIKit
 My Resume
 
 # Objective
-This app is an iOS App represnation of my Resume. It's a failry intutive app, once installed and run. There is also a short gif included further below in this readme file demonstrating the app.
+This app is an iOS App represnation of my Resume. It's a failry intutive app, once installed and run. 
+
+In short however:
+
+- the app launches to a main screen which uses a segement controller to switch between various information screens (view controllers) that show case various aspects of my career within the software development industry, iOS Development, as well as highlighting iOS Projects developed, education and vocational training / certfications. 
+
+- Additonal informaton can be sought on the experince and iOS Projects segments by clicking the more link. This will display a Details Screen (Detail View Controller) with more information.
+
+- There is also a short gif included further below in this readme file demonstrating the app.
+
 
 # Additonal notes for Udacity Rubric Assessor/s
 I have highlighted here how some of the specific rubric criteria has been met: 
