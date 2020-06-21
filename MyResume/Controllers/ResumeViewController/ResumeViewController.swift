@@ -113,7 +113,6 @@ class ResumeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        fetchRemoteResume()
         fetchResumeFromCoreData()
         configureVC()
     }
