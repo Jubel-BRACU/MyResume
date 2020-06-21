@@ -14,7 +14,6 @@ fileprivate let reusableCellNibName = cellReuseIdentifier
 
 
 class TrainingViewController: UIViewController {
-    
 
     //MARK: - Storyboard Connections
     
@@ -22,6 +21,10 @@ class TrainingViewController: UIViewController {
     
     
     //MARK: - Class Properties
+    
+    enum TrainingSection: Int {
+        case projectBased = 0, foundational
+    }
     
     private lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self]

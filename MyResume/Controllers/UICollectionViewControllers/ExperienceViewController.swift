@@ -15,11 +15,15 @@ fileprivate let reusableCellNibName = cellReuseIdentifier
 class ExperienceViewController: UIViewController {
     
     //MARK: - Storyboard Connections
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
     
     
     //MARK: - Class Properties
+    
+    enum ExperienceSection: Int {
+        case professional = 0, developer
+    }
     
     private lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self]
@@ -185,14 +189,14 @@ extension ExperienceViewController: UICollectionViewDelegate {
             vc.viewTitle = item.jobTitle
             vc.viewDescription = item.professionalExperienceDescription
             vc.viewDetails = item.accomplishments
-            vc.viewImage = item.image
+            vc.viewImage = item.imageName
             
         case .developer:
             let item = resume.developerExperience[indexPath.item]
             vc.viewTitle = item.language
             vc.viewDescription = item.developerExperienceDescription
             vc.viewDetails = item.technologies
-            vc.viewImage = item.image
+            vc.viewImage = item.imageName
                
         case .none:
             fatalError("Error! Unknown case, failed to set destination VC properties")

@@ -58,13 +58,14 @@ struct ProjectObject: Codable {
     let projectName, date: String
     let github: String
     let projectDescription, technologies: String
-    let image: String?
+    let imageName: String?
 
     enum CodingKeys: String, CodingKey {
         case projectName = "project name"
         case date, github
         case projectDescription = "description"
-        case technologies, image
+        case technologies
+        case imageName = "image"
     }
 }
 
@@ -74,12 +75,13 @@ struct DeveloperExperienceObject: Codable {
     let language, location, period, duration: String
     let developerExperienceDescription, technologies: String
     let projects: String
-    let image: String
+    let imageName: String
 
     enum CodingKeys: String, CodingKey {
         case language, location, period, duration
         case developerExperienceDescription = "description"
-        case technologies, projects, image
+        case technologies, projects
+        case imageName = "image"
     }
 }
 
@@ -135,7 +137,7 @@ struct ProfessionalExperienceObject: Codable {
     let jobTitle, professionalExperienceDescription, company, companyDescription: String
     let companyWebsite: String
     let location, period, duration, accomplishments: String
-    let image: String
+    let imageName: String
 
     enum CodingKeys: String, CodingKey {
         case jobTitle = "job title"
@@ -143,7 +145,8 @@ struct ProfessionalExperienceObject: Codable {
         case company
         case companyDescription = "company description"
         case companyWebsite = "company website"
-        case location, period, duration, accomplishments, image
+        case location, period, duration, accomplishments
+        case imageName = "image"
     }
 }
 

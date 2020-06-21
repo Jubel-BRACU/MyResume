@@ -16,11 +16,14 @@ fileprivate let reusableCellNibName = cellReuseIdentifier
 class iOSProjectsViewController: UIViewController {
     
     //MARK: - Storyboard Connections
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
     //MARK: - Class Properties
+    
+    enum ProjectSection: Int {
+        case personal = 0, coursework
+    }
     
     lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self]
@@ -183,7 +186,7 @@ extension iOSProjectsViewController: UICollectionViewDelegate {
             vc.viewTitle = item.projectName
             vc.viewDescription = item.projectDescription
             vc.viewDetails = item.technologies
-            vc.viewImage = item.image
+            vc.viewImage = item.imageName
 
         case .coursework:
             let item = resume.courseworkProjects[indexPath.item]

@@ -25,7 +25,6 @@
 		2A75972C249892F800AFC403 /* Resume.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A75972A249892F800AFC403 /* Resume.xcdatamodeld */; };
 		2A7597302498D8DF00AFC403 /* Resume+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A75972F2498D8DF00AFC403 /* Resume+Extensions.swift */; };
 		2AA4527023A5AA2C00A30E9F /* ResumeViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4526F23A5AA2C00A30E9F /* ResumeViewController+Extensions.swift */; };
-		2AA4527423A5B28100A30E9F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4527323A5B28100A30E9F /* Enums.swift */; };
 		2AA6F59D239DF1F200DF0FE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F59C239DF1F200DF0FE4 /* AppDelegate.swift */; };
 		2AA6F59F239DF1F200DF0FE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F59E239DF1F200DF0FE4 /* SceneDelegate.swift */; };
 		2AA6F5A1239DF1F200DF0FE4 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F5A0239DF1F200DF0FE4 /* ResumeViewController.swift */; };
@@ -58,7 +57,6 @@
 		2A75972B249892F800AFC403 /* Resume.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Resume.xcdatamodel; sourceTree = "<group>"; };
 		2A75972F2498D8DF00AFC403 /* Resume+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resume+Extensions.swift"; sourceTree = "<group>"; };
 		2AA4526F23A5AA2C00A30E9F /* ResumeViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResumeViewController+Extensions.swift"; sourceTree = "<group>"; };
-		2AA4527323A5B28100A30E9F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		2AA6F599239DF1F200DF0FE4 /* My Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Resume.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA6F59C239DF1F200DF0FE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AA6F59E239DF1F200DF0FE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				2A759728249892B300AFC403 /* ResumeResponse */,
-				2A7597322498DBA500AFC403 /* Constants+Enums */,
 				2A759729249892C300AFC403 /* Data Persistence */,
 				2A7597032498590800AFC403 /* Extensions */,
 			);
@@ -248,14 +245,6 @@
 				2A75972F2498D8DF00AFC403 /* Resume+Extensions.swift */,
 			);
 			path = "NSManaged Object Extensions";
-			sourceTree = "<group>";
-		};
-		2A7597322498DBA500AFC403 /* Constants+Enums */ = {
-			isa = PBXGroup;
-			children = (
-				2AA4527323A5B28100A30E9F /* Enums.swift */,
-			);
-			path = "Constants+Enums";
 			sourceTree = "<group>";
 		};
 		2AA6F590239DF1F200DF0FE4 = {
@@ -391,7 +380,6 @@
 				2A368ED723B0472600D2FB47 /* DetailViewController.swift in Sources */,
 				2ACAA0CA249DB56E0008D08C /* UIViewController+Extensions.swift in Sources */,
 				2A7597302498D8DF00AFC403 /* Resume+Extensions.swift in Sources */,
-				2AA4527423A5B28100A30E9F /* Enums.swift in Sources */,
 				2A11379B23A7ADF70097B8AA /* ExperienceViewController.swift in Sources */,
 				2AAA39352499989F004FF6C7 /* ResumeResponse.swift in Sources */,
 				2AA6F59D239DF1F200DF0FE4 /* AppDelegate.swift in Sources */,

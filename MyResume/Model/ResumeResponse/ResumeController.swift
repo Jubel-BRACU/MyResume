@@ -40,7 +40,7 @@ class ResumeController {
                 "hrg": "19WzfvYj_KIsyhGgwjI2Uya9bL9D3k4zy",
                 "fairfax": "1sXzJn8DMe8fAqJ9lPyl0HA2E5TZkWR9t",
                 "estee": "1NZg_QWdJoTnp_5jNDdK1TXGgRT8cW5fV",
-                "airstayz": "1NZg_QWdJoTnp_5jNDdK1TXGgRT8cW5fV",
+                "airstayz": "1KAO7FNjQq73hPyXVrlQFof8aCcif8_vR",
                 "7marbles": "19K0LiXE2a2ZMSpE_JsBQue4aK4MzJEm_"
             ]
             

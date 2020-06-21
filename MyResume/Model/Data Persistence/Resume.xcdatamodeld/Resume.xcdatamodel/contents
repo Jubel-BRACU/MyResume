@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDResumeObject" representedClassName="CDResumeObject" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="String"/>
+        <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="cdResumeObject" inverseEntity="Resume"/>
+    </entity>
     <entity name="ContactInformation" representedClassName="ContactInformation" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
@@ -14,16 +18,25 @@
         <attribute name="technologies" optional="YES" attributeType="String"/>
         <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="courseworkProjects" inverseEntity="Resume"/>
     </entity>
-    <entity name="DeveloperExp" representedClassName="DeveloperExp" syncable="YES">
+    <entity name="DeveloperExperience" representedClassName="DeveloperExperience" syncable="YES">
         <attribute name="details" optional="YES" attributeType="String"/>
         <attribute name="duration" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>
-        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="imageName" optional="YES" attributeType="String"/>
         <attribute name="language" optional="YES" attributeType="String"/>
         <attribute name="location" optional="YES" attributeType="String"/>
         <attribute name="period" optional="YES" attributeType="String"/>
+        <attribute name="projects" optional="YES" attributeType="String"/>
         <attribute name="technologies" optional="YES" attributeType="String"/>
         <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="developerExperience" inverseEntity="Resume"/>
+    </entity>
+    <entity name="Education" representedClassName="Education" syncable="YES">
+        <attribute name="course" optional="YES" attributeType="String"/>
+        <attribute name="graduationYear" optional="YES" attributeType="String"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="period" optional="YES" attributeType="String"/>
+        <attribute name="school" optional="YES" attributeType="String"/>
+        <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="education" inverseEntity="Resume"/>
     </entity>
     <entity name="ExperienceOverview" representedClassName="ExperienceOverview" syncable="YES">
         <attribute name="jobType" optional="YES" attributeType="String"/>
@@ -35,14 +48,6 @@
         <attribute name="contentVersion" optional="YES" attributeType="String"/>
         <attribute name="fileFormatVersion" optional="YES" attributeType="String"/>
         <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="fileInformation" inverseEntity="Resume"/>
-    </entity>
-    <entity name="FormalEducation" representedClassName="FormalEducation" syncable="YES">
-        <attribute name="course" optional="YES" attributeType="String"/>
-        <attribute name="graduationYear" optional="YES" attributeType="String"/>
-        <attribute name="location" optional="YES" attributeType="String"/>
-        <attribute name="period" optional="YES" attributeType="String"/>
-        <attribute name="school" optional="YES" attributeType="String"/>
-        <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="education" inverseEntity="Resume"/>
     </entity>
     <entity name="FoundationalCourse" representedClassName="FoundationalCourse" syncable="YES">
         <attribute name="completionYear" optional="YES" attributeType="String"/>
@@ -75,19 +80,20 @@
         <attribute name="date" optional="YES" attributeType="String"/>
         <attribute name="details" optional="YES" attributeType="String"/>
         <attribute name="github" optional="YES" attributeType="String"/>
+        <attribute name="imageName" optional="YES" attributeType="String"/>
         <attribute name="projectName" optional="YES" attributeType="String"/>
         <attribute name="technologies" optional="YES" attributeType="String"/>
         <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="personalProjects" inverseEntity="Resume"/>
     </entity>
-    <entity name="ProfessionalExp" representedClassName="ProfessionalExp" syncable="YES">
+    <entity name="ProfessionalExperience" representedClassName="ProfessionalExperience" syncable="YES">
         <attribute name="accomplishments" optional="YES" attributeType="String"/>
-        <attribute name="attribute2" optional="YES" attributeType="String"/>
         <attribute name="company" optional="YES" attributeType="String"/>
-        <attribute name="companyDetails" optional="YES" attributeType="String"/>
+        <attribute name="companyDescription" optional="YES" attributeType="String"/>
+        <attribute name="companyWebsite" optional="YES" attributeType="String"/>
         <attribute name="details" optional="YES" attributeType="String"/>
         <attribute name="duration" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
-        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="imageName" optional="YES" attributeType="String"/>
         <attribute name="jobTitle" optional="YES" attributeType="String"/>
         <attribute name="location" optional="YES" attributeType="String"/>
         <attribute name="period" optional="YES" attributeType="String"/>
@@ -110,18 +116,18 @@
         <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="swiftProjectBasedCourses" inverseEntity="Resume"/>
     </entity>
     <entity name="Resume" representedClassName="Resume" syncable="YES">
-        <attribute name="identifier" optional="YES" attributeType="String"/>
+        <relationship name="cdResumeObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDResumeObject" inverseName="resume" inverseEntity="CDResumeObject"/>
         <relationship name="contactInformation" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ContactInformation" inverseName="resume" inverseEntity="ContactInformation"/>
         <relationship name="courseworkProjects" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CourseworkProject" inverseName="resume" inverseEntity="CourseworkProject"/>
-        <relationship name="developerExperience" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DeveloperExp" inverseName="resume" inverseEntity="DeveloperExp"/>
-        <relationship name="education" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FormalEducation" inverseName="resume" inverseEntity="FormalEducation"/>
+        <relationship name="developerExperience" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DeveloperExperience" inverseName="resume" inverseEntity="DeveloperExperience"/>
+        <relationship name="education" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Education" inverseName="resume" inverseEntity="Education"/>
         <relationship name="experienceOverview" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ExperienceOverview" inverseName="resume" inverseEntity="ExperienceOverview"/>
         <relationship name="fileInformation" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="FileInformation" inverseName="resume" inverseEntity="FileInformation"/>
         <relationship name="hobbies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Hobby" inverseName="resume" inverseEntity="Hobby"/>
         <relationship name="industryCertifications" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IndustryCertification" inverseName="resume" inverseEntity="IndustryCertification"/>
         <relationship name="otherCertifications" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OtherCertification" inverseName="resume" inverseEntity="OtherCertification"/>
         <relationship name="personalProjects" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PersonalProject" inverseName="resume" inverseEntity="PersonalProject"/>
-        <relationship name="professionalExperience" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ProfessionalExp" inverseName="resume" inverseEntity="ProfessionalExp"/>
+        <relationship name="professionalExperience" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ProfessionalExperience" inverseName="resume" inverseEntity="ProfessionalExperience"/>
         <relationship name="profile" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Profile" inverseName="resume" inverseEntity="Profile"/>
         <relationship name="skills" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Skill" inverseName="resume" inverseEntity="Skill"/>
         <relationship name="swiftFounationalCourses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FoundationalCourse" inverseName="resume" inverseEntity="FoundationalCourse"/>
@@ -138,22 +144,23 @@
         <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="websites" inverseEntity="Resume"/>
     </entity>
     <elements>
-        <element name="Resume" positionX="-36" positionY="45" width="128" height="298"/>
         <element name="ContactInformation" positionX="-63" positionY="-18" width="128" height="103"/>
         <element name="CourseworkProject" positionX="-9" positionY="90" width="128" height="133"/>
-        <element name="DeveloperExp" positionX="9" positionY="153" width="128" height="178"/>
+        <element name="DeveloperExperience" positionX="9" positionY="153" width="128" height="193"/>
+        <element name="Education" positionX="36" positionY="180" width="128" height="133"/>
         <element name="ExperienceOverview" positionX="18" positionY="162" width="128" height="88"/>
-        <element name="FormalEducation" positionX="36" positionY="180" width="128" height="133"/>
+        <element name="FileInformation" positionX="0" positionY="144" width="128" height="103"/>
         <element name="FoundationalCourse" positionX="0" positionY="144" width="128" height="148"/>
         <element name="Hobby" positionX="18" positionY="162" width="128" height="73"/>
         <element name="IndustryCertification" positionX="45" positionY="189" width="128" height="118"/>
         <element name="OtherCertification" positionX="9" positionY="153" width="128" height="118"/>
-        <element name="PersonalProject" positionX="36" positionY="90" width="128" height="133"/>
-        <element name="ProfessionalExp" positionX="0" positionY="99" width="128" height="223"/>
+        <element name="PersonalProject" positionX="36" positionY="90" width="128" height="148"/>
+        <element name="ProfessionalExperience" positionX="0" positionY="99" width="128" height="223"/>
         <element name="Profile" positionX="-54" positionY="18" width="128" height="103"/>
         <element name="ProjectBasedCourse" positionX="-9" positionY="135" width="128" height="163"/>
+        <element name="Resume" positionX="-36" positionY="45" width="128" height="298"/>
         <element name="Skill" positionX="27" positionY="171" width="128" height="73"/>
         <element name="Website" positionX="18" positionY="81" width="128" height="88"/>
-        <element name="FileInformation" positionX="0" positionY="144" width="128" height="103"/>
+        <element name="CDResumeObject" positionX="0" positionY="144" width="128" height="73"/>
     </elements>
 </model>

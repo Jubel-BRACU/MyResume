@@ -21,6 +21,10 @@ class EducationViewController: UIViewController {
     
     
     //MARK: - Class Properties
+    
+    enum EducationSection: Int {
+        case university = 0, certifications
+    }
 
     private lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self]

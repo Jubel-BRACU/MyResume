@@ -23,8 +23,6 @@ let sectionHeaderReusableViewNibName = sectionHeaderReuseIdentifier
 @IBDesignable
 class ResumeViewController: UIViewController {
     
-    static let shared = ResumeViewController()
-    
     //MARK: - Storyboard connections
 
     //outlets
@@ -71,6 +69,26 @@ class ResumeViewController: UIViewController {
     
     
     //MARK: - Class Properties
+    
+    enum SegmentControl: Int {
+        case experience = 0, projects, education, training
+    }
+    
+    
+    enum WebsiteLabel: Int {
+        case linkedin = 0, github, website
+    }
+    
+    
+    enum ContactLabel: Int {
+        case name = 0, phone, email
+    }
+
+    enum ProfileTextViews: Int {
+        case general = 0, valueProposition
+    }
+    
+    static let shared = ResumeViewController()
     var resume: ResumeObject?
     
     //delegates for containers
