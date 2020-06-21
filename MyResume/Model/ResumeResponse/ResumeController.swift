@@ -8,10 +8,14 @@
 
 import UIKit
 
-
 class ResumeController {
     
+    //MARK: - Shared
+    
     static let shared = ResumeController()
+    
+    
+    //MARK: - Networking
     
     private enum Endpoint {
 
@@ -84,13 +88,13 @@ class ResumeController {
     }
     
     
-    //class initializer
+    //MARK: - Initializer
     private init() {}
     
 }
 
 
-//MARK - Network Request Handlers
+//MARK: - Network Request Handlers
     
 extension ResumeController {
     
@@ -120,7 +124,7 @@ extension ResumeController {
         }
     }
     
-    
+
     //fetch json file from remote server
     private func downloadRemoteJSON(completion: @escaping (URL?, Error?) -> Void) {
         guard let url = Endpoint.json.url else {

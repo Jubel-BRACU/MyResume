@@ -8,10 +8,8 @@
 
 import UIKit
 
-
 fileprivate let cellReuseIdentifier = "iOSProjectCell"
 fileprivate let reusableCellNibName = cellReuseIdentifier
-
 
 class iOSProjectsViewController: UIViewController {
     

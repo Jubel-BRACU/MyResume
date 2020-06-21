@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class ExperienceCell: UICollectionViewCell {
     
     //cell UI Outlets

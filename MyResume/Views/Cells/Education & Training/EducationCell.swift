@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class EducationCell: UICollectionViewCell {
     
     @IBOutlet var labels: [UILabel]!

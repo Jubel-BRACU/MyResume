@@ -23,7 +23,7 @@
 		2A5B173123AE349100671EB8 /* iOSProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5B172F23AE349100671EB8 /* iOSProjectCell.xib */; };
 		2A6740B723A390A400685D1E /* profile_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6740B623A390A400685D1E /* profile_image.png */; };
 		2A75972C249892F800AFC403 /* Resume.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A75972A249892F800AFC403 /* Resume.xcdatamodeld */; };
-		2A7597302498D8DF00AFC403 /* Resume+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A75972F2498D8DF00AFC403 /* Resume+Extensions.swift */; };
+		2A7597302498D8DF00AFC403 /* CDResumeObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A75972F2498D8DF00AFC403 /* CDResumeObject+Extensions.swift */; };
 		2AA4527023A5AA2C00A30E9F /* ResumeViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4526F23A5AA2C00A30E9F /* ResumeViewController+Extensions.swift */; };
 		2AA6F59D239DF1F200DF0FE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F59C239DF1F200DF0FE4 /* AppDelegate.swift */; };
 		2AA6F59F239DF1F200DF0FE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F59E239DF1F200DF0FE4 /* SceneDelegate.swift */; };
@@ -36,6 +36,9 @@
 		2ABAF76E23B207CF000C437F /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABAF76B23B207CF000C437F /* appIcon.png */; };
 		2AC3BCCF23A4A87A0097073C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC3BCCE23A4A87A0097073C /* String+Extensions.swift */; };
 		2ACAA0CA249DB56E0008D08C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAA0C9249DB56E0008D08C /* UIViewController+Extensions.swift */; };
+		2ACAA0DD249F6D920008D08C /* CDResume+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAA0DB249F6D920008D08C /* CDResume+CoreDataClass.swift */; };
+		2ACAA0DE249F6D920008D08C /* CDResume+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAA0DC249F6D920008D08C /* CDResume+CoreDataProperties.swift */; };
+		2ACAA0E0249F70DE0008D08C /* ResumeDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAA0DF249F70DE0008D08C /* ResumeDataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +58,7 @@
 		2A5B172F23AE349100671EB8 /* iOSProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iOSProjectCell.xib; sourceTree = "<group>"; };
 		2A6740B623A390A400685D1E /* profile_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_image.png; sourceTree = "<group>"; };
 		2A75972B249892F800AFC403 /* Resume.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Resume.xcdatamodel; sourceTree = "<group>"; };
-		2A75972F2498D8DF00AFC403 /* Resume+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resume+Extensions.swift"; sourceTree = "<group>"; };
+		2A75972F2498D8DF00AFC403 /* CDResumeObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDResumeObject+Extensions.swift"; sourceTree = "<group>"; };
 		2AA4526F23A5AA2C00A30E9F /* ResumeViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResumeViewController+Extensions.swift"; sourceTree = "<group>"; };
 		2AA6F599239DF1F200DF0FE4 /* My Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Resume.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA6F59C239DF1F200DF0FE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +73,10 @@
 		2ABAF76B23B207CF000C437F /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
 		2AC3BCCE23A4A87A0097073C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		2ACAA0C9249DB56E0008D08C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		2ACAA0CD249F60F80008D08C /* ResumeV2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ResumeV2.xcdatamodel; sourceTree = "<group>"; };
+		2ACAA0DB249F6D920008D08C /* CDResume+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDResume+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2ACAA0DC249F6D920008D08C /* CDResume+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDResume+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2ACAA0DF249F70DE0008D08C /* ResumeDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +147,7 @@
 		2A7596FC249856A600AFC403 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2AA6F5A0239DF1F200DF0FE4 /* ResumeViewController.swift */,
+				2AFEB141249F7D4C00611D09 /* ResumeViewController */,
 				2AAA393C249CCCDE004FF6C7 /* UICollectionViewControllers */,
 				2A368ED623B0472600D2FB47 /* DetailViewController.swift */,
 				2A7597012498581200AFC403 /* Extensions */,
@@ -234,17 +241,19 @@
 			isa = PBXGroup;
 			children = (
 				2A75972A249892F800AFC403 /* Resume.xcdatamodeld */,
-				2A7597312498DB2600AFC403 /* NSManaged Object Extensions */,
+				2A7597312498DB2600AFC403 /* NSManaged Objects */,
 			);
 			path = "Data Persistence";
 			sourceTree = "<group>";
 		};
-		2A7597312498DB2600AFC403 /* NSManaged Object Extensions */ = {
+		2A7597312498DB2600AFC403 /* NSManaged Objects */ = {
 			isa = PBXGroup;
 			children = (
-				2A75972F2498D8DF00AFC403 /* Resume+Extensions.swift */,
+				2ACAA0DB249F6D920008D08C /* CDResume+CoreDataClass.swift */,
+				2ACAA0DC249F6D920008D08C /* CDResume+CoreDataProperties.swift */,
+				2ACAA0D2249F68700008D08C /* NSManagedObjects+Extensions */,
 			);
-			path = "NSManaged Object Extensions";
+			path = "NSManaged Objects";
 			sourceTree = "<group>";
 		};
 		2AA6F590239DF1F200DF0FE4 = {
@@ -294,6 +303,23 @@
 				2ABAF76B23B207CF000C437F /* appIcon.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		2ACAA0D2249F68700008D08C /* NSManagedObjects+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A75972F2498D8DF00AFC403 /* CDResumeObject+Extensions.swift */,
+			);
+			path = "NSManagedObjects+Extensions";
+			sourceTree = "<group>";
+		};
+		2AFEB141249F7D4C00611D09 /* ResumeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2AA6F5A0239DF1F200DF0FE4 /* ResumeViewController.swift */,
+				2ACAA0DF249F70DE0008D08C /* ResumeDataViewController.swift */,
+			);
+			path = ResumeViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,10 +402,11 @@
 				2A75972C249892F800AFC403 /* Resume.xcdatamodeld in Sources */,
 				2A11378F23A7AC300097B8AA /* ExperienceCell.swift in Sources */,
 				2AA6F5A1239DF1F200DF0FE4 /* ResumeViewController.swift in Sources */,
+				2ACAA0DE249F6D920008D08C /* CDResume+CoreDataProperties.swift in Sources */,
 				2A2EC2C423AED4B8006378C3 /* iOSProjectsViewController.swift in Sources */,
 				2A368ED723B0472600D2FB47 /* DetailViewController.swift in Sources */,
 				2ACAA0CA249DB56E0008D08C /* UIViewController+Extensions.swift in Sources */,
-				2A7597302498D8DF00AFC403 /* Resume+Extensions.swift in Sources */,
+				2A7597302498D8DF00AFC403 /* CDResumeObject+Extensions.swift in Sources */,
 				2A11379B23A7ADF70097B8AA /* ExperienceViewController.swift in Sources */,
 				2AAA39352499989F004FF6C7 /* ResumeResponse.swift in Sources */,
 				2AA6F59D239DF1F200DF0FE4 /* AppDelegate.swift in Sources */,
@@ -387,6 +414,8 @@
 				2A11379423A7AC990097B8AA /* SectionHeaderReusableView.swift in Sources */,
 				2A368ED523AF60B300D2FB47 /* TrainingViewContoller.swift in Sources */,
 				2A368ECE23AF1C8800D2FB47 /* EducationViewController.swift in Sources */,
+				2ACAA0DD249F6D920008D08C /* CDResume+CoreDataClass.swift in Sources */,
+				2ACAA0E0249F70DE0008D08C /* ResumeDataViewController.swift in Sources */,
 				2AA6F59F239DF1F200DF0FE4 /* SceneDelegate.swift in Sources */,
 				2A11378C23A704390097B8AA /* UIView+Extensions.swift in Sources */,
 				2AA4527023A5AA2C00A30E9F /* ResumeViewController+Extensions.swift in Sources */,
@@ -599,9 +628,10 @@
 		2A75972A249892F800AFC403 /* Resume.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				2ACAA0CD249F60F80008D08C /* ResumeV2.xcdatamodel */,
 				2A75972B249892F800AFC403 /* Resume.xcdatamodel */,
 			);
-			currentVersion = 2A75972B249892F800AFC403 /* Resume.xcdatamodel */;
+			currentVersion = 2ACAA0CD249F60F80008D08C /* ResumeV2.xcdatamodel */;
 			path = Resume.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

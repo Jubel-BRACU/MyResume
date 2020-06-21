@@ -10,7 +10,7 @@
         <!--RESUME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="ResumeViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="ResumeDataViewController" customModule="My_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -430,6 +430,7 @@
                             <constraint firstItem="K4X-MA-CgB" firstAttribute="leading" secondItem="bZd-0g-sku" secondAttribute="leading" id="iUB-ew-tsL"/>
                             <constraint firstAttribute="bottom" secondItem="K4X-MA-CgB" secondAttribute="bottom" id="oCV-cd-4pH"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="mTN-5L-ydR"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="K4X-MA-CgB" id="9vq-sD-UYf"/>
@@ -466,6 +467,7 @@
                             <constraint firstItem="tNe-D6-ibm" firstAttribute="leading" secondItem="fN2-3X-B4c" secondAttribute="leading" id="jIu-uw-JeP"/>
                             <constraint firstAttribute="trailing" secondItem="tNe-D6-ibm" secondAttribute="trailing" id="lSO-rp-CyN"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="X65-Cu-jF2"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="tNe-D6-ibm" id="022-Ck-JiJ"/>
@@ -502,6 +504,7 @@
                             <constraint firstAttribute="bottom" secondItem="ZP6-Ai-U0J" secondAttribute="bottom" id="ffy-Wh-14w"/>
                             <constraint firstAttribute="trailing" secondItem="ZP6-Ai-U0J" secondAttribute="trailing" id="mqa-bN-fEg"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="HJQ-BK-GiE"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="ZP6-Ai-U0J" id="ALN-fw-ARx"/>
@@ -538,6 +541,7 @@
                             <constraint firstAttribute="trailing" secondItem="Tma-bi-oAz" secondAttribute="trailing" id="a0z-ec-w1w"/>
                             <constraint firstItem="Tma-bi-oAz" firstAttribute="leading" secondItem="qnn-p8-i73" secondAttribute="leading" id="rFs-eB-Wmw"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="On8-6M-xHV"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Tma-bi-oAz" id="niE-Ib-dug"/>

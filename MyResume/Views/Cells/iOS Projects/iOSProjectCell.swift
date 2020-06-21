@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class iOSProjectCell: UICollectionViewCell {
     
     //cell UI Outlets

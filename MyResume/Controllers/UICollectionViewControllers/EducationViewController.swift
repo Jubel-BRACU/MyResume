@@ -8,10 +8,8 @@
 
 import UIKit
 
-
 private let cellReuseIdentifier = "EducationCell"
 private let reusableCellNibName = cellReuseIdentifier
-
 
 class EducationViewController: UIViewController {
     

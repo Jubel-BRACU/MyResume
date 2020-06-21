@@ -11,7 +11,6 @@ import UIKit
 import SafariServices
 import MessageUI
 
-
 extension ResumeViewController: MFMailComposeViewControllerDelegate {
     
     //Load Safari

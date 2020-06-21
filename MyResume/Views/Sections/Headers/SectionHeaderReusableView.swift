@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class SectionHeaderReusableView: UICollectionReusableView {
     
     //cell UI Outlets

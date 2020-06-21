@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
+//MARK: - ResumeViewController Protocol
 
 protocol ResumeViewControllerDelegate {
     func reloadCollectionView()
@@ -22,6 +24,15 @@ let sectionHeaderReusableViewNibName = sectionHeaderReuseIdentifier
 
 @IBDesignable
 class ResumeViewController: UIViewController {
+    
+    //MARK: - Core Data
+    
+    private var container: NSPersistentContainer? = {
+        (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
+    }()
+    
+    var fetchedResultsController: NSFetchedResultsController<CDResume>?
+    
     
     //MARK: - Storyboard connections
 
@@ -102,7 +113,8 @@ class ResumeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchRemoteResume()
+//        fetchRemoteResume()
+        fetchResumeFromCoreData()
         configureVC()
     }
     
@@ -158,8 +170,10 @@ class ResumeViewController: UIViewController {
     }
     
     
-    private func updateUI() {
+    internal func updateUI(with resume: ResumeObject) {
+        ResumeViewController.shared.resume = resume
         updateProfileSection()
+        updateContainerViewControllers()
     }
     
     
@@ -178,9 +192,7 @@ class ResumeViewController: UIViewController {
             self.showActivityIndicator(false)
             
             if let resume = resume {
-                ResumeViewController.shared.resume = resume
-                self.updateUI()
-                self.updateContainerViewControllers()
+                self.updateUI(with: resume)
             }
        
             if let error = error {
@@ -189,6 +201,59 @@ class ResumeViewController: UIViewController {
                     ac.addAction(UIAlertAction(title: "OK", style: .default))
                     self.present(ac, animated: true)
                 }
+            }
+        }
+    }
+}
+
+//MARK: - Core Data
+
+extension ResumeViewController: NSFetchedResultsControllerDelegate {
+    
+    func fetchResumeFromCoreData() {
+        guard let context = container?.viewContext else {
+            print("Error! Cannot update core data, container is missing.")
+            return
+        }
+        
+        let fetchRequest:NSFetchRequest<CDResume> = CDResume.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "resumeObject", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController?.delegate = self
+        
+        //fetch resume from core data
+        do {
+            try fetchedResultsController?.performFetch()
+            
+        } catch {
+            fatalError("The fetch could not be performed: \(error.localizedDescription)")
+        }
+            
+        //handle fetch result
+        guard let objects = fetchedResultsController?.fetchedObjects, !objects.isEmpty else {
+            
+            //fetch data from remote
+            print("No fetched objects returned from core data, fetching resume from remote server...")
+            fetchRemoteResume()
+            return
+        }
+                
+        //convert object to resume
+        if let data = objects.first?.resumeObject {
+        
+            do {
+                let resume = try JSONDecoder().decode(ResumeObject.self, from: data)
+                print("Success! Resume object fetched and decoded from core data.")
+                
+                //update properties and UI
+                ResumeViewController.shared.resume = resume
+                updateProfileSection()
+                updateContainerViewControllers()
+    
+            } catch {
+                print("Error! Could not fetch objects from core data: \(error.localizedDescription)")
             }
         }
     }

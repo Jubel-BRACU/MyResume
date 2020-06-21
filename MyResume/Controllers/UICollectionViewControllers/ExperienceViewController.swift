@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 fileprivate let cellReuseIdentifier = "ExperienceCell"
 fileprivate let reusableCellNibName = cellReuseIdentifier
 

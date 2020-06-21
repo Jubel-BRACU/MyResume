@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 extension String {
     
     //generate attributabed string
