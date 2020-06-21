@@ -5,7 +5,7 @@ UIKit
 My Resume
 
 # Objective
-This app is an iOS App represnation of my Resume. It's a failry intutive app, once installed and run. 
+This app is an iOS App representation of my Resume. It's a failry intutive app, once installed and run. 
 
 In short however:
 
