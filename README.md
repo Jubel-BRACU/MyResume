@@ -10,23 +10,28 @@ This app is an iOS App represnation of my Resume. It's a failry intutive app, on
 # Additonal notes for Udacity Rubric Assessor/s
 I have highlighted here how some of the specific rubric criteria has been met: 
 
-*Networking service rubric requirement:
+
+*//Networking service rubric requirement:*
 - app uses URLSession to fetch json data enclosed within a file located on a remote server (google drive)
 - app also fetches images from files also located on a remote server (google drive)
 - app uses JSON Decoder to decode fetched json
 - above networking code is encapsulated within its own class
 
-*Networking failure alert rubric requirement
+
+*//Networking failure alert rubric requirement
 - if download of json file fails for any reason, an alert is displayed to the user
 
-*UIActivity Indicator rubric requirement
+
+*//UIActivity Indicator rubric requirement
 - when app is first launched, app displays a activity indicator whilst json file / data is fetched and loaded from the remote (google drive) server
 - app also displays activity indicator whilst any images are downloaded from the remote (google drive) server (on the item DetailViewController)
 
-*Data Persistence rubric requirement
+
+*//Data Persistence rubric requirement
 - json data fetched from remote (google drive) server is saved as permanalty as NSObject within core data (Note! images fetched and dsiplayed on the DetailViewController are not persisted by design, to demonstarte networking per app launch without needing to uninstall and reinstall app).
 
-*Installation and build requirements:
+
+*//Installation and build requirements:
 - app developed with Xcode v11x using iOS v13x APIs. Please run on devices running iOS 13 and above
 - Supported iOS devices: iPhones only, running iOS 13x
 
