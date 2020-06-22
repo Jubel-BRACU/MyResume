@@ -5,13 +5,13 @@ UIKit
 My Resume
 
 # Objective
-This app is an iOS App representation of my Resume. It's a failry intutive app, once installed and run. 
+This app is an iOS App representation of my Resume. It's a fairly intutive app, once installed and run. 
 
 In short however:
 
-- the app launches to a main screen which uses a segement controller to switch between various information screens (view controllers) that show case various aspects of my career within the software development industry, iOS Development, as well as highlighting iOS Projects developed, education and vocational training / certfications. 
+- the app launches to a main screen which uses a segment controller to switch between various information screens (view controllers) that show case various aspects of my career within the software development industry, iOS Development, as well as highlighting iOS Projects developed, education and vocational training / certfications. 
 
-- Additonal informaton can be sought on the experience and iOS Projects segments by clicking the more link. This will display a Details Screen (Detail View Controller) with more information.
+- Additional information can be sought on the experience and iOS Projects segments by clicking the more link. This will display a Details Screen (Detail View Controller) with more information.
 
 - There is also a short gif included further below in this readme file demonstrating the app.
 
@@ -32,7 +32,7 @@ I have highlighted here how some of the specific rubric criteria has been met:
 
 
 *//UIActivity Indicator rubric requirement:*
-- when app is first launched, app displays a activity indicator whilst json file / data is fetched and loaded from the remote (google drive) server
+- when app is first launched, app displays an activity indicator whilst json file / data is fetched and loaded from the remote (google drive) server
 - app also displays activity indicator whilst any images are downloaded from the remote (google drive) server (on the item DetailViewController)
 
 
